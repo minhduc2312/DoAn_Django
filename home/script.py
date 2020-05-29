@@ -35,6 +35,7 @@ for url_bai in link:
         f.close()
 
 
+
 # titles = [chuong.find('a').text for chuong in chuongs]
 
 # contents = [cnt.find('a').text for cnt in soup.findAll('p', class_="i-des")]
