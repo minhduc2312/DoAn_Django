@@ -657,5 +657,306 @@ function format_phanso(){
 //     kq = kq.slice(0,kq.length-3);
 //     document.getElementById("kq_ucln").innerHTML=kq;
 // }
+function demPTLienTiep(){
+    var n= document.getElementById("dem_lientiep").value;
+    var arr =n.split(';');
+    var dau=parseInt(arr[0]);
+    var cuoi= parseInt(arr[arr.length-1]);
+    var k=cuoi-dau+1;
+    var kq="Số phần tử của tập A = {"+n+"} là: "+ cuoi+" - "+dau+" + 1 ="+k;
+    document.getElementById("kq_demlientiep").innerHTML=kq;
+}
+function lietKeChanLe(){
+    var check= document.getElementById("cl").value;
+    var dieukien= document.getElementById("demcl").value;
+    var arr=dieukien.split('<');
+    var dau= parseInt(arr[0]);
+    var cuoi= parseInt(arr[2]);
+    var th="";
+    if(dau>cuoi)
+        kq+="Nhập khoảng giá trị sai."
+    else{
+        if(check=="chẵn"){
+            for(var i=dau+1; i<cuoi ;i++)
+                if(i%2==0)
+                    th+=i.toString()+" ;";
+        }
+        else{
+            for(var i=dau+1;i<cuoi;i++)
+                if(i%2!=0)
+                    th+=i.toString()+" ;";
+        }
+    }
+    document.getElementById("lietke_cl").innerHTML= "A = {"+th.substring(0, th.length - 1)+"}";
+}
+function demSPTChanLe(){
+    var n=document.getElementById("dem_sptchanle").value;
+    var check=document.getElementById("chanle").value;
+    var kq="";
+    var d=0;
+    var arr=n.split(';');
+    var dau= parseInt(arr[0]);
+    var cuoi= parseInt(arr[arr.length-1]);
+    if(check=="chẵn" && dau%2==0 && cuoi%2==0){
+        kq+="Tập hợp D có số phần tử chẵn hợp là:";
+        d=(cuoi-dau)/2+1;
+    }if(check=="lẻ" && dau%2!=0 && cuoi%2!=0){
+        kq+="Tập hợp D có số phần tử lẻ là:";
+        d=(cuoi-dau)/2+1;
+    }else{
+        kq+="Nhập tập hợp sai."
+    }
+    document.getElementById("kq_sptchanle").innerHTML=kq +"( "+cuoi+" - "+dau+"):2 + 1 ="+d;
+}
+//Tìm số đối
+function timSD(){
+    var n=document.getElementById("doi").value;
+    var kq=" Số đối của "+n+" là : "
+    if(parseInt(n)==0){
+        kq+="0";
+    }if(parseInt(n)>0){
+        kq+="-"+n;
+    }else{
+        kq+=(-n).toString();
+    }
+    document.getElementById("kq_doi").innerHTML=kq;
+}
+
+//Xuất số ước của 1 số nguyên
+function timUocZ(){
+    var n= document.getElementById("soz").value;
+    var t= Math.abs(parseInt(n));
+    var kq="Tập hợp các ước của số nguyên vừa nhập là:<br>A = {";
+    for( var i=1;i<=t;i++){
+        if(t%i==0){
+            kq+=i.toString()+";"+"-"+i.toString()+";";
+        }
+    }
+    document.getElementById("kq_z").innerHTML=kq.substring(0,kq.length-1)+"}";
+}
+//Đếm số ước của 1 số nguyên
+function demUocZ(){
+    var n= document.getElementById("so_z").value;
+    var t= Math.abs(parseInt(n));
+    var kq="Số |"+n+"| có ";
+    var k=0;
+    for( var i=1;i<=t;i++){
+        if(t%i==0){
+            k++;
+        }
+    }
+    kq+=k.toString() +" ước. <br> Vậy số ước nguyên của số nguyên "+n +" là: "+2*k;
+    document.getElementById("kq_soz").innerHTML=kq;
+}
+//Lớp 7
+//GT hs tại 1 điểm xác định
+function tinhHS(){
+    var x=document.getElementById("x_d").value;
+    var y=document.getElementById("hamso_x").value;
+    document.getElementById("kq_hamso").innerHTML= "f("+x+") = " +y.replace(/x/g,"("+x+")");
+}
+function doDaiCanh(){
+    var n= document.getElementById("canh_tl").value;
+    
+    var arr= n.split(";");
+    var x=parseInt(arr[0]);
+    var y=parseInt(arr[1]);
+    var z=parseInt(arr[2]);
+    var s= parseInt(document.getElementById("chuvi").value);
+    var kq="Gọi độ dài 3 cạnh của tam giác lần lượt là x,y,z.<br>Theo đề ra ta có: x/"+x+" = y/"+y +" = z/"+z +" và x+y+z = "+s;
+    var t=parseFloat(s/(x+y+z));
+    kq+="<br>=>"+"x/"+x.toString()+" = y/"+y.toString() +" = z/"+z.toString() +" = (x+y+z)/"+"("+x+"+"+y+"+"+z+") = "+ t+"<br>Vậy 3 cạnh của tam giác lần lượt là: "+ t*x+", "+t*y+", "+t*z;
+    document.getElementById("kq_canh").innerHTML=kq;
+}
+function rutGonBT(){
+    var n= document.getElementById("tl_3so").value;
+    var a= n.split(";");
+    var x= a[0];
+    var y= a[1];
+    var z= a[2];
+    var tu= document.getElementById("tu_bt").value.split(';');
+    var mau= document.getElementById("mau_bt").value.split(';');
+    if(tu.length != 3 || mau.length != 3 ){
+        kq = "Không hợp lệ"
+    }else{
+        kq = `x = ${x}t , y = ${y}t , z = ${z}t \n thay vào biểu thức ta có: S = ` + frac(`${tu[0]}*${x}t `+(tu[1]>0?`+`:``)+`${tu[1]}*${y}t ` + (tu[2]>0?`+`:``) +` ${tu[2]}*${z}t / ${mau[0]}*${x}t `+(mau[1]>0?`+`:``)+` ${mau[1]}*${y}t `+(mau[2]>0?`+`:``)+` ${mau[2]}*${z}`).outerHTML + ` = ` + frac(`${tu[0]*x+tu[1]*y+tu[2]*z}t/${mau[0]*x+mau[1]*y+mau[2]*z}t`).outerHTML;
+    }
+    document.getElementById('kq_rutgon').innerHTML = kq;
+}
+//Lớp 8
+function giaiPTB2(){
+    const arrNumber = []
+    const arrOperator = []
+
+    //Tách biểu thức thành 2 vế bởi dấu '='
+    var txt = document.getElementById("da").value;;
+    txt = txt.toLowerCase();
+    var str = txt.split('=');
+    //console.log(txt);
+
+    var str1 = str[0].split(/(?:\+|-)+/);
+    //console.log(str1);
+
+    var regexObj = new RegExp(/([\da-z\^]+)|([+\-\=]+)/g);//Lấy số và dấu
+    let match = txt.match(regexObj);
+
+    match.forEach(function (item) {
+        if (item == "+" || item == "-" || item == "=") {
+            arrOperator.push(item);
+        }
+        else {
+            arrNumber.push(item);
+        }
+    });
+
+    var vt = arrOperator.indexOf("="); // vị trí của dấu '='
+    //console.log(arrOperator);
+    var sptt = str1.length;// đếm số phần tử trước dấu '='
+    var spts = arrNumber.length - sptt;// đếm số phần tử trước dấu '='
+    var sds = arrOperator.length - vt - 1; //đếm số dấu sau dấu '='
+    var sdt = arrOperator.length - sds - 1;
+
+    //console.log(sptt + " " + spts +" " +sdt + " "+sds)
+    if (sptt > sdt) {
+        arrOperator.unshift("+");
+    }
+    if (spts > sds) {
+        arrOperator.splice(arrOperator.indexOf("=") + 1, 0, "+");
+    }
 
 
+    //console.log(arrNumber);
+    //console.log(arrOperator);
+
+    var a = 0, b = 0, c = 0;
+    var vt = arrOperator.indexOf("=");
+    arrOperator.splice(arrOperator.indexOf("="), 1) // remove dấu '='
+    var chuyenve = "";
+    //console.log(arrOperator);
+    for (let i = 0; i < arrNumber.length; i++) {
+        if (i >= vt) //đổi dấu nếu ở phía sau dấu '='
+        {
+            if (arrOperator[i] == "+")
+                arrOperator[i] = "-";
+            else if (arrOperator[i] == "-")
+                arrOperator[i] = "+";
+        }
+        if (arrNumber[i].indexOf("x^2") >= 0) // lấy hệ số của x^2 rồi cộng 
+        {
+            num = arrNumber[i].substr(0, arrNumber[i].indexOf("x^2"));
+            if (num == "") {
+                num = "1";
+            }
+            num = arrOperator[i].concat(num);
+            a += Number(num);
+        }
+        else if (arrNumber[i].indexOf("x") >= 0) { //hệ số của x
+            num = arrNumber[i].substr(0, arrNumber[i].indexOf("x"));
+            if (num == "") {
+                num = "1";
+            }
+            num = arrOperator[i].concat(num);
+            b += Number(num);
+        }
+        else {
+            num = arrOperator[i].concat(arrNumber[i]); //hệ số c
+            console.log(num + " ");
+            c += Number(num);
+
+        }
+        chuyenve += arrOperator[i] + " " + arrNumber[i] + " "; //Chuyển về ax^2 + bx + c = 0
+    }
+    if (arrOperator[0] == "+")
+        chuyenve = chuyenve.slice(2); // bỏ đi dấu '+' ở số đầu tiên
+    //console.log("Chuyen ve: " + chuyenve + " = 0"); //Chuyển về ax^2 + bx + c = 0
+
+    var heso = [a.toString(), b.toString(), c.toString()]
+    for (let i = 1; i < heso.length; i++) {
+        if (Number(heso[i]) >= 0) {
+            heso[i] = "+" + heso[i];
+        }
+    } //lấy hệ số và dấu để trình bày
+
+    //text là biến để in ra HTML, mà t kh in ra được nên đổi lại console.log để test
+    var info = "";
+    info += "Rut gon bieu thuc: " + heso[0] + "x^2" + heso[1] + "x" + heso[2] + " = 0" + "</br>";
+    //text = "Rut gon bieu thuc: "+ heso[0] +"x^2 " + heso[1]+ "x " + heso[2]+" = 0";
+
+    info += "Voi a=" + a + ",b=" + b + ",c=" + c + "</br>";
+    //console.log("a=%d,b=%d,c=%d", a, b, c);
+    //text= "a=" + a + ", b=" + b + ", c=" +c;
+    if (a != 0) {
+        var delta = b * b - 4 * a * c;
+
+        info += "Delta = b<sup>2</sup> - 4ac = (" + b + ")<sup>2</sup> - 4*(" + a + ")*(" + c + ") =" + delta + "</br>";
+        //console.log("Tim delta: b^2 - 4ac = (%d)^2 - 4*%d*%d = %d", b, a, c, delta);
+        //text = "Tim delta: b^2 - 4ac = (" + b +")^2 - 4*" + a + "*" + c + " = " + delta;
+
+        if (delta < 0) {
+            info += " => Delta < 0: Phuong trinh vo nghiem";
+            //console.log("Delta < 0: Phuong trinh vo nghiem");
+            //text = "Delta < 0: Phuong trinh vo nghiem";
+
+        }
+        else if (delta == 0) {
+            info += " => Delta = 0: Phuong trinh co nghiem kep: x1 = x2 = "+frac("-b/2a").outerHTML+" = "+ frac(`${-b}/${2*a}`).outerHTML +" = " + (-b / (2 * a).toFixed(2));
+            //console.log("Delta = 0: Phuong trinh co nghiem kep: x1=x2= -b/2*a = -(%d)/2*%d = %f", b, a, (float) - b / (2 * a).toFixed(2));
+            //text = "Delta = 0: Phuong trinh co nghiem kep: x1 = x2 = -b/a = -("+ b +")/2*" + a + " = " + (-b/(2*a).toFixed(2));
+        }
+        else {
+            x1 = (-b + Math.sqrt(delta)) / 2 * a;
+            x2 = (-b - Math.sqrt(delta)) / 2 * a;
+            y2=frac(`${-b}-&radic;${delta}/${2*a}`).outerHTML;
+            y1=frac(`${-b}+&radic;${delta}/${2*a}`).outerHTML;
+            info += " => Delta > 0: Phuong trinh co 2 nghiem phan biet x1 = "+ y1 +" = " + x1.toFixed(2) + ", x2 = "+ y2 +" = " + x2.toFixed(2);
+            //console.log("Delta > 0: Phuong trinh co 2 nghiem phan biet x1= %f, x2= %f", x1.toFixed(2), x2.toFixed(2));
+            //text = "Delta > 0: Phuong trinh co 2 nghiem phan biet x1= "+ x1.toFixed(2) +", x2= "+ x2.toFixed(2);
+        }
+    }
+    else {
+        info += "Phuong trinh co nghiem: x= "+frac("c/b").outerHTML +" = "+ frac(`${-c}/${b}`).outerHTML +" =  " + (-c / b).toFixed(2);
+        //console.log("Phuong trinh co nghiem: x= -c/b = %d/%d = %f", -c, b, (-c / b).toFixed(2));
+    }
+    document.getElementById("kq_pt2").innerHTML = info;
+}
+function TinhPhanSo(){
+    var input = document.getElementById('tinh_phanso').value;
+    let p_tag = document.getElementById('tinhphanso');
+    operator = input.match(/([+\-*:])/)[0];
+    a = input.split(operator)[0]
+    b = input.split(operator)[1]
+    a = a.split('/');
+    b = b.split('/');
+    tu_a  = Number(a[0]);
+    mau_a = Number(a[1]);
+    tu_b = Number(b[0]);
+    mau_b = Number(b[1]);
+    bcnn = BCNN(mau_a,mau_b);
+    if(operator.length > 0){
+        switch (operator){
+            case '+':                
+                b1 ="<br>Mẫu số chung là: " + bcnn;
+                thuaso_a = bcnn;
+                thuaso_b = bcnn;
+                b2 = "<br>Quy đồng 2 phân số:" + frac(`${tu_a}*(${thuaso_a})/${mau_a}*(${thuaso_a})`).outerHTML + '+' + frac(`${tu_b}*(${thuaso_b})/${mau_b}*(${thuaso_b})`).outerHTML;
+                kq = b1+b2+"<br>Kết quả là: " + frac(`${tu_a*thuaso_a+tu_b*thuaso_b}/${mau_a*thuaso_a}`).outerHTML;                
+                break;
+            case '-':
+                b1 ="<br>Mẫu số chung là: " + bcnn;
+                thuaso_a = bcnn;
+                thuaso_b = bcnn;
+                b2 = "<br>Quy đồng 2 phân số:" + frac(`${tu_a}*(${thuaso_a})/${mau_a}*(${thuaso_a})`).outerHTML + '-' + frac(`${tu_b}*(${thuaso_b})/${mau_b}*(${thuaso_b})`).outerHTML;
+                kq = b1 + b2 +"\nKết quả là: " + frac(`${tu_a*thuaso_a-tu_b*thuaso_b}/${mau_a*thuaso_a}`).outerHTML;
+                break;
+            case '*':
+                kq = "<br>Kết quả là: " +frac(`${tu_a}*${tu_b}/${mau_a}*${mau_b}`).outerHTML +frac(`${tu_a*tu_b}/${mau_a*mau_b}`).outerHTML;
+                break;
+            case ':':
+                kq = "<br>Kết quả là: " + frac(`${tu_a}*${mau_b}/${tu_b}*${mau_a}`).outerHTML + frac(`${tu_a/mau_b}/${tu_b*mau_a}`).outerHTML;
+                break;
+        }
+        
+    }
+
+    p_tag.innerHTML ="Giải:" +  kq;
+}
