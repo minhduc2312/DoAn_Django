@@ -25,7 +25,7 @@ class GiaitoanForm(forms.Form):
             "PHPSESSID": r.headers["Set-Cookie"].split("=")[1].split(";")[0],
         }
 
-        params["lang"] = "en"
+        params["lang"] = "vi"
 
         response = requests.get("https://www.cymath.com/ajax/get_steps.php",headers=headers, params=params, cookies=cookies)
         answer = response.text

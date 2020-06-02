@@ -34,7 +34,7 @@
 
 <body>
     <div class="container">
-        
+        <a href="/"><img class="logo" src="../../static/resources-index/img/Logo.jpg" alt="Logo"></a>
         <div class="row">            
             <div class="col-lg-4">
                 <h1>Lớp 6</h1>
@@ -56,6 +56,14 @@
                 <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
                     
                     <a id="lop7" href="#tab4" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab4"
+                        aria-selected="false">
+                        <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
+                    </a>
+                </div>
+                <h1>Lớp 9</h1>
+                <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
+                    
+                    <a id="lop9" href="#tab5" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab5"
                         aria-selected="false">
                         <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
                     </a>
@@ -792,16 +800,20 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab5" role="tabpanel" aria-labelledby="tab5">
+                        <div class="accordion" id="accordion-tab-5">                            
                             <div class="card">
-                                <div class="card-header" id="accordion-tab-4-heading-4">
+                                <div class="card-header" id="accordion-tab-5-heading-1">
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
-                                            data-target="#accordion-tab-4-content-4" aria-expanded="false"
-                                            aria-controls="accordion-tab-4-content-4">Dạng 4: Giải phương trình bậc 2 một ẩn</button>
+                                            data-target="#accordion-tab-5-content-1" aria-expanded="false"
+                                            aria-controls="accordion-tab-5-content-1">Dạng 1: Giải phương trình bậc 2 một ẩn</button>
                                     </h5>
                                 </div>
-                                <div class="collapse" id="accordion-tab-4-content-4"
-                                    aria-labelledby="accordion-tab-4-heading-4" data-parent="#accordion-tab-4">
+                                <div class="collapse" id="accordion-tab-5-content-1"
+                                    aria-labelledby="accordion-tab-5-heading-1" data-parent="#accordion-tab-5">
                                     <div class="card-body">
                                         <p>Nhập pt bậc 2:</p>
                                         <input type="text" id="da" placeholder="Input pt dau vao">
@@ -858,6 +870,11 @@
         $(document).ready(function(){
             $('#lop7').click(function(){
                 $('#lop7').removeClass('active')
+            })                         
+        })
+        $(document).ready(function(){
+            $('#lop9').click(function(){
+                $('#lop9').removeClass('active')
             })                         
         })
     </script>

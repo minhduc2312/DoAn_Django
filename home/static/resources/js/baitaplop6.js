@@ -860,7 +860,6 @@ function giaiPTB2(){
         }
         else {
             num = arrOperator[i].concat(arrNumber[i]); //hệ số c
-            console.log(num + " ");
             c += Number(num);
 
         }
@@ -904,10 +903,11 @@ function giaiPTB2(){
             //text = "Delta = 0: Phuong trinh co nghiem kep: x1 = x2 = -b/a = -("+ b +")/2*" + a + " = " + (-b/(2*a).toFixed(2));
         }
         else {
-            x1 = (-b + Math.sqrt(delta)) / 2 * a;
-            x2 = (-b - Math.sqrt(delta)) / 2 * a;
-            y2=frac(`${-b}-&radic;${delta}/${2*a}`).outerHTML;
+            x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            x2 = (-b - Math.sqrt(delta)) / (2 * a);
             y1=frac(`${-b}+&radic;${delta}/${2*a}`).outerHTML;
+            y2=frac(`${-b}-&radic;${delta}/${2*a}`).outerHTML;
+            
             info += " => Delta > 0: Phuong trinh co 2 nghiem phan biet x1 = "+ y1 +" = " + x1.toFixed(2) + ", x2 = "+ y2 +" = " + x2.toFixed(2);
             //console.log("Delta > 0: Phuong trinh co 2 nghiem phan biet x1= %f, x2= %f", x1.toFixed(2), x2.toFixed(2));
             //text = "Delta > 0: Phuong trinh co 2 nghiem phan biet x1= "+ x1.toFixed(2) +", x2= "+ x2.toFixed(2);
