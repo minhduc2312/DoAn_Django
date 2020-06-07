@@ -1,4 +1,4 @@
-.h4,h4{font-size:16px}
+.h4,h4{font-size:18px}
 .posabsolute{position:absolute!important}
 .displayblock{display:block!important}
 .video-container{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden}
@@ -100,7 +100,7 @@ select.form-control+.error{width:100%}
 .b-img{overflow:hidden}
 .b-img>img{transition:all .2s ease}
 .b-img>img:hover{transform:scale(1.1)}
-.content-fck{font-family:'Quicksand';float:left;width:100%}
+.content-fck{font-family: sans-serif;float:left;width:100%}
 .content-fck h3{font-size:18px;margin:5px 0}
 .cke_editable{line-height:1.3;padding:6px}
 .cke_editable ol,.cke_editable ul,.cke_editable dl,.content-fck ol,.content-fck ul,.content-fck dl{padding:0 0 0 20px}
@@ -339,7 +339,7 @@ footer .box-footer-top{width:100%;float:left;margin-left:4px;padding-top:20px}
 .box-detail .box-video{float:left;width:100%}
 .box-1{float:left;width:100%;position:relative;margin-bottom:20px}
 .box-1 .box-content{float:left;width:100%;position:relative;color:#333}
-.box-1 .box-content h3{font-size:18px;line-height:1.3;font-weight:500;margin:10px 0 5px}
+.box-1 .box-content h3{font-size:20px;line-height:1.3;font-weight:500;margin:10px 0 5px}
 .box-1 .box-content p{margin-bottom:5px}
 .box-1 .box-content iframe{width:100%;height:200px;min-height:200px}
 .box-title-1{position:relative;width:100%;float:left;margin-bottom:10px}
@@ -1062,4 +1062,6 @@ li .itemvideoright{border-bottom:1px solid #e1e1e1;padding-bottom:10px}
     transform: translate(-50%, 0);
     margin-top: 90px;
 }
+
+
 

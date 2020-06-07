@@ -48,51 +48,23 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương
                         3 - Phân số</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="">Khái niệm phân số</a>
-                        </li>
-                        <li>
-                            <a href="">Hai phân số bằng nhau </a>
-                        </li>
-                        <li>
-                            <a href="">Tính chất cơ bản của phân số</a>
-                        </li>
-                        <li>
-                            <a href="">Rút gọn phân số</a>
-                        </li>
-                        <li>
-                            <a href="">Quy đồng mẫu nhiều phân số</a>
-                        </li>
-                        <li>
-                            <a href="">So sánh phân số</a>
-                        </li>
-                        <li>
-                            <a href="">Phép cộng phân số cùng mẫu, không cùng mẫu</a>
-                        </li>
-                        <li>
-                            <a href="#bai35">Tính chất cơ bản của phép cộng phân số</a>
-                        </li>
-                        <li>
-                            <a href="#bai36">Số đối, phép trừ phân số</a>
-                        </li>
-                        <li>
-                            <a href="#bai37">Phép nhân phân số</a>
-                        </li>
-                        <li>
-                            <a href="#bai38">Tính chất cơ bản của phép nhân phân số</a>
-                        </li>
-                        <li>
-                            <a href="#bai39">Số nghịch đảo, phép chia phân số</a>
-                        </li>
-                        <li>
-                            <a href="#bai40">Hỗn số. Số thập phân. Phần trăm</a>
-                        </li>
-                        <li>
-                            <a href="#bai41">Các bài toán liên quan đến phân số</a>
-                        </li>
-                        <li>
-                            <a href="#bai42">Biểu đồ cột, biểu đồ vuông, biểu đồ hình quạt</a>
-                        </li>
+                        <li><a href="#bai">Bài 1: Mở rộng khái niệm về phân số</a></li>
+                        <li><a href="#bai">Bài 2: Phân số bằng nhau</a></li>
+                        <li><a href="#bai">Bài 3: Tính chất cơ bản của phân số</a></li>
+                        <li><a href="#bai">Bài 4: Rút gọn phân số</a></li>
+                        <li><a href="#bai">Bài 5: Quy đồng mẫu số nhiều phân số</a></li>
+                        <li><a href="#bai">Bài 6: So sánh phân số</a></li>
+                        <li><a href="#bai">Bài 7: Phép cộng phân số</a></li>
+                        <li><a href="#bai">Bài 8: Tính chất cơ bản của phép cộng phân số</a></li>
+                        <li><a href="#bai">Bài 9: Phép trừ phân số</a></li>
+                        <li><a href="#bai">Bài 10: Phép nhân phân số</a></li>
+                        <li><a href="#bai">Bài 11: Tính chất cơ bản của phép nhân phân số</a></li>
+                        <li><a href="#bai">Bài 12: Phép chia phân số</a></li>
+                        <li><a href="#bai">Bài 13: Hỗn số Số thập phân và phần trăm</a></li>
+                        <li><a href="#bai">Bài 14: Tìm giá trị phân số của một số cho trước</a></li>
+                        <li><a href="#bai">Bài 15: Tìm một số biết giá trị một phân số của nó</a></li>
+                        <li><a href="#bai">Bài 16: Tìm tỉ số của hai số</a></li>
+                        <li><a href="#bai">Bài 17: Biểu đồ phần trăm</a></li>
                     </ul>
                 </li>
                 <li >
@@ -213,7 +185,7 @@
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
     for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan6/chuong3/bai"+(i+1);
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan6/chuong3/bai"+(i+1);
     }
 
 

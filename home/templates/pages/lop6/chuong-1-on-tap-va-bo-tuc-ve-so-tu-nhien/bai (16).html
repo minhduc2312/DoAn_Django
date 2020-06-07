@@ -1,6 +1,7 @@
 {% extends "pages/lop6/chuong-1-on-tap-va-bo-tuc-ve-so-tu-nhien/base-lop6-chuong1.html" %}
 {% block title %}Toán 6 Bài 16: Ước chung và bội chung{% endblock %}
 {% block content %}
+{% verbatim %}
 <section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 6 Bài 16: Ước chung và bội chung</h1></div></section>
 <section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
 <br/>
@@ -43,5 +44,43 @@
 <p><strong>Ví dụ 4: </strong></p>
 <p>\(\begin{array}{l}84 = {2^2}.3.7\\140 = {2^2}.5.7\\360 = {2^3}{.3^2}.5\end{array}\)</p>
 <p>\(BCNN = {2^3}{.3^2}.5.7 = 2520.\)</p> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div class="box-content content-fck">
+<p><strong>Bài 1:</strong> Tìm số tự nhiên A có bốn chữ số sao cho đó chia cho 131 thì dư 112, chia cho 132 thì dư 97 nhưng chia hết cho 99.</p>
+<p><em><strong>Giải</strong></em></p>
+<p>Theo đề bài, ta có: A = 131p + 112 = 132q + 97</p>
+<p>Hay 131p = 132q – 15 = 131q + (q – 15)</p>
+<p>\( \Rightarrow q - 15\,\,\, \vdots \,\,\,131\,\, \Rightarrow \,\,q = 131x + 15\,\,(x \in \mathbb{N})\)</p>
+<p>mà  A = 132q + 97 = 132. (131x + 15) = 132 .131x + 1980</p>
+<p>Vì A có bốn chữ số nên x = 0 và 1980 : 99 = 20</p>
+<p>Vậy số cần tìm là A = 1980.</p>
+<hr/>
+<p><strong>Bài 2:</strong> Cho a = 123456789; b=987654321.</p>
+<p>a) Tìm ƯCLN của ( a; b)</p>
+<p>b) Tìm số dư trong phép chia BCNN (a; b) cho 11.</p>
+<p><em><strong>Giải</strong></em></p>
+<p>a.</p>
+<p>\(a\,\,\, \vdots \,\,\,9\) và \(b\,\,\, \vdots \,\,\,9\) (vì tổng các chữ số của nó chia hết 9)</p>
+<p>Mặt khác b – 8a = 9 nên nếu ƯC (a; b) = d thì \(9\,\, \vdots \,\,d\)</p>
+<p>Vậy mọi ƯC của a, b đều là ƯC của 9 hay 9 = ƯCLN (a; b)</p>
+<p>b.</p>
+<p>Vì \(BCNN(a;b) = \frac{{a.b}}{{UCLN(a;b)}} = \frac{{a.b}}{9} = \frac{a}{9}.b\)</p>
+<p>Nhưng \(\frac{a}{9} = 11m + 3;\,\,\frac{b}{9} = 11n\,\, + 5.\)</p>
+<p>Vậy BCNN (a;b) = 11p + 4</p>
+<p>Vậy số dư cần tìm là 4.</p>
+<hr/>
+<p><strong>Bài 3:</strong></p>
+<p>a. Tìm \(a \in {\mathbb{N}^*}\), biết \(a\,\, \vdots \,\,\,378,\,\,a\,\, \vdots \,\,594.\)</p>
+<p>b. Tìm \(b \in {\mathbb{N}^*}\), biết \(112\,\,\, \vdots \,\,\,b;\,\,280\,\, \vdots \,\,\,b.\)</p>
+<p><em><strong>Giải</strong></em></p>
+<p>a. \(a\,\, \vdots \,\,\,378,\,\,a\,\, \vdots \,\,594\,\, \Rightarrow \,\,a\,\, = BCNN\,\,(378;\,\,594)\)</p>
+<p>\(378 = {2.3^3}.7,\,\,594\,\, = \,{2.3^3}.11\)</p>
+<p>Vậy a = BCNN(378; 594)</p>
+<p>b. \(112\,\, \vdots \,\,b,\,\,280\,\, \vdots \,\,b\,\, \Rightarrow \,\) b = ƯCLN (112; 280)</p>
+<p>\(112 = {2^4}.7,\,\,280\,\, = \,{2^3}.5.7\)</p>
+<p>Vậy b = WCLN(112; 280) = \({2^3}.7 = 56.\)             </p> </div>
 </div></div></div></section>
+{% endverbatim %}
 {% endblock %}

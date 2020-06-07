@@ -1,6 +1,7 @@
 {% extends "pages/lop6/chuong-1-on-tap-va-bo-tuc-ve-so-tu-nhien/base-lop6-chuong1.html" %}
 {% block title %}Toán 6 Bài 17: Ước chung lớn nhất{% endblock %}
 {% block content %}
+{% verbatim %}
 <section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 6 Bài 17: Ước chung lớn nhất</h1></div></section>
 <section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
 <br/>
@@ -99,5 +100,47 @@
 <p>* Lấy 12 chia cho 4, ta được:</p>
 <p>12 = 3 . 4 + 0</p>
 <p>Vậy, ƯCLN(124, 16) =  4</p> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div class="box-content content-fck">
+<p><strong>Bài 1:</strong> Trong đợt tổng kết cuối năm, có 135 quyển vở, 80 thước kẻ, 169 bút bi. Cô giáo chia thành các phần thưởng đến nhau, mỗi phần thưởng gồm cả ba loại. Sau khi chia, còn thừa 15 quyển vở, 8 thước kẻ và 1 bút bi không đủ chia vào các phần thưởng. Tính xem có bao nhiêu phần thưởng và mỗi phần thưởng có bao nhiêu quyển vở, bao nhiêu thước kẻ, bao nhiêu bút bi?</p>
+<p><strong><em>Giải</em></strong></p>
+<p>Giả sử a là số phần thưởng.</p>
+<p>Ta có:</p>
+<p>Số quyển vở đã chia: 135 – 15 = 120.</p>
+<p>Số thước kẻ đã chia: 80 – 8 = 72.</p>
+<p>Số bút bi đã chia: 169 – 1 = 168.</p>
+<p>Do đó, a = ƯC(72, 120, 168) và a &gt; 15.</p>
+<p>\( \Rightarrow a = 24.\)</p>
+<p>Vậy, có 24 phần thưởng. Mỗi phần thưởng có 5 quyển vở, 3 thước kẻ và 7 bút bi.</p>
+<hr/>
+<p><strong>Bài 2:</strong> Tìm giao của hai tập hợp A và B biết:</p>
+<p>a. A = {1, 4, 6} và B = {1, 2, 3, 5, 6, 7}</p>
+<p>b. A là tập hợp các số tự nhiên chẵn và B là tập hợp các số tự nhiên lẻ.</p>
+<p><strong><em>Giải</em></strong></p>
+<p>a. Ta có:</p>
+<p>A = {1, 4, 6} và B = {1, 2, 3, 5, 6, 7}</p>
+<p>Vậy \(A \cap B = {\rm{\{ }}1,6\} \)</p>
+<p>b. Ta có:</p>
+<p>A là tập hợp các số tự nhiên chẵn và B là tập hợp các số tự nhiên lẻ.</p>
+<p>Vậy, \(A \cap B = \,\emptyset \)</p>
+<hr/>
+<p><strong>Bài 3:</strong> Cho a và b là hai số nguyên tố cùng nhau. Chứng minh rằng:</p>
+<p>A = 8a + 3 và B = 5a + 2</p>
+<p>là hai số nguyên tố cùng nhau.</p>
+<p><strong><em>Giải</em></strong></p>
+<p>Gọi d là ước chung của hai số A và B.</p>
+<p>Do đó:</p>
+<p>\((8a + 3b) \vdots d\) và \((5a + 2b) \vdots d \Rightarrow 5(8a + 3b) \vdots d\) và \(8(5a + 2b) \vdots d\)</p>
+<p>\( \Rightarrow 8(5a + 2b) - 5(8a + 3b)\,\, \vdots \,\,d \Rightarrow \,b\,\, \vdots \,\,d\)             (1)</p>
+<p>Lại có:</p>
+<p>\(2(8a + 3b) \vdots d\) và \(3(5a + 2b)\,\, \vdots \,\,d\)</p>
+<p>\( \Rightarrow 2(8a + 3b) - 3(5a + 2b)\,\, \vdots \,\,d\, \Rightarrow a\,\, \vdots \,\,d\)        (2)</p>
+<p>Từ (1) và (2) suy ra:</p>
+<p>d = ƯC(a, b)</p>
+<p>Mà (a,b) = 1 \( \Rightarrow \) d = 1 \( \Rightarrow \) ƯC(8a + 3b, 5a + 2b) = 1.</p>
+<p>Vậy, hai số A = 8a + 3b và B = 5a + 2b là hai số nguyên tố cùng nhau</p> </div>
 </div></div></div></section>
+{% endverbatim %}
 {% endblock %}

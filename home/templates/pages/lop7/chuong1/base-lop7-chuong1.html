@@ -45,39 +45,18 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 1 - Số hữu tỉ, số thực</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#bai1">Tập hợp Q các số hữu tỉ</a>
-                        </li>
-                        <li>
-                            <a href="#bai2">Cộng trừ số hữu tỉ</a>
-                        </li>
-                        <li>
-                            <a href="#bai3">Nhân, chia số hữu tỉ</a>
-                        </li>
-                        <li>
-                            <a href="#bai4">Giá trị tuyệt đối số hữu tỉ</a>
-                        </li>
-                        <li>
-                            <a href="#bai5">Cộng, trừ, nhân, chia số thập phân</a>
-                        </li>
-                        <li>
-                            <a href="#bai6">Định nghĩ, tính chất của tỉ lệ thức</a>
-                        </li>
-                        <li>
-                            <a href="#bai7">Tính chất của dãy tỉ số bằng nhau</a>
-                        </li>
-                        <li>
-                            <a href="#bai8">Số thập phân hữu hạn, vô hạn tuần hoàn</a>
-                        </li>
-                        <li>
-                            <a href="#bai9">Quy ước làm tròn số</a>
-                        </li>
-                        <li>
-                            <a href="#bai10">Khái niệm số vô tỉ căn bậc hai</a>
-                        </li>
-                        <li>
-                            <a href="#bai11">Khái niệm số thực, trục số thực</a>
-                        </li>
+                        <li><a href="#bai">Bài 1: Tập hợp Q các số hữu tỉ</a></li>
+                        <li><a href="#bai">Bài 2: Cộng, trừ số hữu tỉ</a></li>
+                        <li><a href="#bai">Bài 3: Nhân, chia số hữu tỉ</a></li>
+                        <li><a href="#bai">Bài 4: Giá trị tuyệt đối của một số hữu tỉ. Cộng, trừ, nhân, chia số thập phân</a></li>
+                        <li><a href="#bai">Bài 5: Lũy thừa của một số hữu tỉ</a></li>
+                        <li><a href="#bai">Bài 6: Lũy thừa của một số hữu tỉ (tiếp)</a></li>
+                        <li><a href="#bai">Bài 7: Tỉ lệ thức</a></li>
+                        <li><a href="#bai">Bài 8: Tính chất của dãy tỉ số bằng nhau</a></li>
+                        <li><a href="#bai">Bài 9: Số thập phân hữu hạn. Số thập phân vô hạn tuần hoàn</a></li>
+                        <li><a href="#bai">Bài 10: Làm tròn số</a></li>
+                        <li><a href="#bai">Bài 11: Số vô tỉ. Khái niệm về căn bậc hai</a></li>
+                        <li><a href="#bai">Bài 12: Số thực</a></li>
                     </ul>
                     <li >
                         <a href="toan6/giaitoan">Giải toán</a>                   
@@ -199,7 +178,7 @@
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
     for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan7/chuong1/bai"+(i+1);
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan7/chuong1/bai"+(i+1);
     }
 
     

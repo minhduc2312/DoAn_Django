@@ -258,6 +258,9 @@ def toan7_chuong3_bai3(request):
 def toan7_chuong3_bai4(request):
     return render(request, 'pages/lop7/chuong3/bai (4).html')
 
+def toan7_chuong3_bai5(request):
+    return render(request, 'pages/lop7/chuong3/bai (5).html')
+
 def toan7_chuong4_bai1(request):
     return render(request, 'pages/lop7/chuong4/bai (1).html')
 
@@ -465,14 +468,24 @@ def toan9_chuong4_bai7(request):
 def toan9_chuong4_bai8(request):
     return render(request, 'pages/lop9/chuong4/bai (8).html')
 
+def toan9_chuong1_ontap(request):
+    return render(request, 'pages/lop9/chuong1/bai (9).html')
+
+def toan9_chuong2_ontap(request):
+    return render(request, 'pages/lop9/chuong2/bai (6).html')
+
+def toan9_chuong3_ontap(request):
+    return render(request, 'pages/lop9/chuong3/bai (7).html')
+
+def toan9_chuong4_ontap(request):
+    return render(request, 'pages/lop9/chuong4/bai (9).html')
+
 
 def answer(request):
     if request.method == 'GET':
         q = request.GET.get('q')
         q = str(q).replace(' ', '')
-        debai = q
-
-        
+        debai = q       
 
         headers = {
             "DNT": "1",

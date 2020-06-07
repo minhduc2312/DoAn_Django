@@ -49,33 +49,18 @@
                 <li class = "active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 2 - Phân thức đại số</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Định nghĩa phân thức đại số</a>
-                        </li>
-                        <li>
-                            <a href="#">Tính chất cơ bản của phân thức, quy tắc đổi dấu</a>
-                        </li>
-                        <li>
-                            <a href="#">Quy tắc rút gọn phân thức</a>
-                        </li>
-                        <li>
-                            <a href="#">Tìm mẫu chung, quy đồng mẫu thức</a>
-                        </li>
-                        <li>
-                            <a href="#">Phép cộng các phân thức đại số</a>
-                        </li>
-                        <li>
-                            <a href="#">Phép trừ các phân thức đại số</a>
-                        </li>
-                        <li>
-                            <a href="#">Phép nhân các phân thức đại số</a>
-                        </li>
-                        <li>
-                            <a href="#">Biểu thức hữu tỷ.  Giá trị của phân thức</a>
-                        </li>
+                        <li><a href="#bai">Bài 1: Phân thức đại số</a></li>
+                        <li><a href="#bai">Bài 2: Tính chất cơ bản của phân thức</a></li>
+                        <li><a href="#bai">Bài 3: Rút gọn phân thức</a></li>
+                        <li><a href="#bai">Bài 4: Quy đồng mẫu thức nhiều phân thức</a></li>
+                        <li><a href="#bai">Bài 5: Phép cộng các phân thức đại số</a></li>
+                        <li><a href="#bai">Bài 6: Phép trừ các phân thức đại số</a></li>
+                        <li><a href="#bai">Bài 7: Phép nhân các phân thức đại số</a></li>
+                        <li><a href="#bai">Bài 8: Phép chia các phân thức đại số</a></li>
+                        <li><a href="#bai">Bài 9: Biến đổi các biểu thức hữu tỉ và Giá trị của phân thức</a></li>
                     </ul>
                     <li >
-                        <a href="toan8/giaitoan">Giải toán</a>                   
+                        <a href="toan6/giaitoan">Giải toán</a>                   
                     </li>  
                 </li>                                                     
             </ul>
@@ -193,7 +178,7 @@
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
     for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan8/chuong2/bai"+(i+1);
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan8/chuong2/bai"+(i+1);
     }
 
     

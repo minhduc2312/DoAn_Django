@@ -48,21 +48,12 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 2 - Hàm số bậc nhất</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Nhắc lại, bổ sung các khái niệm hàm số</a>
-                        </li>
-                        <li>
-                            <a href="#">Định nghĩa, tính chất hàm số bậc nhất</a>
-                        </li>
-                        <li>
-                            <a href="#">Đồ thi hàm số y=ax+b (a#0)</a>
-                        </li>
-                        <li>
-                            <a href="#">Đường thẳng song song và đường thẳng cắt nhau</a>
-                        </li>
-                        <li>
-                            <a href="#">Hệ số góc của đường thẳng y= ax+b (a#0)</a>
-                        </li>
+                        <li><a href="#bai">Bài 1: Nhắc lại và bổ sung các khái niệm về hàm số</a></li>
+                        <li><a href="#bai">Bài 2: Hàm số bậc nhất</a></li>
+                        <li><a href="#bai">Bài 3: Đồ thị của hàm số y = ax + b (a ≠ 0)</a></li>
+                        <li><a href="#bai">Bài 4: Đường thẳng song song và đường thẳng cắt nhau</a></li>
+                        <li><a href="#bai">Bài 5: Hệ số góc của đường thẳng y = ax + b (a ≠ 0)</a></li>
+                        <li><a href="/toan9/chuong2/on-tap">Ôn tập chương 2 Hàm số bậc nhất</a></li>                        
                     </ul>
                     <li >
                         <a href="toan6/giaitoan">Giải toán</a>                   
@@ -183,8 +174,8 @@
 <script type="text/javascript">
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
-    for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan9/chuong2/bai"+(i+1);
+    for(let i=0;i<li_tag.length -1;i++){
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan9/chuong2/bai"+(i+1);
     }
 
     

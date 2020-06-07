@@ -3,7 +3,7 @@ import pandas
 import requests
 
 # các bạn thay link của trang mình cần lấy dữ liệu tại đây
-url = 'https://hoc247.net/chuong-4-phuong-trinh-bac-hai-mot-an-ct47.html'
+url = 'https://hoc247.net/chuong-1-can-bac-hai-can-bac-ba-ct44.html'
 
 def get_page_content(url):
     page = requests.get(url, headers={"Accept-Language": "en-US"})
@@ -20,16 +20,18 @@ for url_bai in link:
     soup1 = get_page_content(str(url_bai))
     title = soup1.find('h1', class_='cate-h1').text #tên của bài học
     detail = soup1.find('div', class_="box-content")# mô tả
-    content = soup1.findAll('div', class_="box-1")[2] # nội dung
+    content1 = soup1.findAll('div', class_="box-1")[2]
+    content2 =  soup1.findAll('div', class_="box-1")[3]# nội dung
+    content = str(content1) + "\n" + str(content2)
     bai = "<section class=\"wrapbanner\"><div class=\"container\"><h1 class=\"cate-h1\">" + str(title) + "</h1></div></section>" #add tên bài trong html
     noidung = "<section class=\"main\"><div class=\"container\"><div class=\"detail-col-left\"><div class=\"box-1\">" + str(detail) + "</div>" + str(content) + "</div></div></section>"# add nội dung vào html
-    extend  = "{% extends \"pages/lop9/chuong4/base-lop9-chuong4.html\" %}"#extend của django
+    extend  = "{% extends \"pages/lop6/chuong-1-on-tap-va-bo-tuc-ve-so-tu-nhien/base-lop6-chuong1.html\" %}"#extend của django
     titles = "{% block title %}"+title+"{% endblock %}"#title trong django
     block_content = "{% block content %}\n{% verbatim %}\n" + bai + "\n" + noidung +"\n{% endverbatim %}\n{% endblock %}"
     size = "https://hoc247.net/toan-6/"
     tenbai = url_bai[len(size):-10]
     try:
-        f = open("templates/pages/lop9/chuong4/"+ tenbai+".html", mode='w', encoding='utf-8')
+        f = open("templates/pages/lop6/chuong-1-on-tap-va-bo-tuc-ve-so-tu-nhien/"+ tenbai+".html", mode='w', encoding='utf-8')
         f.write(extend + "\n" + titles + "\n" + block_content)        
     finally:
         f.close()

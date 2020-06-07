@@ -49,39 +49,19 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 2
                         - Số nguyên</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#bai19">Làm quen với số nguyên âm</a>
-                        </li>
-                        <li>
-                            <a href="#bai20">Tập hợp các số nguyên, số đối</a>
-                        </li>
-                        <li>
-                            <a href="#bai21">So sánh số nguyên, giá trị tuyệt đối</a>
-                        </li>
-                        <li>
-                            <a href="#bai22">Cộng hai số nguyên cùng dấu, khác dấu</a>
-                        </li>
-                        <li>
-                            <a href="#bai23">Tính chất của phép cộng các số nguyên</a>
-                        </li>
-                        <li>
-                            <a href="#bai24">Phép trừ hai số nguyên</a>
-                        </li>
-                        <li>
-                            <a href="#bai25">Quy tắc dấu ngoặc, tổng đại số</a>
-                        </li>
-                        <li>
-                            <a href="#bai26">Tính chất của đẳng thức, quy tắc chuyển vế</a>
-                        </li>
-                        <li>
-                            <a href="#bai27">Nhân hai số nguyên khác dấu, cùng dấu</a>
-                        </li>
-                        <li>
-                            <a href="#bai28">Tính chất của phép nhân</a>
-                        </li>
-                        <li>
-                            <a href="#bai29">Bội và ước của một số nguyên</a>
-                        </li>
+                        <li><a href="#bai">Bài 1: Làm quen với số nguyên âm</a></li>
+                        <li><a href="#bai">Bài 2: Tập hợp các số nguyên</a></li>
+                        <li><a href="#bai">Bài 3: Thứ tự trong tập hợp các số nguyên</a></li>
+                        <li><a href="#bai">Bài 4: Cộng hai số nguyên cùng dấu</a></li>
+                        <li><a href="#bai">Bài 5: Cộng hai số nguyên khác dấu</a></li>
+                        <li><a href="#bai">Bài 6: Tính chất của phép cộng các số nguyên</a></li>
+                        <li><a href="#bai">Bài 7: Phép trừ hai số nguyên</a></li>
+                        <li><a href="#bai">Bài 8: Quy tắc dấu ngoặc</a></li>
+                        <li><a href="#bai">Bài 9: Quy tắc chuyển vế</a></li>
+                        <li><a href="#bai">Bài 10: Nhân hai số nguyên khác dấu</a></li>
+                        <li><a href="#bai">Bài 11: Nhân hai số nguyên cùng dấu</a></li>
+                        <li><a href="#bai">Bài 12: Tính chất của phép nhân</a></li>
+                        <li><a href="#bai">Bài 13: Bội và ước của một số nguyên</a></li>
                     </ul>
                 </li>
 
@@ -204,7 +184,7 @@
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
     for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan6/chuong2/bai"+(i+1);
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan6/chuong2/bai"+(i+1);
     }
 
     
