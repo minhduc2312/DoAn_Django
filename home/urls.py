@@ -81,6 +81,7 @@ urlpatterns = [
     path('toan7/chuong3/bai2/',views.toan7_chuong3_bai2),
     path('toan7/chuong3/bai3/',views.toan7_chuong3_bai3),
     path('toan7/chuong3/bai4/',views.toan7_chuong3_bai4),
+    path('toan7/chuong3/bai5/',views.toan7_chuong3_bai5),
     path('toan7/chuong4/',views.toan7_chuong4),
     path('toan7/chuong4/bai1/',views.toan7_chuong4_bai1),
     path('toan7/chuong4/bai2/',views.toan7_chuong4_bai2),
@@ -159,5 +160,9 @@ urlpatterns = [
     path('toan9/chuong4/bai6/',views.toan9_chuong4_bai6),
     path('toan9/chuong4/bai7/',views.toan9_chuong4_bai7),
     path('toan9/chuong4/bai8/',views.toan9_chuong4_bai8),
+    path('toan9/chuong1/on-tap/',views.toan9_chuong1_ontap),
+    path('toan9/chuong2/on-tap/',views.toan9_chuong2_ontap),
+    path('toan9/chuong3/on-tap/',views.toan9_chuong3_ontap),
+    path('toan9/chuong4/on-tap/',views.toan9_chuong4_ontap),
     path('answer/',views.answer)
 ]

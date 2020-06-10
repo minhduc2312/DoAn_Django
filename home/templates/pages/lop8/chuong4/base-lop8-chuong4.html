@@ -48,26 +48,16 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 4 - Bất phương trình bậc nhất một ẩn</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Khái niệm bất đẳng thức, thứ tự và phép cộng</a>
-                        </li>
-                        <li>
-                            <a href="#">Liên hệ giữa thứ tự và phép nhân</a>
-                        </li>
-                        <li>
-                            <a href="#">Bất phương trình một ẩn, bất phương trình tương đương</a>
-                        </li>
-                        <li>
-                            <a href="#">Bất phương trình bậc nhất một ẩn</a>
-                        </li>
-                        <li>
-                            <a href="#">Cách giải phương trình chứa dấu giá trị tuyệt đối</a>
-                        </li>
+                        <li><a href="#bai">Bài 1: Liên hệ giữa thứ tự và phép cộng</a></li>
+                        <li><a href="#bai">Bài 2: Liên hệ giữa thứ tự và phép nhân - Luyện tập</a></li>
+                        <li><a href="#bai">Bài 3: Bất phương trình một ẩn</a></li>
+                        <li><a href="#bai">Bài 4: Bất phương trình bậc nhất một ẩn - Luyện tập</a></li>
+                        <li><a href="#bai">Bài 5: Phương trình chứa dấu giá trị tuyệt đối</a></li>
                         
                     </ul>
                 </li>   
                 <li >
-                        <a href="toan8/giaitoan">Giải toán</a>                   
+                        <a href="toan6/giaitoan">Giải toán</a>                   
                     </li>      
             </ul>
 
@@ -184,7 +174,7 @@
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
     for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan8/chuong4/bai"+(i+1);
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan8/chuong4/bai"+(i+1);
     }
 
     

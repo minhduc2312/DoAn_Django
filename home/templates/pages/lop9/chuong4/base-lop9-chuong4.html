@@ -48,27 +48,15 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 4 - Phương trình bậc hai một ẩn</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Hàm số y= ax^2 (a#0)</a>
-                        </li>
-                        <li>
-                            <a href="#">Đồ thị của hàm số y= ax^2 (a#0)</a>
-                        </li>
-                        <li>
-                            <a href="#">Phương trình bậc hai một ẩn ax^2+bx+c= 0 (a#0)</a>
-                        </li>
-                        <li>
-                            <a href="#">Công thức nghiệm của phương trình bậc hai ax^2+bx+c= 0 (a#0)</a>
-                        </li>
-                        <li>
-                            <a href="#">Hệ thức Vi-ét và ứng dụng</a>
-                        </li>
-                        <li>
-                            <a href="#">Phương trình quy về phương trình bậc hai</a>
-                        </li>
-                        <li>
-                            <a href="#">Giải toán bằng cách lập phương trình</a>
-                        </li>
+                        <li><a href="#bai">Bài 1: Hàm số y = ax^2 (a ≠ 0)</a></li>
+                        <li><a href="#bai">Bài 2: Đồ thị của hàm số y = ax^2 (a ≠ 0)</a></li>
+                        <li><a href="#bai">Bài 3: Phương trình bậc hai một ẩn</a></li>
+                        <li><a href="#bai">Bài 4: Công thức nghiệm của phương trình bậc hai</a></li>
+                        <li><a href="#bai">Bài 5: Công thức nghiệm thu gọn</a></li>
+                        <li><a href="#bai">Bài 6: Hệ thức Vi-ét và ứng dụng</a></li>
+                        <li><a href="#bai">Bài 7: Phương trình quy về phương trình bậc hai</a></li>
+                        <li><a href="#bai">Bài 8: Giải bài toán bằng cách lập phương trình</a></li>
+                        <li><a href="/toan9/chuong4/on-tap">Ôn tập chương 4 Phương trình bậc hai một ẩn</a></li>                        
                         
                     </ul>
                     <li >
@@ -190,8 +178,8 @@
 <script type="text/javascript">
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
-    for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan9/chuong4/bai"+(i+1);
+    for(let i=0;i<li_tag.length -1 ;i++){
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan9/chuong4/bai"+(i+1);
     }
 
     

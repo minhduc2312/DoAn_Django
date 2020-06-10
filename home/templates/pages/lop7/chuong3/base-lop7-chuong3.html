@@ -47,18 +47,11 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 3 - Thống kê</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#bai19">Thu thập sô liệu thống kê, tần số</a>
-                        </li>
-                        <li>
-                            <a href="#bai20">Bảng tần số và công dụng</a>
-                        </li>
-                        <li>
-                            <a href="#bai21">Khái niệm biểu đồ, tần suất</a>
-                        </li>
-                        <li>
-                            <a href="#bai22">Khái niệm, quy tắc tìm số trung bình cộng</a>
-                        </li>
+                        <li><a href="#bai">Bài 1: Thu thập số liệu thống kê, tần số - Luyện tập</a></li>
+                        <li><a href="#bai">Bài 2: Bảng</a></li>
+                        <li><a href="#bai">Bài 3: Biểu đồ - Luyện tập</a></li>
+                        <li><a href="#bai">Bài 4: Số trung bình cộng - Luyện tập</a></li>
+                        <li><a href="#bai">Ôn tập chương 3 Thống kê</a></li>
                     </ul>
                 </li>
                 <li >
@@ -180,7 +173,7 @@
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
     for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan7/chuong3/bai"+(i+1);
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan7/chuong3/bai"+(i+1);
     }
 
 </script>

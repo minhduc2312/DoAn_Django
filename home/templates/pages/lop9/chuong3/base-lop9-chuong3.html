@@ -48,21 +48,14 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 3 - Hệ hai phương trình bậc nhất một ẩn</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Phương trình bậc nhất hai ẩn</a>
-                        </li>
-                        <li>
-                            <a href="#">Hệ phương trình bậc nhất hai ẩn</a>
-                        </li>
-                        <li>
-                            <a href="#">Giải hệ phương trình bằng phương pháp thế</a>
-                        </li>
-                        <li>
-                            <a href="#">Giải hệ phương trình bằng phương pháp cộng đại số</a>
-                        </li>
-                        <li>
-                            <a href="#">Giải toán bằng cách lập hệ phương trình</a>
-                        </li>
+                        <li><a href="#bai">Bài 1: Phương trình bậc nhất hai ẩn</a></li>
+                        <li><a href="#bai">Bài 2: Hệ hai phương trình bậc nhất hai ẩn</a></li>
+                        <li><a href="#bai">Bài 3: Giải hệ phương trình bằng phương pháp thế</a></li>
+                        <li><a href="#bai">Bài 4: Giải hệ phương trình bằng phương pháp cộng đại số</a></li>
+                        <li><a href="#bai">Bài 5: Giải bài toán bằng cách lập hệ phương trình</a></li>
+                        <li><a href="#bai">Bài 6: Giải bài toán bằng cách lập hệ phương trình (Tiếp theo)</a></li>
+                        <li><a href="/toan9/chuong3/on-tap">Ôn tập chương 3 Hệ phương trình bậc nhất hai ẩn</a></li>
+                        
                     </ul>
                     <li >
                         <a href="toan6/giaitoan">Giải toán</a>                   
@@ -184,8 +177,8 @@
 <script type="text/javascript">
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
-    for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan9/chuong3/bai"+(i+1);
+    for(let i=0;i<li_tag.length-1 ;i++){
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan9/chuong3/bai"+(i+1);
     }
 
     

@@ -47,27 +47,13 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 2 - Hàm số và đồ thị</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#bai12">Công thức, tính chất đại lượng tỉ lệ thuận</a>
-                        </li>
-                        <li>
-                            <a href="#bai13">Một số bài toán về địa lượng tỉ lệ thuận</a>
-                        </li>
-                        <li>
-                            <a href="#bai14">Công thức, tính chất đại lượng tỉ lệ nghịch</a>
-                        </li>
-                        <li>
-                            <a href="#bai15">Một số bài toán về địa lượng tỉ lệ nghịch</a>
-                        </li>
-                        <li>
-                            <a href="#bai16">Khái niệm hàm số</a>
-                        </li>
-                        <li>
-                            <a href="#bai17">Mặt phẳng tọa độ, trục tung, trục hoành</a>
-                        </li>
-                        <li>
-                            <a href="#bai18">Khái niệm đồ thị hàm số y= ax (a#0)</a>
-                        </li>
+                        <li><a href="#bai">Bài 1: Đại lượng tỉ tệ thuận</a></li>
+                        <li><a href="#bai">Bài 2: Một số bài toán về đại lượng tỉ lệ thuận</a></li>
+                        <li><a href="#bai">Bài 3: Đại lượng tỉ lệ nghịch</a></li>
+                        <li><a href="#bai">Bài 4: Một số bài toán về đại lượng tỉ lệ nghịch</a></li>
+                        <li><a href="#bai">Bài 5: Hàm số</a></li>
+                        <li><a href="#bai">Bài 6: Mặt phẳng tọa độ</a></li>
+                        <li><a href="#bai">Bài 7: Đồ thị của hàm số y = ax (a ≠ 0)</a></li>
                     </ul>
                 </li>
                 
@@ -190,7 +176,7 @@
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
     for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan7/chuong2/bai"+(i+1);
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan7/chuong2/bai"+(i+1);
     }
 
 

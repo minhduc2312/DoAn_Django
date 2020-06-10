@@ -49,63 +49,24 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 1
                         - Ôn tập bổ túc về số tự nhiên</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#bai1">Tập hợp. Phần tử của tập hợp</a>
-                        </li>
-                        <li>
-                            <a href="#bai2">Tập hợp các số tự nhiên</a>
-                        </li>
-                        <li>
-                            <a href="#bai3">Ghi số tự nhiên</a>
-                        </li>
-                        <li>
-                            <a href="#bai4">Số phần tử của tập hợp. Tập hợp con</a>
-                        </li>
-                        <li>
-                            <a href="#bai5">Phép cộng và phép nhân</a>
-                        </li>
-                        <li>
-                            <a href="#bai6">Phép trừ và phép chia</a>
-                        </li>
-                        <li>
-                            <a href="#bai7">Lũy thừa với số mũ tự nhiên</a>
-                        </li>
-                        <li>
-                            <a href="#bai8">Chia hai lũy thừa cùng cơ số</a>
-                        </li>
-                        <li>
-                            <a href="#bai9">Thứ tự thực hiện phép tính</a>
-                        </li>
-                        <li>
-                            <a href="#bai10">Tính chất chia hết của một tổng</a>
-                        </li>
-                        <li>
-                            <a href="#bai11">Dấu hiệu chia hết cho 2 và 5</a>
-                        </li>
-                        <li>
-                            <a href="#bai12">Dấu hiệu chia hết cho 3 và 9</a>
-                        </li>
-                        <li>
-                            <a href="#bai13">Uớc và bội</a>
-                        </li>
-                        <li>
-                            <a href="#bai14">Số nguyên tố. Hợp số</a>
-                        </li>
-                        <li>
-                            <a href="#bai15">Phân tích một số ra thừa số nguyên tố</a>
-                        </li>
-                        <li>
-                            <a href="#bai16">Uớc chung và bội chung</a>
-                        </li>
-                        <li>
-                            <a href="#bai17">Uớc chung lớn nhất</a>
-                        </li>
-                        <li>
-                            <a href="#bai18">Bội chung nhỏ nhất</a>
-                        </li>          
-                        <li >
-                            <a href="toan6/giaitoan">Giải toán</a>                   
-                        </li>
+                        <li><a href="#bai">Bài 1: Tập hợp và phần tử của tập hợp</a></li>
+                        <li><a href="#bai">Bài 2: Tập hợp các số tự nhiên</a></li>
+                        <li><a href="#bai">Bài 3: Ghi số tự nhiên</a></li>
+                        <li><a href="#bai">Bài 4: Số phần tử của một tập hợp và tập hợp con</a></li>
+                        <li><a href="#bai">Bài 5: Phép cộng và phép nhân</a></li>
+                        <li><a href="#bai">Bài 6: Phép trừ và phép chia</a></li>
+                        <li><a href="#bai">Bài 7: Lũy thừa với số mũ tự nhiên và nhân hai lũy thừa cùng cơ số</a></li>
+                        <li><a href="#bai">Bài 8: Chia hai lũy thừa cùng cơ số</a></li>
+                        <li><a href="#bai">Bài 9: Thứ tự thực hiện các phép tính</a></li>
+                        <li><a href="#bai">Bài 10: Tính chất chia hết của một tổng</a></li>
+                        <li><a href="#bai">Bài 11: Dấu hiệu chia hết cho 2, cho 5</a></li>
+                        <li><a href="#bai">Bài 12: Dấu hiệu chia hết cho 3, cho 9</a></li>
+                        <li><a href="#bai">Bài 13: Ước và bội</a></li>
+                        <li><a href="#bai">Bài 14: Số nguyên tố, hợp số và bảng số nguyên tố</a></li>
+                        <li><a href="#bai">Bài 15: Phân tích một số ra thừa số nguyên tố</a></li>
+                        <li><a href="#bai">Bài 16: Ước chung và bội chung</a></li>
+                        <li><a href="#bai">Bài 17: Ước chung lớn nhất</a></li>
+                        <li><a href="#bai">Bài 18: Bội chung nhỏ nhất</a></li>
                     </ul>
                     <li >
                         <a href="toan6/giaitoan">Giải toán</a>                   
@@ -228,7 +189,7 @@
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
     for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan6/chuong1/bai"+(i+1);
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan6/chuong1/bai"+(i+1);
     }
     
 </script>

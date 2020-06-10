@@ -1,6 +1,7 @@
 {% extends "pages/lop6/chuong-1-on-tap-va-bo-tuc-ve-so-tu-nhien/base-lop6-chuong1.html" %}
 {% block title %}Toán 6 Bài 14: Số nguyên tố, hợp số và bảng số nguyên tố{% endblock %}
 {% block content %}
+{% verbatim %}
 <section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 6 Bài 14: Số nguyên tố, hợp số và bảng số nguyên tố</h1></div></section>
 <section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
 <br/>
@@ -106,5 +107,45 @@
 <p>1             2             3             4             5             6             7             10</p>
 <p>12           14           15           20           21           28           30           42</p>
 <p>53           60           70           84           105        140        210        420</p> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div class="box-content content-fck">
+<p><strong>Bài 1:</strong> Chứng minh rằng các số sau đây là hợp số:</p>
+<p>a. \({12^{11}} + {13^{17}} + {17^{19}}\)</p>
+<p>b. \(1 + {23^{23}} + {29^{29}} + {25^{125}}\)</p>
+<p>c. \({45^{25}} + {37^{15}}\)</p>
+<p>d. \({95^{354}} + {51^{25}}\)</p>
+<p><strong><em>Giải</em></strong></p>
+<p>Chứng minh rằng chữ số tận cùng trong luỹ thừa chia hết cho 2.</p>
+<p>a. Khi đó \({12^{11}} + {13^{17}} + {17^{19}}\) có chữ số tận cùng là 8</p>
+<p>b. Khi đó \(1 + {23^{23}} + {29^{29}} + {25^{125}}\) có chữ số tận cùng là 4</p>
+<p>c. Khi đó \({45^{25}} + {37^{15}}\) có chữ số tận cùng là 2</p>
+<p>d. Khi đó \({95^{354}} + {51^{25}}\)có chữ số tận cùng là 6.</p>
+<hr/>
+<p><strong>Bài 2:</strong> Trong một phép chia, số bị chia bằng 99, số dư bằng 8. Tìm số chia và thương.</p>
+<p><em><strong>Giải</strong></em></p>
+<p>Giả sử</p>
+<p>99 = a . x + 8 (với a là số chia, x là thương, a &gt; 8)</p>
+<p>\( \Rightarrow \) a . x = 91.</p>
+<p>Suy ra, a phải là ước của 91 và a &gt; 8</p>
+<p>Phân tích ra thừa số nguyên tố, ta được:</p>
+<p>91 = 13 . 7</p>
+<p>Vậy ta có hai đáp số</p>
+<p>* Số chia bằng 13, thương bẳng 7</p>
+<p>99 = 13 . 7 + 8</p>
+<p>* Số chia bằng 91, thương bằng 1</p>
+<p>99 = 91 .  1 + 8.</p>
+<hr/>
+<p><strong>Bài 3:</strong> Tìm số tự nhiên n thoả mãn: n, n + 2, n + 6 đều là số nguyên tố.</p>
+<p><em><strong>Giải</strong></em></p>
+<p>Từ giả thiết: n là số nguyên tố</p>
+<p>Suy ra:</p>
+<p>n = 3 hoặc n = 5</p>
+<p>Với n = 3 suy ra n + 6 = 3 + 6 = 9 (không phải là số nguyên tố)</p>
+<p>Với n = 5 ta được:</p>
+<p>n = 5 suy ra n + 2 = 7, n + 6 = 11 (đều là số nguyên tố)</p>
+<p>Vậy n = 5 thoả mãn.</p> </div>
 </div></div></div></section>
+{% endverbatim %}
 {% endblock %}

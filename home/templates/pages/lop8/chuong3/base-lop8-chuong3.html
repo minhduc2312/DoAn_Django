@@ -49,28 +49,17 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 3 - Phương trình bậc nhất một ẩn</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Mở đầu về phương trình</a>
-                        </li>
-                        <li>
-                            <a href="#">Phương trình bậc nhất một ẩn và cách giải</a>
-                        </li>
-                        <li>
-                            <a href="#">Phương trình đưa về dạng ax+b=0</a>
-                        </li>
-                        <li>
-                            <a href="#">Phương trình A(x)*B(x)=0</a>
-                        </li>
-                        <li>
-                            <a href="#">Phương trình chứa ẩn ở mẫu</a>
-                        </li>
-                        <li>
-                            <a href="#">Gỉai toán bằng cách lập phương trình</a>
-                        </li>
+                        <li><a href="#bai">Bài 1: Mở đầu về phương trình</a></li>
+                        <li><a href="#bai">Bài 2: Phương trình bậc nhất một ẩn và cách giải</a></li>
+                        <li><a href="#bai">Bài 3: Phương trình đưa được về dạng ax + b = 0 - Luyện tập</a></li>
+                        <li><a href="#bai">Bài 4: Phương trình tích - Luyện tập</a></li>
+                        <li><a href="#bai">Bài 5: Phương trình chứa ẩn ở mẫu - Luyện tập</a></li>
+                        <li><a href="#bai">Bài 6: Giải bài toán bằng cách lập phương trình</a></li>
+                        <li><a href="#bai">Bài 7: Giải bài toán bằng cách lập phương trình (tiếp) - Luyện tập</a></li>
                     </ul>
                 </li>
                 <li >
-                        <a href="toan8/giaitoan">Giải toán</a>                   
+                        <a href="toan6/giaitoan">Giải toán</a>                   
                     </li>      
             </ul>
 
@@ -187,7 +176,7 @@
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
     for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan8/chuong3/bai"+(i+1);
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan8/chuong3/bai"+(i+1);
     }
 
     

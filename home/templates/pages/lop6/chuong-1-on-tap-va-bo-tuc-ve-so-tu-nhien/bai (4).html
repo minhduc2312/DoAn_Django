@@ -1,6 +1,7 @@
 {% extends "pages/lop6/chuong-1-on-tap-va-bo-tuc-ve-so-tu-nhien/base-lop6-chuong1.html" %}
 {% block title %}Toán 6 Bài 4: Số phần tử của một tập hợp và tập hợp con{% endblock %}
 {% block content %}
+{% verbatim %}
 <section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 6 Bài 4: Số phần tử của một tập hợp và tập hợp con</h1></div></section>
 <section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
 <br/>
@@ -27,5 +28,25 @@
 <p>Ta kí hiệu <span class="math-tex">\(A \subset B\)</span> hay <span class="math-tex">\(B \supset A\)</span></p>
 <p>Đọc là A là tập hợp con của tập hợp B, hoặc A chứa trong B hoặc B chứa A.</p>
 <p>Nếu <span class="math-tex">\(A \subset B\)</span> và <span class="math-tex">\(B \subset A\)</span> thì ta nói A và B là <strong>hai tập hợp bằng nhau, </strong>kí hiệu là <span class="math-tex">\(A = B\)</span></p> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div class="box-content content-fck">
+<p><strong><u>Bài 1</u>:</strong> Hãy tìm các tập con của tập A trong các trường hợp sau:</p>
+<p>a) A chỉ có một phần tử \(A = \left\{ a \right\}\)</p>
+<p>b) A có hai phần tử \(A = \left\{ {a;b} \right\}\)</p>
+<p>c) A có 3 phần tử \(A = \left\{ {a,b,c} \right\}\)</p>
+<p>d) Tổng quát: Nếu A có n phần tử thì có bao nhiêu tập con?</p>
+<p>Hướng dẫn giải:</p>
+<p>a) Tập \(A = \left\{ a \right\}\) có hai tập con là \(\left\{ a \right\},\emptyset \)</p>
+<p>b) Tập \(A = \left\{ {a;b} \right\}\) có bốn tập con là \(\left\{ a \right\},\left\{ b \right\},\left\{ {a,b} \right\}\emptyset \)</p>
+<p>c) Tập \(A = \left\{ {a,b,c} \right\}\) có 8 tập con là \(\left\{ a \right\},\left\{ b \right\},\left\{ c \right\},\left\{ {a,b} \right\},\left\{ {a,c} \right\},\left\{ {b,c} \right\},A,\emptyset \)</p>
+<p>d) Nếu A có n phần tử, thì có 2x2x2x...x2 (n lần) tập con</p>
+<p><u><strong>Bài 2:</strong></u> Cho A là tập hợp số tự nhiên lớn hơn 3 và nhỏ hơn 8. Hãy viết tập hợp theo 2 cách (liệt kê và nêu tính chất đặc trưng)</p>
+<p>* Cách 1: Viết A bằng cách liệt kê phần tử: \(A = \left\{ {4;5;6;7} \right\}\)</p>
+<p>* Cách 2: Viết A bằng cách nêu tính chất đặc trưng \(A = \left\{ {n \in N|3 &lt; n &lt; 8} \right\}\)</p>
+<p> </p>
+<p> </p> </div>
 </div></div></div></section>
+{% endverbatim %}
 {% endblock %}

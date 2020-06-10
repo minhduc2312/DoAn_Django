@@ -48,30 +48,15 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 1 - Căn bậc hai, căn bậc ba</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Lý thuyết căn bậc hai</a>
-                        </li>
-                        <li>
-                            <a href="#">Căn thức bậc hai và hằng đẳng thức</a>
-                        </li>
-                        <li>
-                            <a href="#">Liên hệ giữa phép nhân và phép khai phương</a>
-                        </li>
-                        <li>
-                            <a href="#">Liên hệ giữa phép chia và phép khai phương</a>
-                        </li>
-                        <li>
-                            <a href="#">Bảng căn bậc hai</a>
-                        </li>
-                        <li>
-                            <a href="#">Biến đổi đơn giản biểu thức chứa căn bậc hai</a>
-                        </li>
-                        <li>
-                            <a href="#">Rút gọn biểu thức chứa căn bậc hai</a>
-                        </li>
-                        <li>
-                            <a href="#">Định nghĩa, tính chất của căn bậc ba</a>
-                        </li>
+                        <li><a href="#bai">Bài 1: Căn bậc hai</a></li>
+                        <li><a href="#bai">Bài 2: Căn thức bậc hai và hằng đẳng thức căn bậc hai</a></li>
+                        <li><a href="#bai">Bài 3: Liên hệ giữa phép nhân và phép khai phương</a></li>
+                        <li><a href="#bai">Bài 4: Liên hệ giữa phép chia và phép khai phương</a></li>
+                        <li><a href="#bai">Bài 5: Bảng căn bậc hai</a></li>
+                        <li><a href="#bai">Bài 6: Biến đổi đơn giản biểu thức chứa căn thức bậc hai</a></li>
+                        <li><a href="#bai">Bài 8: Rút gọn biểu thức chứa căn bậc hai</a></li>
+                        <li><a href="#bai">Bài 9: Căn bậc ba</a></li>
+                        <li><a href="/toan9/chuong1/on-tap">Ôn tập chương 1 Căn bậc hai, căn bậc ba</a></li>                       
                     </ul>
                     <li >
                         <a href="toan6/giaitoan">Giải toán</a>                   
@@ -192,8 +177,8 @@
 <script type="text/javascript">
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
-    for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan9/chuong1/bai"+(i+1);
+    for(let i=0;i<li_tag.length -1;i++){
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan9/chuong1/bai"+(i+1);
     }
 </script>
 </body>

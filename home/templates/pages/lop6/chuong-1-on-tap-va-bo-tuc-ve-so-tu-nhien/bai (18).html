@@ -1,6 +1,7 @@
 {% extends "pages/lop6/chuong-1-on-tap-va-bo-tuc-ve-so-tu-nhien/base-lop6-chuong1.html" %}
 {% block title %}Toán 6 Bài 18: Bội chung nhỏ nhất{% endblock %}
 {% block content %}
+{% verbatim %}
 <section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 6 Bài 18: Bội chung nhỏ nhất</h1></div></section>
 <section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
 <br/>
@@ -71,5 +72,35 @@
 <p>* Nếu (a, b) = 1 thì BCNN(a, b) = a.b</p>
 <p>* Nếu \(a \vdots b\) và \(a \vdots c\) thì BCNN(a,b,c,…)=a.</p>
 <p>* Muốn tìm bội chung của các số đã cho ta có thể tìm các bội của BCNN của các số đó.</p> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div class="box-content content-fck">
+<p><strong>Bài 1:</strong> Tìm số tự nhiên nhỏ nhất sao cho khi chia cho 3 thì dư 2, khi chia cho 7 thì dư 6, khi chia cho 25 thì dư 24.</p>
+<p><strong><em>Giải</em></strong></p>
+<p>Giả sử a là số phải tìm.</p>
+<p>Vì a chia 3 dư 2, chia 7 dư 6 và chia 25 dư 24 nên a + 1 chia hết cho 2, 7, 25.</p>
+<p>Do đó</p>
+<p>a = BCNN(3, 7, 25)</p>
+<p>Ta có:</p>
+<p>BCNN(3,7,25) \({3.5^2} = 7 = 525\)</p>
+<p>Vậy số cần tìm a = 254.</p>
+<hr/>
+<p><strong>Bài 2:</strong> Có ba chiếc hộp hình vuông: Hộp màu đỏ cao 8cm, hộp màu xanh cao 7cm, hộp màu vàng cao 12cm. Người ta xếp thành ba chông bằng nhau, mỗi chồng một màu. Hỏi chiều cao nhỏ nhất của chồng hộp đó.</p>
+<p><strong><em>Giải</em></strong></p>
+<p>Giả sử chiều cao nhỏ nhất của mỗi chồng là a (cm)</p>
+<p>Ta có:</p>
+<p>a = BCNN(7, 8, 12) = \({2^3}.3.7 = 168\) (cm)</p>
+<p>Vậy chiều cao nhỏ nhất của chồng hộp là 168cm.</p>
+<hr/>
+<p><strong>Bài 3:</strong> Tìm số tự nhiên a. Biết số đó chia hết cho 7 và khi chia cho 2, cho 3, cho 4, cho 5, cho 6 đều dư 1 và a &lt; 400.</p>
+<p>Giải</p>
+<p>Ta có:</p>
+<p>a – 1 = BC(2, 3, 4, 5, 6)</p>
+<p>\(\begin{array}{l} \Rightarrow a - 1 \in {\rm{\{ }}60,120,180,240,300,360\} \\ \Rightarrow a \in {\rm{\{ }}61,121,181,241,301,361\} \end{array}\)</p>
+<p>Do \(a \vdots 7\) nên a = 301</p>
+<p>Vậy a = 301</p>
+<p> </p> </div>
 </div></div></div></section>
+{% endverbatim %}
 {% endblock %}

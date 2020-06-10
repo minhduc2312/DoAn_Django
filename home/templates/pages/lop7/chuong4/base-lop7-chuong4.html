@@ -47,33 +47,15 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 4 - Biểu thức đại số</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#bai23">Khái niệm biểu thức đại số, nguyên, phấn số</a>
-                        </li>
-                        <li>
-                            <a href="#bai24">Giá trị của một biểu thức đại số</a>
-                        </li>
-                        <li>
-                            <a href="#bai25">Các khái niệm về đơn thức</a>
-                        </li>
-                        <li>
-                            <a href="#bai26">Định nghĩa công thức đồng dạng</a>
-                        </li>
-                        <li>
-                            <a href="#bai27">Các khái niệm về đa thức</a>
-                        </li>
-                        <li>
-                            <a href="#bai28">Quy tắc cộng trừ đa thức</a>
-                        </li>
-                        <li>
-                            <a href="#bai29">Khái niệm đa thức một biến</a>
-                        </li>
-                        <li>
-                            <a href="#bai30">Cộng trừ đa thức một biến</a>
-                        </li>
-                        <li>
-                            <a href="#bai31">Số nghiệm của đa thức một biến</a>
-                        </li>
+                        <li><a href="#bai">Bài 1: Khái niệm về biểu thức đại số</a></li>
+                        <li><a href="#bai">Bài 2: Giá trị của một biểu thức đại số</a></li>
+                        <li><a href="#bai">Bài 3: Đơn thức</a></li>
+                        <li><a href="#bai">Bài 4: Đơn thức đồng dạng - Luyện tập</a></li>
+                        <li><a href="#bai">Bài 5: Đa thức</a></li>
+                        <li><a href="#bai">Bài 6: Cộng, trừ đa thức - Luyện tập</a></li>
+                        <li><a href="#bai">Bài 7: Đa thức một biến</a></li>
+                        <li><a href="#bai">Bài 8: Cộng, trừ đa thức một biến - Luyện tập</a></li>
+                        <li><a href="#bai">Bài 9: Nghiệm của đa thức một biến</a></li>
                     </ul>
                 </li> 
                 <li >
@@ -195,7 +177,7 @@
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
     for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[1].href = "toan7/chuong2/bai"+(i+1);
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan7/chuong4/bai"+(i+1);
     }
     
 
