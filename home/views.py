@@ -1,7 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse, response
 from jinja2 import Environment, FileSystemLoader
+from .forms import RegistrationForm
 import requests
+from django.http import HttpResponseRedirect
+from django.contrib.auth import login, authenticate
+
+
 
 # Create your views here.
 def index(request):
@@ -522,3 +527,23 @@ def answer(request):
         #return render(request, 'pages/Giaitoan_API/index.html', {'ketqua' : response.text})
         return render(request, 'pages/Giaitoan_API/ketqua.html',{'debai': debai})
     return render(request, 'pages/Giaitoan_API/index.html')
+
+def register(request):    
+    form  = RegistrationForm()
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return HttpResponseRedirect('/')
+        else:
+           rightpanel = 'right-panel-active'
+    else:
+        form = RegistrationForm()
+        rightpanel = ''
+    return render(request, 'pages/register.html',{'form': form,'rightpanel': rightpanel})
+
+        

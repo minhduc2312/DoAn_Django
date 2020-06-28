@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../static/resources-index/css/style.css">
+    <link rel="stylesheet" href="../../static/vendors/css/grid.css">
+    <title>Giai Toan Nhanh</title>
+</head>
+
+<body>
+    <header id="home">
+        <nav>
+            <a href="/"><img class="logo" src="../../static/resources-index/img/Logo.jpg" alt="Logo"></a>
+            <ul class="main-nav">
+                <li><a href="#home">Trang Chủ</a></li>                
+                <li><a href="#khoilop">Lý thuyết</a></li>
+                <li><a href="answer/">Giải toán nhanh</a></li>
+                <li><a href="#dangky">Đăng nhập</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+        <section id="dangky" class= "dangky">
+            <div class="container {{rightpanel}}" id="container">
+                <div class="form-container sign-up-container">
+                    <form name="register" autocomplete="off" action="{% url 'home:register' %}" method="POST">
+                        {% csrf_token %}
+                        <h1 style="color: black; font-size: 25px;top: 20px;" >Đăng ký thành viên</h1>
+                        <div class="social-container">
+                            <a href="" class="social"><i class="fa fa-facebook"></i></a>
+                            <a href="" class="social"><i class="fa fa-google-plus"></i></a>
+                            <a href="" class="social"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                        <span>Sử dụng Email để làm tài khoản</span>
+                       
+                        <div id="hoten">
+                            {% for field in form %}
+                            {% if field.name == 'firstname' or field.name == 'lastname' %}
+                            {{ field.errors }}
+                                {{field}}
+                            {% endif %}
+                            {% endfor %}                                                      
+                        </div>                        
+                        {% for field in form %}
+                            {% if field.name == 'firstname' or field.name == 'lastname' %}                                
+                            {% else %}
+                            {{ field.errors }}
+                            {{field}}
+                            {% endif %}                             
+                        {% endfor %}                       
+                        <!-- <h1 style="color: black; font-size: 30px;position: absolute;top: 20px;" >Đăng ký thành viên</h1>
+                        <div class="social-container">
+                            <a href="" class="social"><i class="fa fa-facebook"></i></a>
+                            <a href="" class="social"><i class="fa fa-google-plus"></i></a>
+                            <a href="" class="social"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                        <span>Sử dụng Email để làm tài khoản</span>
+                        <div id="hoten">
+                            <input id="firstname" type="text" placeholder="Họ" name="firstname" />
+                            <input id="lastname"type="text" placeholder="Tên" name="lastname" />
+                        </div>                        
+                        <input id="username" type="text" placeholder="Tài khoản" name ="username" required/>                        
+                        <input type="password" placeholder="Mật khẩu" name="password1" required/>
+                        <input type="password" placeholder="Nhập Lại Mật khẩu" name="password2" required />-->
+                        <button type="submit">Đăng Ký</button> 
+                    </form>
+                </div>
+                <div class="form-container sign-in-container">
+                    <form autocomplete="off" action="{% url 'home:login' %}" method="POST">
+                        {% csrf_token %}                        
+                        <h1 style="color: black;font-size:30px">Đăng nhập</h1>
+                        <div class="social-container">
+                            <a href="" class="social"><i class="fa fa-facebook"></i></a>
+                            <a href="" class="social"><i class="fa fa-google-plus"></i></a>
+                            <a href="" class="social"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                        <span>Hoặc sử dụng tài khoản của bạn</span>
+                        {% for key,value in form.errors.items %}
+                        <p style="color: #e54040;font-family: sans-serif;font-size: larger">Sai tài khoản hoặc mật khẩu</p>
+                        {% endfor %}
+                        <input type="text" placeholder="Tài khoản" autocomplete="nope" name="username" required/>
+                        <input type="password" placeholder="Mật Khẩu" name="password" autocomplete="new-password" required/>
+                        <input type="hidden" name="next" value="/"/>
+                        <a href="#">Quên Mật Khẩu?</a>
+                        <button>Đăng Nhập</button>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>WELCOME BACK!</h1>
+                            <p>To keep connected with us please login with your personal info</p>
+                            <button class="ghost" id="signIn">Đăng Nhập</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1>Hello, Friend!</h1>
+                            <p>Enter your personal details and start journey with us</p>
+                            <button class="ghost" id="signUp">Đăng Ký</button>
+                        </div>
+                    </div>
+                </div>
+            </div>                     
+        </section>    
+    </header>
+      
+    <footer>
+        <p>
+            Copyright &copy;2020 by Nguyen Van Tu & Bui Minh Duc
+        </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="../../static/resources-index/js/scripts.js"></script>
+    <script src="../../static/vendors/js/jquery.waypoints.min.js"></script>
+    <script src="../../static/resources-index/js/dangnhap.js"></script>
+</body>
+
+</html>

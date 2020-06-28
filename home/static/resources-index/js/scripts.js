@@ -9,10 +9,10 @@ $(document).ready(
                     $('nav').removeClass('sticky');
                 }
             },{
-                offset:'1000px'
+                offset:'500px'
             }
         )
-        //Scroll
+        Scroll
         $('a').click(function(event){
             $('html, body').animate({
                 scrollTop: $( $.attr(this, 'href') ).offset().top
@@ -21,6 +21,4 @@ $(document).ready(
         });
     }
 )
-
-//Phân số
 
