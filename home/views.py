@@ -526,7 +526,7 @@ def answer(request):
         # t =  template.loader.get_template('ketqua.html')   
         #return render(request, 'pages/Giaitoan_API/index.html', {'ketqua' : response.text})
         return render(request, 'pages/Giaitoan_API/ketqua.html',{'debai': debai})
-    return render(request, 'pages/Giaitoan_API/index.html')
+    return render(request, 'pages/Giaitoan_API/index.html',{'debai': debai})
 
 def register(request):    
     form  = RegistrationForm()

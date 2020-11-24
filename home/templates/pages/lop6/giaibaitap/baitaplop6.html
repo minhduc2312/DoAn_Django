@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="../../../../static/resources/css/baitaplop6.css">
     <link rel="stylesheet" href="../../../../static/resources-index/css/phanso.css">
 
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet"
@@ -30,6 +28,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
         integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
         crossorigin="anonymous"></script>
+    
+    
 </head>
 
 <body>
@@ -64,6 +64,14 @@
                 <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
                     
                     <a id="lop9" href="#tab5" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab5"
+                        aria-selected="false">
+                        <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
+                    </a>
+                </div>
+                <h1>Giải tích</h1>
+                <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
+                    
+                    <a id="tongquat" href="#tab6" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab6"
                         aria-selected="false">
                         <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
                     </a>
@@ -824,6 +832,46 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tab-pane" id="tab6" role="tabpanel" aria-labelledby="tab6">
+                        <div class="accordion" id="accordion-tab-6">                            
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-6-heading-1">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#accordion-tab-6-content-1" aria-expanded="false"
+                                            aria-controls="accordion-tab-6-content-1"> Giải Đạo hàm</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="accordion-tab-6-content-1"
+                                    aria-labelledby="accordion-tab-6-heading-1" data-parent="#accordion-tab-6">
+                                    <div class="card-body">
+                                        <p>Nhập bài toán:</p>
+                                        <input type="text" id="input_daoham" placeholder="Input pt dau vao">
+                                        <button onclick="Daoham(); return false;">Giải</button><br>                                        
+                                        <label id="kq_daoham"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-6-heading-2">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#accordion-tab-6-content-2" aria-expanded="false"
+                                            aria-controls="accordion-tab-6-content-2"> Giải Nguyên hàm</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="accordion-tab-6-content-2"
+                                    aria-labelledby="accordion-tab-6-heading-2" data-parent="#accordion-tab-6">
+                                    <div class="card-body">
+                                        <p>Nhập bài toán:</p>
+                                        <input type="text" id="input_nguyenham" placeholder="Input pt dau vao">
+                                        <button id="nguyenham">Giải</button><br>                                        
+                                        <label id="kq_nguyenham"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -881,4 +929,8 @@
     
 </body>
 <script type="text/javascript" src="../../../../static/resources/js/baitaplop6.js"></script>
+<!-- MathJS -->
+<script type="text/javascript" src="../../../../static/resources/js/math.js"></script>
+<script type="text/javascript" src="../../../../static/resources/js/bundle.js"></script>
+
 </html>

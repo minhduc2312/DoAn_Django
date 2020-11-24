@@ -960,3 +960,19 @@ function TinhPhanSo(){
 
     p_tag.innerHTML ="Giải:" +  kq;
 }
+
+function Daoham(){
+    try{
+        var input = $('#input_daoham').val();//cos(-4x) + 4x^3 - 2x^2 +5x
+		text = "Đạo hàm: `" + input +"`<br>";
+		text += '<br> Rút gọn: ' +'`' +math.derivative(input, 'x',{simplify:false}).toString()+'`';  		
+		text += '<br><br> Kết quả: ' +'`' + math.derivative(input, 'x',{simplify:true}).toString().split('*').join('') + '`';
+	  	text += '<br> => ' + math.derivative(input, 'x').eval({x:4}).toFixed(2);
+	  $('#kq_daoham').html(text);
+	  MathJax.Hub.Queue(["Typeset", MathJax.Hub, 'kq_daoham']);
+    }catch{
+        $('#kq_daoham').html("Bài toán sai");
+    }
+   
+}
+
