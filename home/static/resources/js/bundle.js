@@ -18,9 +18,8 @@ $('#nguyenham').on('click',function(){
     $('#kq_nguyenham').html(text);
     //$('#kq_nguyenham').html('`'+kq1 +'`'+'<br>' +'`'+ kq2+'`')
     MathJax.Hub.Queue(["Typeset", MathJax.Hub, 'kq_nguyenham']);
-    alert("OK");
   }catch(err){
-    $('#kq_nguyenham').html("Bài toán sai" + err);
+    $('#kq_nguyenham').html("Bài toán sai<br>" + err);
   }
   
 })

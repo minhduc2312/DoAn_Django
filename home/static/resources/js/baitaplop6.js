@@ -962,16 +962,35 @@ function TinhPhanSo(){
 }
 
 function Daoham(){
-    try{
-        var input = $('#input_daoham').val();//cos(-4x) + 4x^3 - 2x^2 +5x
-		text = "Đạo hàm: `" + input +"`<br>";
-		text += '<br> Rút gọn: ' +'`' +math.derivative(input, 'x',{simplify:false}).toString()+'`';  		
-		text += '<br><br> Kết quả: ' +'`' + math.derivative(input, 'x',{simplify:true}).toString().split('*').join('') + '`';
-	  	text += '<br> => ' + math.derivative(input, 'x').eval({x:4}).toFixed(2);
+    function derivative(input ,x){
+        var text = '';
+        text = "Đạo hàm: `" + input + "`"+ (x?" với `x = `"+x:"")+"<br>" ;
+		text += '<br> Áp dụng công thức tính đạo hàm: <br>=> ' +'`' +math.derivative(input, 'x',{simplify:false}).toString()+'`';  		
+        text += '<br><br> Kết quả: ' +'`' + math.derivative(input, 'x',{simplify:true}).toString().split('*').join('') + '`';
+        if(x!= null){
+            text += "<br>x = "+ x +" => " + math.derivative(input, 'x').eval({x:x}).toFixed(2);
+        }
 	  $('#kq_daoham').html(text);
 	  MathJax.Hub.Queue(["Typeset", MathJax.Hub, 'kq_daoham']);
-    }catch{
-        $('#kq_daoham').html("Bài toán sai");
+    }
+    try{
+        var input = $('#input_daoham').val();//cos(-4x) + 4x^3 - 2x^2 +5x
+        if(input.indexOf(',')){
+            input = input.split(',');
+            derivative(input[0],input[1]);
+        }
+        else{
+            derivative(input);
+        }
+        
+	// 	text = "Đạo hàm: `" + input +"`<br>";
+	// 	text += '<br> Áp dụng công thức tính đạo hàm: <br>=> ' +'`' +math.derivative(input, 'x',{simplify:false}).toString()+'`';  		
+	// 	text += '<br><br> Kết quả: ' +'`' + math.derivative(input, 'x',{simplify:true}).toString().split('*').join('') + '`';
+	//   	text += '<br> => ' + math.derivative(input, 'x').eval({x:4}).toFixed(2);
+	//   $('#kq_daoham').html(text);
+	//   MathJax.Hub.Queue(["Typeset", MathJax.Hub, 'kq_daoham']);
+    }catch(err){
+        $('#kq_daoham').html("Bài toán sai <br>" + err);
     }
    
 }
