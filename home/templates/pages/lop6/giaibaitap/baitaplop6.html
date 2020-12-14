@@ -28,6 +28,10 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
         integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
         crossorigin="anonymous"></script>
+
+        <script src="https://unpkg.com/mathjs@8.1.0/lib/browser/math.js"></script>
+
+        <script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
     
     
 </head>
@@ -72,6 +76,14 @@
                 <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
                     
                     <a id="tongquat" href="#tab6" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab6"
+                        aria-selected="false">
+                        <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
+                    </a>
+                </div>
+                <h1>Vẽ đồ thị</h1>
+                <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
+                    
+                    <a id="tongquat" href="#tab7" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab6"
                         aria-selected="false">
                         <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
                     </a>
@@ -892,6 +904,39 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tab-pane" id="tab7" role="tabpanel" aria-labelledby="tab7">
+                        <div class="accordion" id="accordion-tab-7">                            
+                            <div class="card">
+                                <form id="form">
+                                    <label for="eq">Enter an equation:</label>
+                                    <input type="text" id="eq" value="4 * sin(x) + 5 * cos(x/2)" />
+                                    <input type="submit" value="Draw" />
+                                  </form>
+                                  
+                                  <div id="plot"></div>
+                                  
+                                  <p>
+                                    Used plot library: <a href="https://plot.ly/javascript/">Plotly</a>
+                                  </p>
+                                <!-- <div class="card-header" id="accordion-tab-7-heading-1">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#accordion-tab-7-content-1" aria-expanded="false"
+                                            aria-controls="accordion-tab-7-content-1">Vẽ đồ thị hàm số y= f(x)</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="accordion-tab-7-content-1"
+                                    aria-labelledby="accordion-tab-7-heading-1" data-parent="#accordion-tab-7">
+                                    <div class="card-body">
+                                        <p>Với f(x): </p>
+                                        <input type="text" id="input_fx" placeholder="Input ham so">
+                                        <button onclick="Draw(); return false;">Vẽ</button><br>                                        
+                                        <label id="dothi_fx"></label>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -899,6 +944,41 @@
     
     </div>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script>
+        function draw() {
+          try {
+            // compile the expression once
+            const expression = document.getElementById('eq').value
+            const expr = math.compile(expression)
+      
+            // evaluate the expression repeatedly for different values of x
+            const xValues = math.range(-10, 10, 0.5).toArray()
+            const yValues = xValues.map(function (x) {
+              return expr.evaluate({x: x})
+            })
+      
+            // render the plot using plotly
+            const trace1 = {
+              x: xValues,
+              y: yValues,
+              type: 'scatter'
+            }
+            const data = [trace1]
+            Plotly.newPlot('plot', data)
+          }
+          catch (err) {
+            console.error(err)
+            alert(err)
+          }
+        }
+      
+        document.getElementById('form').onsubmit = function (event) {
+          event.preventDefault()
+          draw()
+        }
+      
+        draw()
+      </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
