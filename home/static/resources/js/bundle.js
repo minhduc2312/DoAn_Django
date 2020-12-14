@@ -24,6 +24,7 @@ $('#nguyenham').on('click',function(){
   
 })
 
+
 $('#tichphan').on('click',function(){
   try{    
     var input = $('#input_tichphan').val();
