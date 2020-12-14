@@ -2,19 +2,19 @@
 const math = require('mathjs')
 
 math.import(require('mathjs-simple-integral'));
-// function print (value) {
-//   var precision = 14;
-//   return math.format(value, precision);
-// }
+function print (value) {
+  var precision = 14;
+  return math.format(value, precision);
+}
 $('#nguyenham').on('click',function(){
   try{    
     var input = $('#input_nguyenham').val();
     var text = '';
-    text += "Nguyên Hàm: `int " + input + "`dx<br>Áp dụng công thức nguyên hàm";
+    text += "Nguyên Hàm: `int_0^1 " + input + " dx`<br>Áp dụng công thức nguyên hàm";
     var kq1 = math.integral(input, 'x', {simplify: false}).toString();
     var kq2 = math.integral(input, 'x', {simplify: true}).toString();
-    text += "<br>=> " + "`" + kq1 +"`";
-    text += "<br><br>Rút gọn:  `" + kq2 + "`";
+    text += "<br>=> `" + kq1 +" + C`";
+    text += "<br><br>Rút gọnn:  `" + kq2 + " + C`";
     $('#kq_nguyenham').html(text);
     //$('#kq_nguyenham').html('`'+kq1 +'`'+'<br>' +'`'+ kq2+'`')
     MathJax.Hub.Queue(["Typeset", MathJax.Hub, 'kq_nguyenham']);
@@ -24,16 +24,37 @@ $('#nguyenham').on('click',function(){
   
 })
 
+$('#tichphan').on('click',function(){
+  try{    
+    var input = $('#input_tichphan').val();
+    var a = $('#input_cantren').val();
+    var b = $('#input_canduoi').val();
+    var text = '';    
+    
+    if(input == "" || a == "" || b == ""){
+      text = "Nhập đầy đủ thông tin !";
+    }else{
+      text += "Tích phân: `int_"+ b +"^"+ a +" " + input + " dx`<br>Áp dụng công thức nguyên hàm";
+      var kq1 = math.integral(input, 'x', {simplify: false}).toString();
+      var kq2 = math.integral(input, 'x', {simplify: true}).toString();
+      text += "<br>=> " + "`" + kq1 +" + C`";
+      text += "<br><br>Rút gọnn:  `" + math.parse(kq2) + " + C`";
+      text += "<br><br>Thay cận ta được: `" + math.parse(kq2.split('x').join(`${a}`)) + " - "+kq2.split('x').join(`${b}`) + " `";
+      a = math.simplify(kq2,{exactFractions:true}).eval({x:a}).toFixed(2);
+      b = math.simplify(kq2,{exactFractions:true}).eval({x:b}).toFixed(2);
+      result = a-b;
+      text += "<br><br>=> " + a + " - " + b +" = " + result.toFixed(2);
+    }
+    $('#kq_tichphan').html(text);
+      //$('#kq_nguyenham').html('`'+kq1 +'`'+'<br>' +'`'+ kq2+'`')
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub, 'kq_tichphan']);
+    
+  }catch(err){
+    $('#kq_tichphan').html("Bài toán sai<br>" + err);
+  }
+  
+})
 
-
-// button.onclick( function(){
-//   var input = 'cos(-4x) + 4x^3 - 2x^2 +5x'
-//   var kq1 = print(math.integral(input, 'x', {simplify: false}));
-//   var kq2 = print(math.integral(input, 'x', {simplify: true}));
-//   alert(kq1 + '<br>' + kq2);
-// });
-// document.body.appendChild(button)
-//$('body').append(button);
 },{"mathjs":8,"mathjs-simple-integral":4}],2:[function(require,module,exports){
 "use strict";
 
