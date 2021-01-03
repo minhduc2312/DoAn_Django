@@ -29,9 +29,7 @@
         integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
         crossorigin="anonymous"></script>
 
-        <script src="https://unpkg.com/mathjs@8.1.0/lib/browser/math.js"></script>
-
-        <script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
+        
     
     
 </head>
@@ -73,9 +71,8 @@
                     </a>
                 </div>
                 <h1>Giải tích</h1>
-                <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
-                    
-                    <a id="tongquat" href="#tab6" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab6"
+                <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">                    
+                    <a id="giaitich" href="#tab6" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab6"
                         aria-selected="false">
                         <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
                     </a>
@@ -83,7 +80,7 @@
                 <h1>Vẽ đồ thị</h1>
                 <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
                     
-                    <a id="tongquat" href="#tab7" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab6"
+                    <a id="dothi" href="#tab7" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab6"
                         aria-selected="false">
                         <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
                     </a>
@@ -882,7 +879,8 @@
                                         <label id="kq_nguyenham"></label>
                                     </div>
                                 </div>
-                            </div><div class="card">
+                            </div>
+                            <div class="card">
                                 <div class="card-header" id="accordion-tab-6-heading-3">
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
@@ -906,18 +904,16 @@
                     </div>
                     <div class="tab-pane" id="tab7" role="tabpanel" aria-labelledby="tab7">
                         <div class="accordion" id="accordion-tab-7">                            
-                            <div class="card">
-                                <form method="POST" id="form">
-                                    <label for="eq">Enter an equation:</label>
-                                    <input type="text" id="eq" value="4 * sin(x) + 5 * cos(x/2)" />
-                                    <input type="submit" value="Draw" />
-                                  </form>
+                            <div class="card" style="padding: 15px;">                                
+                                <label for="eq">Enter an equation:</label>
+                                <input placeholder="Nhập hàm số f(x)" style="width: 50%" class="form-control" type="text" id="eq" value="4 * sin(x) + 5 * cos(x/2)" />
+                                <button style="width: 10%;margin: 10px 0px;border: 1px solid;" class="btn"type="button" value="Draw" id="plotly">Giải</button>                                  
                                   
-                                  <div id="plot"></div>
+                                <div id="plot"></div>
                                   
-                                  <p>
-                                    Used plot library: <a href="https://plot.ly/javascript/">Plotly</a>
-                                  </p>
+                                <p>
+                                Used plot library: <a href="https://plot.ly/javascript/">Plotly</a>
+                                </p>
                                 <!-- <div class="card-header" id="accordion-tab-7-heading-1">
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
@@ -945,37 +941,37 @@
     </div>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script>
-        function draw() {
-          try {
-            // compile the expression once
-            const expression = document.getElementById('eq').value
-            const expr = math.compile(expression)
+        // function draw() {
+        //   try {
+        //     // compile the expression once
+        //     const expression = document.getElementById('eq').value
+        //     const expr = math.compile(expression)
       
-            // evaluate the expression repeatedly for different values of x
-            const xValues = math.range(-10, 10, 0.5).toArray()
-            const yValues = xValues.map(function (x) {
-              return expr.eval({x: x})
-            })
+        //     // evaluate the expression repeatedly for different values of x
+        //     const xValues = math.range(-10, 10, 0.5).toArray()
+        //     const yValues = xValues.map(function (x) {
+        //       return expr.eval({x: x})
+        //     })
       
-            // render the plot using plotly
-            const trace1 = {
-              x: xValues,
-              y: yValues,
-              type: 'scatter'
-            }
-            const data = [trace1]
-            Plotly.newPlot('plot', data)
-          }
-          catch (err) {
-            console.error(err)
-            alert(err)
-          }
-        }
+        //     // render the plot using plotly
+        //     const trace1 = {
+        //       x: xValues,
+        //       y: yValues,
+        //       type: 'scatter'
+        //     }
+        //     const data = [trace1]
+        //     Plotly.newPlot('plot', data)
+        //   }
+        //   catch (err) {
+        //     console.error(err)
+        //     alert(err)
+        //   }
+        // }
       
-        document.getElementById('form').onsubmit = function (event) {
-          event.preventDefault()
-          draw()
-        }      
+        // document.getElementById('form').onsubmit = function (event) {
+        //   event.preventDefault()
+        //   draw()
+        // }      
         
       </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -1024,11 +1020,23 @@
                 $('#lop9').removeClass('active')
             })                         
         })
+        $(document).ready(function(){
+            $('#giaitich').click(function(){
+                $('#giaitich').removeClass('active')
+            })                         
+        })
+        $(document).ready(function(){
+            $('#dothi').click(function(){
+                $('#dothi').removeClass('active')
+            })                         
+        })
     </script>
     
 </body>
 <script type="text/javascript" src="../../../../static/resources/js/baitaplop6.js"></script>
 <!-- MathJS -->
+
+<script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
 <script type="text/javascript" src="../../../../static/resources/js/math.js"></script>
 <script type="text/javascript" src="../../../../static/resources/js/bundle.js"></script>
 

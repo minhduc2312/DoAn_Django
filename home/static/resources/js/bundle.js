@@ -56,6 +56,34 @@ $('#tichphan').on('click',function(){
   
 })
 
+$('#plotly').on('click',function(event){
+  try {
+    event.preventDefault()
+    // compile the expression once
+    const expression = document.getElementById('eq').value
+    const expr = math.compile(expression)
+
+    // evaluate the expression repeatedly for different values of x
+    const xValues = math.range(-10, 10, 0.5).toArray()
+    const yValues = xValues.map(function (x) {
+      return expr.eval({x: x})
+    })
+
+    // render the plot using plotly
+    const trace1 = {
+      x: xValues,
+      y: yValues,
+      type: 'scatter'
+    }
+    const data = [trace1]
+    Plotly.newPlot('plot', data)
+  }
+  catch (err) {
+    console.error(err)
+    alert(err)
+  }
+})
+
 },{"mathjs":8,"mathjs-simple-integral":4}],2:[function(require,module,exports){
 "use strict";
 
