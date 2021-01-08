@@ -28,9 +28,45 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
         integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
         crossorigin="anonymous"></script>
-
         
-    
+    <link rel="stylesheet" href="../../../../static/resources/css/recognition.css">
+    <style>
+        nav {
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        myscript-math-web {
+            height: calc(100% - 60px);
+        }
+
+        .question {
+            font: 20px "Source Sans Pro", sans-serif;
+            color: #1A9FFF;
+            padding-left: 10px;
+            margin: 2px;
+        }
+
+        .check {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: white !important;
+        }
+    </style>
+
+    <script src="../../../../static/docs/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="../../../../static/docs/myscript-math-web.js"></script>
+    <custom-style>
+        <style>
+            paper-fab {
+                --paper-button-ink-color: white;
+                --paper-fab-background: #1A9FFF;
+            }
+        </style>
+    </custom-style>
     
 </head>
 
@@ -80,7 +116,14 @@
                 <h1>Vẽ đồ thị</h1>
                 <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
                     
-                    <a id="dothi" href="#tab7" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab6"
+                    <a id="dothi" href="#tab7" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab7"
+                        aria-selected="false">
+                        <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
+                    </a>
+                </div>
+                <h1>Nhận dạng chữ viết</h1>
+                <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">                    
+                    <a id="recognition-handwritten" href="#tab8" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab8"
                         aria-selected="false">
                         <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
                     </a>
@@ -913,23 +956,28 @@
                                   
                                 <p>
                                 Used plot library: <a href="https://plot.ly/javascript/">Plotly</a>
-                                </p>
-                                <!-- <div class="card-header" id="accordion-tab-7-heading-1">
-                                    <h5>
-                                        <button class="btn btn-link" type="button" data-toggle="collapse"
-                                            data-target="#accordion-tab-7-content-1" aria-expanded="false"
-                                            aria-controls="accordion-tab-7-content-1">Vẽ đồ thị hàm số y= f(x)</button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="accordion-tab-7-content-1"
-                                    aria-labelledby="accordion-tab-7-heading-1" data-parent="#accordion-tab-7">
-                                    <div class="card-body">
-                                        <p>Với f(x): </p>
-                                        <input type="text" id="input_fx" placeholder="Input ham so">
-                                        <button onclick="Draw(); return false;">Vẽ</button><br>                                        
-                                        <label id="dothi_fx"></label>
-                                    </div>
-                                </div> -->
+                                </p>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab8" role="tabpanel" aria-labelledby="tab8">
+                        <div class="accordion" id="accordion-tab-8">                            
+                            <div class="card" style="padding: 15px;">  
+                                <nav>
+                                    <p class="question">What is the formula of mass energy equivalence invented by Albert Einstein ?</p>
+                                </nav>                              
+                                <myscript-math-web  disableconvertcontrol
+                                                    disablesolver
+                                                    hideexportzone
+                                                    ondemand
+                                                    scheme="https"
+                                                    host="webdemoapi.myscript.com"
+                                                    applicationkey="277647d8-9de7-495f-8f72-f1c259a13afa"
+                                                    hmackey="db7063c2-3195-4340-826a-6dec48f1d218"
+                                                    mimetypes='["application/x-latex"]'
+                                                    touch-action="none">
+                                </myscript-math-web>
+                                <button class="check classic-btn">Check</button>
                             </div>
                         </div>
                     </div>
@@ -939,39 +987,29 @@
         
     
     </div>
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script>
-        // function draw() {
-        //   try {
-        //     // compile the expression once
-        //     const expression = document.getElementById('eq').value
-        //     const expr = math.compile(expression)
-      
-        //     // evaluate the expression repeatedly for different values of x
-        //     const xValues = math.range(-10, 10, 0.5).toArray()
-        //     const yValues = xValues.map(function (x) {
-        //       return expr.eval({x: x})
-        //     })
-      
-        //     // render the plot using plotly
-        //     const trace1 = {
-        //       x: xValues,
-        //       y: yValues,
-        //       type: 'scatter'
-        //     }
-        //     const data = [trace1]
-        //     Plotly.newPlot('plot', data)
-        //   }
-        //   catch (err) {
-        //     console.error(err)
-        //     alert(err)
-        //   }
-        // }
-      
-        // document.getElementById('form').onsubmit = function (event) {
-        //   event.preventDefault()
-        //   draw()
-        // }      
+       window.addEventListener('load', () => {
+        const myscriptMathWebElement = document.querySelector('myscript-math-web');
+        const checkElement = document.querySelector('.check.classic-btn');
+
+        myscriptMathWebElement.addEventListener('exported', (evt) => {
+            if (evt.detail.exports) {
+                const latexExport = evt.detail.exports['application/x-latex'] || '';
+                console.log('We got: ', latexExport);
+                if ("E=mc^{2}" === latexExport) {
+                    myscriptMathWebElement.themecolor = '#008000';
+                } else {
+                    myscriptMathWebElement.themecolor = '#FF0000';
+                }
+            }
+        });
+        
+        checkElement.addEventListener('click', () => {
+            myscriptMathWebElement.convert();
+            const functionOutput = myscriptMathWebElement.export_();
+            console.log('Output :' + functionOutput);
+        });
+    });
         
       </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -1028,6 +1066,11 @@
         $(document).ready(function(){
             $('#dothi').click(function(){
                 $('#dothi').removeClass('active')
+            })                         
+        })
+        $(document).ready(function(){
+            $('#recognition-handwritten').click(function(){
+                $('#recognition-handwritten').removeClass('active')
             })                         
         })
     </script>
