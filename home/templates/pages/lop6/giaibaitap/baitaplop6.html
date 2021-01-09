@@ -28,7 +28,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
         integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
         crossorigin="anonymous"></script>
-        
+
     <link rel="stylesheet" href="../../../../static/resources/css/recognition.css">
     <style>
         nav {
@@ -67,13 +67,13 @@
             }
         </style>
     </custom-style>
-    
+
 </head>
 
 <body>
     <div class="container">
         <a href="/"><img class="logo" src="../../static/resources-index/img/Logo.jpg" alt="Logo"></a>
-        <div class="row">            
+        <div class="row">
             <div class="col-lg-4">
                 <h1>Lớp 6</h1>
                 <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
@@ -92,7 +92,7 @@
                 </div>
                 <h1>Lớp 7</h1>
                 <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
-                    
+
                     <a id="lop7" href="#tab4" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab4"
                         aria-selected="false">
                         <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
@@ -100,14 +100,14 @@
                 </div>
                 <h1>Lớp 9</h1>
                 <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
-                    
+
                     <a id="lop9" href="#tab5" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab5"
                         aria-selected="false">
                         <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
                     </a>
                 </div>
                 <h1>Giải tích</h1>
-                <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">                    
+                <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
                     <a id="giaitich" href="#tab6" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab6"
                         aria-selected="false">
                         <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
@@ -115,16 +115,16 @@
                 </div>
                 <h1>Vẽ đồ thị</h1>
                 <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
-                    
+
                     <a id="dothi" href="#tab7" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab7"
                         aria-selected="false">
                         <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
                     </a>
                 </div>
                 <h1>Nhận dạng chữ viết</h1>
-                <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">                    
-                    <a id="recognition-handwritten" href="#tab8" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab8"
-                        aria-selected="false">
+                <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
+                    <a id="recognition-handwritten" href="#tab8" class="nav-link" data-toggle="pill" role="tab"
+                        aria-controls="tab8" aria-selected="false">
                         <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
                     </a>
                 </div>
@@ -388,7 +388,8 @@
                                             dạng tổng quát các số là bội của 9k với k∈N</p>
                                         <p>Tương tự :</p>
                                         <p>Tìm tập hợp các bội của <input type="number" id="tim_boin"> trong khoảng
-                                            <input type="text" id="khoang" placeholder="Nhập dưới dạng [x,y]"></p>
+                                            <input type="text" id="khoang" placeholder="Nhập dưới dạng [x,y]">
+                                        </p>
                                         <button onclick="timBoiN();">Giải: </button>
                                         <label id="kq_boin"></label>
                                         <p>Ví dụ 2: Tìm các ước của 30 và tính tổng các ước trên.</p>
@@ -464,7 +465,8 @@
                                     aria-labelledby="accordion-tab-1-heading-12" data-parent="#accordion-tab-1">
                                     <div class="card-body">
                                         <p>Ví dụ 1: Tìm số tự nhiên x,y biết (x-7)(y+3)=13
-                                            <br>Giải:</p>
+                                            <br>Giải:
+                                        </p>
                                         <p>Do x,y là số tự nhiên, có (x-7)(y+3)=13 nên 2 thừa số x-7 và y+3 là ước của
                                             13.<br>Ta có: U(13)={1,13}<br>Nên xảy ra trường hợp:</p>
                                         <p>.) x-7 = 1 && y+3 = 13 => x= 8, y=10</p>
@@ -539,7 +541,8 @@
                                         </ol>
                                         <p>Ví dụ: Tìm UCLN(18,30)</p>
                                         <P>18= 2. 3<sup>2</sup> <br> 30= 2.3.5<br> Thừa số nguyên tố chung là: 2 và 3
-                                            <br> Vậy UCLN(18,30) = 2.3 =6</P>
+                                            <br> Vậy UCLN(18,30) = 2.3 =6
+                                        </P>
                                         <p>Tương tự: Tìm UCLN ( <input type="number" id="ucln1">,<input type="number"
                                                 id="ucln2">): </p>
                                         <button onclick="tim_UCLN();">Tìm UCLN:</button>
@@ -615,15 +618,18 @@
                             <div class="card">
                                 <div class="card-header" id="accordion-tab-1-heading-17">
                                     <h5>
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-17"
-                                            aria-expanded="false" aria-controls="accordion-tab-1-content-17">Dạng 17: Số phần tử của tập hợp các số
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#accordion-tab-1-content-17" aria-expanded="false"
+                                            aria-controls="accordion-tab-1-content-17">Dạng 17: Số phần tử của tập hợp
+                                            các số
                                             liên tiếp</button>
                                     </h5>
                                 </div>
-                                <div class="collapse" id="accordion-tab-1-content-17" aria-labelledby="accordion-tab-1-heading-17"
-                                    data-parent="#accordion-tab-1">
+                                <div class="collapse" id="accordion-tab-1-content-17"
+                                    aria-labelledby="accordion-tab-1-heading-17" data-parent="#accordion-tab-1">
                                     <div class="card-body">
-                                        <p>Phương pháp: Tập hợp các số tư nhiên liên tiếp từ a đến b có b - a + 1 phần tử.<br>
+                                        <p>Phương pháp: Tập hợp các số tư nhiên liên tiếp từ a đến b có b - a + 1 phần
+                                            tử.<br>
                                             Ví dụ: A={8 ;9 ;10 ;11 ;...; 20} có 20 - 8 + 1 = 13 (phần tử).<br>
                                             Tương tự: Đếm số phần tử của tập hợp sau: B={<input id="dem_lientiep"
                                                 placeholder="a ; a+1; a+2; ...; a+n">} </p>
@@ -641,10 +647,12 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-2-content-1" aria-expanded="false"
-                                            aria-controls="accordion-tab-2-content-1">Dạng 1: Tìm đối số của một số nguyên</button>
+                                            aria-controls="accordion-tab-2-content-1">Dạng 1: Tìm đối số của một số
+                                            nguyên</button>
                                     </h5>
                                 </div>
-                                <div class="collapse show" id="accordion-tab-2-content-1" aria-labelledby="accordion-tab-2-heading-1" data-parent="#accordion-tab-2">
+                                <div class="collapse show" id="accordion-tab-2-content-1"
+                                    aria-labelledby="accordion-tab-2-heading-1" data-parent="#accordion-tab-2">
                                     <div class="card-body">
                                         <p>Tìm số đối của <input type="text" id="doi"></p>
                                         <button onclick="timSD();">Tìm</button>
@@ -657,20 +665,24 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-2-content-2" aria-expanded="false"
-                                            aria-controls="accordion-tab-2-content-2">Dạng 2: Tìm tập hợp ước của một số nguyên</button>
+                                            aria-controls="accordion-tab-2-content-2">Dạng 2: Tìm tập hợp ước của một số
+                                            nguyên</button>
                                     </h5>
                                 </div>
-                                <div class="collapse" id="accordion-tab-2-content-2" aria-labelledby="accordion-tab-2-heading-2" data-parent="#accordion-tab-2">
+                                <div class="collapse" id="accordion-tab-2-content-2"
+                                    aria-labelledby="accordion-tab-2-heading-2" data-parent="#accordion-tab-2">
                                     <div class="card-body">
                                         <p>Phương pháp: Cho số nguyên a với a khác 0.<br>
                                         <ul>
                                             <li>Lấy dấu giá trị tuyệt đối của |a|</li>
                                             <li>Tìm ước của a trên tập số tự nhiên</li>
-                                            <li>Tìm tập số đối các phần tử của tập hợp vừa tìm được trên tập số nguyên</li>
+                                            <li>Tìm tập số đối các phần tử của tập hợp vừa tìm được trên tập số nguyên
+                                            </li>
                                             <li>Tập hợp cần tìm là hợp của 2 tập hợp trên</li>
                                         </ul>
                                         </p>
-                                        <p>Ứng dụng: Tìm tất cả các ước của số nguyên <input type="number" name="" id="soz"></p>
+                                        <p>Ứng dụng: Tìm tất cả các ước của số nguyên <input type="number" name=""
+                                                id="soz"></p>
                                         <button onclick="timUocZ();">Giải</button>
                                         <label id="kq_z"></label>
                                     </div>
@@ -681,20 +693,24 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-2-content-3" aria-expanded="false"
-                                            aria-controls="accordion-tab-2-content-3">Dạng 3: Đếm ước của một số nguyên</button>
+                                            aria-controls="accordion-tab-2-content-3">Dạng 3: Đếm ước của một số
+                                            nguyên</button>
                                     </h5>
                                 </div>
-                                <div class="collapse" id="accordion-tab-2-content-3" aria-labelledby="accordion-tab-2-heading-3" data-parent="#accordion-tab-2" >
+                                <div class="collapse" id="accordion-tab-2-content-3"
+                                    aria-labelledby="accordion-tab-2-heading-3" data-parent="#accordion-tab-2">
                                     <div class="card-body">
-                                        <p>Phương pháp: Do tập hợp các ước của số nguyên bao gồm 2 phần : phần đầu các số nguyên âm, phần cuối các số nguyên
-                                            dương<br>Mà chúng có số phần tử bằng nhau nên số ước của số nguyên a sẽ bằng 2 lần số ước của |a|.</p>
+                                        <p>Phương pháp: Do tập hợp các ước của số nguyên bao gồm 2 phần : phần đầu các
+                                            số nguyên âm, phần cuối các số nguyên
+                                            dương<br>Mà chúng có số phần tử bằng nhau nên số ước của số nguyên a sẽ bằng
+                                            2 lần số ước của |a|.</p>
                                         <p>Ứng dụng: Đếm số ước của số nguyên <input type="text" id="so_z"> </p>
                                         <button onclick="demUocZ();">Giải</button>
                                         <label id="kq_soz"></label>
                                     </div>
                                 </div>
                             </div>
-                           
+
                         </div>
                     </div>
 
@@ -781,8 +797,8 @@
                                         <input type="text" id="tinh_phanso">
                                         <button id="btn_tinhphanso" onclick="TinhPhanSo();">Kết quả</button><span> Ví dụ
                                             nhập:\(\displaystyle\frac{15}{4}\) + \(\displaystyle\frac{10}{3}\) -> 15/4 +
-                                            10/3 . Tương tự cho các dấu (+,-,x,:) -> (+,-,*,:)</span>      
-                                            <p id="tinhphanso"></p>
+                                            10/3 . Tương tự cho các dấu (+,-,x,:) -> (+,-,*,:)</span>
+                                        <p id="tinhphanso"></p>
                                     </div>
                                 </div>
                             </div>
@@ -795,7 +811,8 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-4-content-1" aria-expanded="false"
-                                            aria-controls="accordion-tab-4-content-1">Dạng 1:Giá trị hàm số tại 1 điểm xác định</button>
+                                            aria-controls="accordion-tab-4-content-1">Dạng 1:Giá trị hàm số tại 1 điểm
+                                            xác định</button>
                                     </h5>
                                 </div>
                                 <div class="collapse show" id="accordion-tab-4-content-1"
@@ -805,7 +822,8 @@
                                             Tính f(1), f(1/2)</P>
                                         <P>Ta có: f(1) = 3.(1)<sup>2</sup>+1=4<br>
                                             f(1/2)=3.(1/2)<sup>2</sup>+1=7/4</P>
-                                        <p>Tương tự: Tính f(<input type="text" id="x_d">) của hàm số y=<input type="text" id="hamso_x"></p>
+                                        <p>Tương tự: Tính f(<input type="text" id="x_d">) của hàm số y=<input
+                                                type="text" id="hamso_x"></p>
                                         <button onclick="tinhHS();">Tính</button>
                                         <label id="kq_hamso"></label>
                                     </div>
@@ -816,13 +834,15 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-4-content-2" aria-expanded="false"
-                                            aria-controls="accordion-tab-4-content-2">Dạng 2:Tính giá trị cạnh của tam giác theo tỷ lệ thuận</button>
+                                            aria-controls="accordion-tab-4-content-2">Dạng 2:Tính giá trị cạnh của tam
+                                            giác theo tỷ lệ thuận</button>
                                     </h5>
                                 </div>
                                 <div class="collapse" id="accordion-tab-4-content-2"
                                     aria-labelledby="accordion-tab-4-heading-2" data-parent="#accordion-tab-4">
                                     <div class="card-body">
-                                        <p>Tính giá trị cạnh của tam giác theo tỷ lệ thuận với 1;2;3 và chu vi là 30 dv. Tìm độ dài 3 cạnh của tam giác đó.<br>
+                                        <p>Tính giá trị cạnh của tam giác theo tỷ lệ thuận với 1;2;3 và chu vi là 30 dv.
+                                            Tìm độ dài 3 cạnh của tam giác đó.<br>
                                             Giải:<br>
                                         <ul>
                                             <li>Gọi độ dài 3 cạnh của tam giác lần lượt là x,y,z.</li>
@@ -831,8 +851,9 @@
                                             <li>Vậy độ dài của 3 cạnh lần lượt là 5.1 =5, 5.2=10, 5.3=15</li>
                                         </ul>
                                         </p>
-                                        <p>Tương tự: Tính giá trị các cạnh của tam giác biết chúng tỷ lệ với <input type="text" id="canh_tl" name=""
-                                                placeholder="x;y;z"> và chu vi của tam giác đó là <input type="number" id="chuvi"></p>
+                                        <p>Tương tự: Tính giá trị các cạnh của tam giác biết chúng tỷ lệ với <input
+                                                type="text" id="canh_tl" name="" placeholder="x;y;z"> và chu vi của tam
+                                            giác đó là <input type="number" id="chuvi"></p>
                                         <button onclick="doDaiCanh();">Giải</button>
                                         <label id="kq_canh"></label>
                                     </div>
@@ -843,7 +864,8 @@
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-4-content-3" aria-expanded="false"
-                                            aria-controls="accordion-tab-4-content-3">Dạng 3:Từ tỷ lệ thức 3 số, tính giá trị biểu thức</button>
+                                            aria-controls="accordion-tab-4-content-3">Dạng 3:Từ tỷ lệ thức 3 số, tính
+                                            giá trị biểu thức</button>
                                     </h5>
                                 </div>
                                 <div class="collapse" id="accordion-tab-4-content-3"
@@ -851,10 +873,11 @@
                                     <div class="card-body">
                                         <p>Từ tỷ lệ thức 3 số, tính giá trị biểu thức:</p>
                                         <p>Ví dụ: Cho x/2=y/3=z/5 Tính P=(2x+3y+5z)/(x+y+z)<br> Giải:</p>
-                                        <p>Đặt x/2=y/3=z/5 = t với t khác 0.<br> => x=2t; y=3t; z=5t<br> Thay vào biểu thức:<br>
+                                        <p>Đặt x/2=y/3=z/5 = t với t khác 0.<br> => x=2t; y=3t; z=5t<br> Thay vào biểu
+                                            thức:<br>
                                             P=(2.2t +3.3t +5.5t)/( 2t + 3t+ 5t) = 38t/10t = 19/5</p>
-                                        <p>Tương tự: Cho x,y,z tỷ lệ thuận với <input type="text" id="tl_3so"> Tính S= (<input type="text" id="tu_bt">)/ (<input
-                                                type="text" id="mau_bt">)</p>
+                                        <p>Tương tự: Cho x,y,z tỷ lệ thuận với <input type="text" id="tl_3so"> Tính S=
+                                            (<input type="text" id="tu_bt">)/ (<input type="text" id="mau_bt">)</p>
                                         <button onclick="rutGonBT();"> Giải</button>
                                         <label id="kq_rutgon"></label>
                                     </div>
@@ -863,13 +886,14 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="tab5" role="tabpanel" aria-labelledby="tab5">
-                        <div class="accordion" id="accordion-tab-5">                            
+                        <div class="accordion" id="accordion-tab-5">
                             <div class="card">
                                 <div class="card-header" id="accordion-tab-5-heading-1">
                                     <h5>
                                         <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#accordion-tab-5-content-1" aria-expanded="false"
-                                            aria-controls="accordion-tab-5-content-1">Dạng 1: Giải phương trình bậc 2 một ẩn</button>
+                                            aria-controls="accordion-tab-5-content-1">Dạng 1: Giải phương trình bậc 2
+                                            một ẩn</button>
                                     </h5>
                                 </div>
                                 <div class="collapse" id="accordion-tab-5-content-1"
@@ -877,7 +901,7 @@
                                     <div class="card-body">
                                         <p>Nhập pt bậc 2:</p>
                                         <input type="text" id="da" placeholder="Input pt dau vao">
-                                        <button onclick="giaiPTB2(); return false;">Giải</button><br>                                        
+                                        <button onclick="giaiPTB2(); return false;">Giải</button><br>
                                         <label id="kq_pt2"></label>
                                     </div>
                                 </div>
@@ -885,7 +909,7 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="tab6" role="tabpanel" aria-labelledby="tab6">
-                        <div class="accordion" id="accordion-tab-6">                            
+                        <div class="accordion" id="accordion-tab-6">
                             <div class="card">
                                 <div class="card-header" id="accordion-tab-6-heading-1">
                                     <h5>
@@ -899,8 +923,8 @@
                                     <div class="card-body">
                                         <p>Nhập bài toán:</p>
                                         <input type="text" id="input_daoham" placeholder="Input pt dau vao">
-                                        <button onclick="Daoham(); return false;">Giải</button><br>     
-                                        <p>vd: cos(-4x) + 4x^3 - 2x^2 +5x , 2 (tại x=2)</p>                                                                
+                                        <button onclick="Daoham(); return false;">Giải</button><br>
+                                        <p>vd: cos(-4x) + 4x^3 - 2x^2 +5x , 2 (tại x=2)</p>
                                         <label id="kq_daoham"></label>
                                     </div>
                                 </div>
@@ -918,7 +942,7 @@
                                     <div class="card-body">
                                         <p>Nhập bài toán:</p>
                                         <input type="text" id="input_nguyenham" placeholder="Input pt dau vao">
-                                        <button id="nguyenham">Giải</button><br>           
+                                        <button id="nguyenham">Giải</button><br>
                                         <label id="kq_nguyenham"></label>
                                     </div>
                                 </div>
@@ -935,10 +959,13 @@
                                     aria-labelledby="accordion-tab-6-heading-3" data-parent="#accordion-tab-6">
                                     <div class="card-body">
                                         <p>Nhập bài toán:</p>
-                                        <input type="text" id="input_tichphan" placeholder="Nhập f(x)"required>
-                                        <input type="text" class="can" id="input_cantren" placeholder="Cận trên" required>
-                                        <input type="text" class="can" id="input_canduoi" placeholder="Cận dưới"required>
-                                        <button style="margin-top: -1%;" class='btn btn-primary' id="tichphan">Giải</button><br>           
+                                        <input type="text" id="input_tichphan" placeholder="Nhập f(x)" required>
+                                        <input type="text" class="can" id="input_cantren" placeholder="Cận trên"
+                                            required>
+                                        <input type="text" class="can" id="input_canduoi" placeholder="Cận dưới"
+                                            required>
+                                        <button style="margin-top: -1%;" class='btn btn-primary'
+                                            id="tichphan">Giải</button><br>
                                         <label id="kq_tichphan"></label>
                                     </div>
                                 </div>
@@ -946,72 +973,119 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="tab7" role="tabpanel" aria-labelledby="tab7">
-                        <div class="accordion" id="accordion-tab-7">                            
-                            <div class="card" style="padding: 15px;">                                
+                        <div class="accordion" id="accordion-tab-7">
+                            <div class="card" style="padding: 15px;">
                                 <label for="eq">Enter an equation:</label>
-                                <input placeholder="Nhập hàm số f(x)" style="width: 50%" class="form-control" type="text" id="eq" value="4 * sin(x) + 5 * cos(x/2)" />
-                                <button style="width: 10%;margin: 10px 0px;border: 1px solid;" class="btn"type="button" value="Draw" id="plotly">Giải</button>                                  
-                                  
+                                <input placeholder="Nhập hàm số f(x)" style="width: 50%" class="form-control"
+                                    type="text" id="eq" value="4 * sin(x) + 5 * cos(x/2)" />
+                                <button style="width: 10%;margin: 10px 0px;border: 1px solid;" class="btn" type="button"
+                                    value="Draw" id="plotly">Giải</button>
+
                                 <div id="plot"></div>
-                                  
-                                <p>
-                                Used plot library: <a href="https://plot.ly/javascript/">Plotly</a>
-                                </p>                                
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="tab8" role="tabpanel" aria-labelledby="tab8">
-                        <div class="accordion" id="accordion-tab-8 ">                            
-                            <div class="card" style="padding: 15px;height:900px; width:1100px;">  
+                        <div class="accordion" id="accordion-tab-8 ">
+                            <div class="card" style="padding: 15px;height:900px; width:1100px; ">
                                 <nav>
                                     <p class="question">Input your math:</p>
-                                </nav>                              
-                                <myscript-math-web  disableconvertcontrol
-                                                    disablesolver
-                                                    hideexportzone
-                                                    ondemand
-                                                    scheme="https"
-                                                    host="webdemoapi.myscript.com"
-                                                    applicationkey="277647d8-9de7-495f-8f72-f1c259a13afa"
-                                                    hmackey="db7063c2-3195-4340-826a-6dec48f1d218"
-                                                    mimetypes='["application/x-latex"]'
-                                                    touch-action="none">
+                                </nav>
+                                <myscript-math-web disableconvertcontrol disablesolver hideexportzone ondemand
+                                    scheme="https" host="webdemoapi.myscript.com"
+                                    applicationkey="277647d8-9de7-495f-8f72-f1c259a13afa"
+                                    hmackey="db7063c2-3195-4340-826a-6dec48f1d218" mimetypes='["application/x-latex"]'
+                                    touch-action="none">
                                 </myscript-math-web>
                                 <button class="check classic-btn">Check</button>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#exampleModal" data-whatever="@mdo">Giải ngay</button>
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Thông tin bài toán</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="recipient-name"
+                                                            class="col-form-label">Input:</label>
+                                                        <input name="ketqua1" type="text" class="form-control" id="recipient-name"
+                                                            id="kiemtra1" value="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="message-text" class="col-form-label">Output:</label>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Send message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-    
     </div>
     <script>
-       window.addEventListener('load', () => {
-        const myscriptMathWebElement = document.querySelector('myscript-math-web');
-        const checkElement = document.querySelector('.check.classic-btn');
+        window.addEventListener('load', () => {
+            const myscriptMathWebElement = document.querySelector('myscript-math-web');
+            const checkElement = document.querySelector('.check.classic-btn');
 
-        myscriptMathWebElement.addEventListener('exported', (evt) => {
-            if (evt.detail.exports) {
-                const latexExport = evt.detail.exports['application/x-latex'] || '';
-                console.log('We got: ', latexExport);
-                if ("E=mc^{2}" === latexExport) {
-                    myscriptMathWebElement.themecolor = '#008000';
-                } else {
-                    myscriptMathWebElement.themecolor = '#FF0000';
+            //Khai báo biến tạm chứa chuỗi latex sau khi xử lý
+            var tmp1;
+
+            myscriptMathWebElement.addEventListener('exported', (evt) => {
+                if (evt.detail.exports) {
+                    const latexExport = evt.detail.exports['application/x-latex'] || '';
+
+                    var tmp1;
+                    //Replace 1 số ký tự ra khỏi chuỗi ban đầu
+                    tmp1 = latexExport.replace(/[.,\/{}\-_`~()]/g, "");
+                    console.log('We got: ', tmp1);
+                    //Set giá trị cho input modal có id=kiemtra1
+                    document.querySelector('input[name="ketqua1"]').setAttribute('value',tmp1);
+
+                    if ("E=mc^{2}" === latexExport) {
+                        myscriptMathWebElement.themecolor = '#008000';
+                    } else {
+                        myscriptMathWebElement.themecolor = '#FF0000';
+                    }
                 }
-            }
+            });
+
+            checkElement.addEventListener('click', () => {
+                myscriptMathWebElement.convert();
+                const functionOutput = myscriptMathWebElement.export_();
+                console.log('Output :' + functionOutput);
+            });
         });
-        
-        checkElement.addEventListener('click', () => {
-            myscriptMathWebElement.convert();
-            const functionOutput = myscriptMathWebElement.export_();
-            console.log('Output :' + functionOutput);
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#kiemtra").click(function () {
+                    $("#kemtra1").val(tmp1);
+                });
         });
-    });
-        
-      </script>
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -1048,33 +1122,33 @@
             ele_frac[i].innerHTML = string;
 
         }
-        $(document).ready(function(){
-            $('#lop7').click(function(){
+        $(document).ready(function () {
+            $('#lop7').click(function () {
                 $('#lop7').removeClass('active')
-            })                         
+            })
         })
-        $(document).ready(function(){
-            $('#lop9').click(function(){
+        $(document).ready(function () {
+            $('#lop9').click(function () {
                 $('#lop9').removeClass('active')
-            })                         
+            })
         })
-        $(document).ready(function(){
-            $('#giaitich').click(function(){
+        $(document).ready(function () {
+            $('#giaitich').click(function () {
                 $('#giaitich').removeClass('active')
-            })                         
+            })
         })
-        $(document).ready(function(){
-            $('#dothi').click(function(){
+        $(document).ready(function () {
+            $('#dothi').click(function () {
                 $('#dothi').removeClass('active')
-            })                         
+            })
         })
-        $(document).ready(function(){
-            $('#recognition-handwritten').click(function(){
+        $(document).ready(function () {
+            $('#recognition-handwritten').click(function () {
                 $('#recognition-handwritten').removeClass('active')
-            })                         
+            })
         })
     </script>
-    
+
 </body>
 <script type="text/javascript" src="../../../../static/resources/js/baitaplop6.js"></script>
 <!-- MathJS -->
