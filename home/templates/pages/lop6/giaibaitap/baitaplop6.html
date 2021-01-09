@@ -987,7 +987,7 @@
                     </div>
                     <div class="tab-pane" id="tab8" role="tabpanel" aria-labelledby="tab8">
                         <div class="accordion" id="accordion-tab-8 ">
-                            <div class="card" style="padding: 15px;height:900px; width:1100px; ">
+                            <div class="card" style="padding: 15px;height:900px;">
                                 <nav>
                                     <p class="question">Input your math:</p>
                                 </nav>
@@ -1057,11 +1057,11 @@
 
                     var tmp1;
                     //Replace 1 số ký tự ra khỏi chuỗi ban đầu
-                    tmp1 = latexExport.replace(/[.,\/{}\-_`~()]/g, "");
+                    tmp1 = latexExport.replace(/[{}]/g, "");
                     console.log('We got: ', tmp1);
                     //Set giá trị cho input modal có id=kiemtra1
                     document.querySelector('input[name="ketqua1"]').setAttribute('value',tmp1);
-
+                    
                     if ("E=mc^{2}" === latexExport) {
                         myscriptMathWebElement.themecolor = '#008000';
                     } else {
@@ -1077,13 +1077,7 @@
             });
         });
 
-    </script>
-    <script>
-        $(document).ready(function () {
-            $("#kiemtra").click(function () {
-                    $("#kemtra1").val(tmp1);
-                });
-        });
+        
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
