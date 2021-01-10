@@ -484,6 +484,28 @@ def toan9_chuong3_ontap(request):
 
 def toan9_chuong4_ontap(request):
     return render(request, 'pages/lop9/chuong4/bai (9).html')
+    
+def toan10_chuong1(request):
+    return render(request, 'pages/lop10/chuong1/index.html')
+
+def toan10_chuong1_bai1(request):
+    return render(request, 'pages/lop10/chuong1/bai (1).html')
+
+def toan10_chuong1_bai2(request):
+	return render(request, 'pages/lop10/chuong1/bai (2).html')
+
+def toan10_chuong1_bai3(request):
+	return render(request, 'pages/lop10/chuong1/bai (3).html')
+
+def toan10_chuong1_bai4(request):
+	return render(request, 'pages/lop10/chuong1/bai (4).html')
+
+def toan10_chuong1_bai5(request):
+	return render(request, 'pages/lop10/chuong1/bai (5).html')
+
+def toan10_chuong1_ontap(request):
+    return render(request, 'pages/lop10/chuong1/bai (6).html')
+
 
 
 def answer(request):

@@ -3,7 +3,7 @@ import pandas
 import requests
 
 # các bạn thay link của trang mình cần lấy dữ liệu tại đây
-url = 'https://hoc247.net/chuong-4-phuong-trinh-bac-hai-mot-an-ct47.html'
+url = 'https://hoc247.net/chuong-1-menh-de-tap-hop-ct52.html'
 
 
 def get_page_content(url):

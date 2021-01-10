@@ -170,5 +170,12 @@ urlpatterns = [
     path('toan9/chuong2/on-tap/',views.toan9_chuong2_ontap),
     path('toan9/chuong3/on-tap/',views.toan9_chuong3_ontap),
     path('toan9/chuong4/on-tap/',views.toan9_chuong4_ontap),
+    path('toan10/chuong1/',views.toan10_chuong1),
+    path('toan10/chuong1/bai1/',views.toan10_chuong1_bai1),
+    path('toan10/chuong1/bai2/',views.toan10_chuong1_bai2),
+    path('toan10/chuong1/bai3/',views.toan10_chuong1_bai3),
+    path('toan10/chuong1/bai4/',views.toan10_chuong1_bai4),
+    path('toan10/chuong1/bai5/',views.toan10_chuong1_bai5),
+    path('toan10/chuong1/ontap/',views.toan10_chuong1_ontap),
     path('answer/',views.answer)
 ]

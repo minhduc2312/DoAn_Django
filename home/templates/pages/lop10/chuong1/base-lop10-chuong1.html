@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <base href="http://127.0.0.1:8000/">
+    <base href="/">
     <title>{% block title %}{% endblock %}</title>
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -28,13 +28,14 @@
         integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
         crossorigin="anonymous"></script>
     <!--Math Jax-->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 
 <body>
 
-    <div class="wrapper">
+     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -43,25 +44,24 @@
             </div>
 
             <ul class="list-unstyled components">
-                <p>Toán lớp 7</p>
+                <p>Toán lớp 10</p>                
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 2 - Hàm số và đồ thị</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li><a href="#bai">Bài 1: Đại lượng tỉ tệ thuận</a></li>
-                        <li><a href="#bai">Bài 2: Một số bài toán về đại lượng tỉ lệ thuận</a></li>
-                        <li><a href="#bai">Bài 3: Đại lượng tỉ lệ nghịch</a></li>
-                        <li><a href="#bai">Bài 4: Một số bài toán về đại lượng tỉ lệ nghịch</a></li>
-                        <li><a href="#bai">Bài 5: Hàm số</a></li>
-                        <li><a href="#bai">Bài 6: Mặt phẳng tọa độ</a></li>
-                        <li><a href="#bai">Bài 7: Đồ thị của hàm số y = ax (a ≠ 0)</a></li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Chương 1 - Mệnh đề tập hợp</a>
+                    <ul class="collapse list-unstyled show" id="homeSubmenu">
+                        <li><a href="#bai">Bài 1: Bất đẳng thức</a></li>
+                        <li><a href="#bai">Bài 2: Bất phương trình và hệ bất phương trình một ẩn</a></li>
+                        <li><a href="#bai">Bài 3: Dấu của nhị thức bậc nhất</a></li>
+                        <li><a href="#bai">Bài 4: Bất phương trình bậc nhất hai ẩn</a></li>
+                        <li><a href="#bai">Bài 5: Dấu của tam thức bậc hai</a></li>
+                        <li><a href="/toan10/chuong1/ontap">Ôn tập chương 4 Bất đẳng thức, bất phương trình</a></li>             
+                        
                     </ul>
-                </li>
-                
-                <li >
-                    <a href="/giaitoan">Giải toán</a>                   
-                </li>
+                    <li >
+                        <a href="/giaitoan">Giải toán</a>                   
+                    </li>
+                </li>         
             </ul>
-
+            
         </nav>
 
         <!-- Page Content  -->
@@ -123,6 +123,7 @@
                                 </div>
                             </li>                             
                         </ul>
+                        
                     </div>
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -132,8 +133,7 @@
             </nav>            
             {% block content %}
             
-    		{% endblock %}
-        </div>
+            {% endblock %}
         </div>
     </div>
 
@@ -175,10 +175,9 @@
 <script type="text/javascript">
     var ul_tag = document.getElementById('homeSubmenu');
     var li_tag = ul_tag.getElementsByTagName('li');
-    for(let i=0;i<li_tag.length ;i++){
-        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan7/chuong2/bai"+(i+1);
+    for(let i=0;i<li_tag.length -1 ;i++){
+        li_tag[i].childNodes[0].attributes[0].nodeValue = "toan10/chuong1/bai"+(i+1);
     }
-
 
     
 </script>
