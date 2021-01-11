@@ -151,14 +151,15 @@ header{
 }
 /*------------------Khối lớp------------*/
 .khoilop{
-    background-image: linear-gradient(45deg,rgba(39,174,96,0.4) 55%,rgba(68,189,50,0.5)), url(../img/bakground_3.jpg);
+    /* background-image: linear-gradient(45deg,rgba(39,174,96,0.4) 55%,rgba(68,189,50,0.5)), url(../img/bakground_3.jpg); */
     background-color: #f4f4f4;
+    height: 1200px;
 }
 .khoilop h2{
     margin-bottom: 60px;
 }
 .lop{
-    background-color:#eeefff;
+    background-color:#88c5cf;
     box-shadow: 3px 5px 10px #e0e0e0;
     width: 98%;
     height: 450px;
@@ -170,9 +171,13 @@ header{
     font-weight: 300;
     text-align: center;
 }
+
 .chuong a{
     text-decoration: blink;
     color: currentcolor;
+}
+.lop h3{
+    color: red;
 }
 .lop ol li {
     text-align: left;
@@ -184,9 +189,14 @@ header{
 .lop:active{
     transform: scale(1.1);
 }
-.lop .btn{
-    margin-left: 50px !important;
+.lop ol li a:hover,
+.lop ol li a:focus{
+    background: #ff0000;
+    color: #fff;
 }
+/* .lop .btn{
+    margin-left: 50px !important;
+} */
 /*--------------Form Đăng ký--------------*/
 form{
     background-color: rgba(5,196,107, .4);
@@ -243,8 +253,9 @@ footer{
 }
 /*-----Hướng dẫn sử ddụng------*/
 .hdsd{
-    background-image: url(../img/background_1.jpg);
-    height: 500px;
+    /* background-image: url(../img/background_1.jpg); */
+    height: 1500px;
+    background-color: #f4f4f4;
 }
 /* Login-Register */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
