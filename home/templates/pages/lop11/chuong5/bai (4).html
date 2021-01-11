@@ -1,0 +1,79 @@
+{% extends "pages/lop11/chuong5/base-lop11-chuong5.html" %}
+{% block title %}Toán 11 Bài 4: Vi phân{% endblock %}
+{% block content %}
+{% verbatim %}
+<section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 11 Bài 4: Vi phân</h1></div></section>
+<section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
+<br/>
+<p><strong>Vi phân</strong> là một khái niệm mới được xây dựng trên nền tảng<strong> đạo hàm</strong>. Yêu cầu của học này các em chỉ cần nắm được <strong>khái niệm</strong> và biết <strong>tính vi phân của một hàm số</strong>. Đây là dạng toán nền tảng để các em làm các bài toán <strong>nguyên hàm, tích phân</strong> trong chương trình <strong>Giải tích</strong> <strong>12</strong>. Bài giảng còn cung cấp những ví dụ minh họa có hướng dẫn giải chi tiết sẽ giúp các em hình thành và rèn luyện kĩ năng giải các bài toán liên quan đến vi phân.</p> </div></div><div class="box-1">
+<div class="box-title-1" id="lythuyet"><h2 class="b-title">Tóm tắt lý thuyết </h2></div>
+<div class="box-content content-fck">
+<div id="11">
+<h3>1.1. Định nghĩa</h3>
+</div>
+<p>Cho hàm số \(y=f(x)\) xác định trên (a;b) và có đạo hàm tại \(x \in (a;b).\)</p>
+<p>Giả sử \(\Delta x\) là số gia của x sao cho \(x + \Delta x \in (a;b).\)</p>
+<p>Vi phân của hàm số \(y=f(x)\) tại x là \(dy = df(x) = f'(x)dx.\)</p>
+<div id="12">
+<h3>1.2. Ứng dụng vào phép tính gần đúng</h3>
+</div>
+<p>\(f({x_0} + \Delta x) \approx f({x_0}) + f'({x_0})\Delta x.\)</p>
+<div id="13">
+<h3>1.3. Các dạng toán</h3>
+</div>
+<h4>a) Dạng 1: Tìm vi phân của hàm số y=f(x)</h4>
+<p><strong>Phương pháp:</strong></p>
+<ul>
+<li>Tính đạo hàm f'(x).</li>
+<li>Vi phân của hàm số y=f(x) tại x là \(df(x) = f'(x)dx.\)</li>
+<li>Vi phân của hàm số y=f(x) tại \(x_0\) là \(df(x_0) = f'(x_0)dx.\)</li>
+</ul>
+<h4>b) Dạng 2: Tìm giá trị gần đúng của một biểu thức</h4>
+<p><strong>Phương pháp:</strong></p>
+<ul>
+<li>Lập hàm số \(y=f(x)\) và chọn \(x_0, \Delta x\) một cách thích hợp.</li>
+<li>Tính đạo hàm \(f'(x), f'(x_0)\) và \(f(x_0).\)</li>
+<li>Giá trị gần đúng của biểu thức \(P = f({x_0} + \Delta x) \approx f({x_0}) + f'({x_0})\Delta x.\)</li>
+</ul> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div data="INPAGE_MB YOMEDIA/intVisit=1"> </div><script type="text/javascript">
+	/* load placement: hoc247.net-mobile-inpage, for account: tailieu, site: hoc247.net, size: 2x2 - mobile */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["8701f44d62d54250b122748815c71b40","https://hoc247.net/toan-11/bai-4-vi-phan-l783.html","[width]","[height]"]);
+</script>
+<script id="s-8701f44d62d54250b122748815c71b40" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div data="INVIEW_MB YOMEDIA"> </div> <script type="text/javascript">
+	/* load placement: hoc247.net-inread, for account: tailieu, site: hoc247.net, size: 2x2 - video */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["15c47dbd541741bd976281bcda70b78c","https://hoc247.net/toan-11/bai-4-vi-phan-l783.html","[width]","[height]"]);
+</script>
+<script id="s-15c47dbd541741bd976281bcda70b78c" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div class="box-content content-fck">
+<h4><u>Ví dụ 1:</u></h4>
+<p>Tìm vi phân của các hàm số sau:</p>
+<p>a) \(f(x) = \sin x - x\cos x\).</p>
+<p>b) \(f(x) = \frac{1}{{{x^3}}}\).</p>
+<p>c) \(f(x) = x{\mathop{\rm cosx}\nolimits}\) tại \(x=\frac{\pi}{2}.\)</p>
+<h4><u>Hướng dẫn giải:</u></h4>
+<p>a) \(f'(x) = cosx - (cosx - xsinx) = xsinx\) nên \(df(x) = x\sin xdx.\)</p>
+<p>b) \(f'(x) = - \frac{3}{{{x^4}}}\) nên \(df(x) = - \frac{3}{{{x^4}}}dx.\)</p>
+<p>c) \(f'(x) = cosx - x\sin x \Rightarrow f'\left( {\frac{\pi }{2}} \right) = - \frac{\pi }{2}\) nên \(df\left( {\frac{\pi }{2}} \right) = - \frac{\pi }{2}dx.\)</p>
+<h4><u>Ví dụ 2:</u> </h4>
+<p>Tính gần đúng các giá trị sau:</p>
+<p>a) \(\sqrt {4,01}\).</p>
+<p>b) \(\sin {29^0}\).</p>
+<h4><u>Hướng dẫn giải:</u></h4>
+<p>a) Đặt \(f(x) = \sqrt x .\)</p>
+<p>Chọn \(x_0=4\) và \(\Delta x=0,01\) thì \(4,01=4+0,01=x_0+\Delta x.\)</p>
+<p>\(f'(x)=\frac{1}{2 \sqrt x}\Rightarrow f'(4)=\frac{1}{2 \sqrt 4}=\frac{1}{4}.\)</p>
+<p>\(f(4)=2.\)</p>
+<p>Vậy: \(\sqrt {4,01} = f(4 + 0,01) \approx f(4) + f'(4).0,01 = 2,0025.\)</p>
+<p>b) Đặt \(f(x)=sin x,\) chọn \(x_0=30^0\) và \(\Delta x=-1^0=-\frac{-\pi}{180}.\)</p>
+<p>Ta có: \(29^0=30^0-1^0=x_0+\Delta x.\)</p>
+<p>\(f'(x)=cos x,f'(30^0)=cos (30^0)=\frac{\sqrt 3}{2};f(30^0)=sin 30^0=\frac{1}{2}.\)</p>
+<p>Vậy: \(sin 29^0 = f(30^0-1^0) \approx f(30^0)+f'(30^0).\left (- \frac{\pi}{180} \right )\approx 0,4849.\)</p> </div>
+</div></div></div></section>
+{% endverbatim %}
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends "pages/lop12/chuong3/base-lop12-chuong3.html" %}
+{% block title %}Toán 12 Bài 3: Ứng dụng của tích phân trong hình học{% endblock %}
+{% block content %}
+{% verbatim %}
+<section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 12 Bài 3: Ứng dụng của tích phân trong hình học</h1></div></section>
+<section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
+<br/>
+<p>Trong quá trình học tập môn Toán trong chương trình phổ thông, các em đã khá quen thuộc với các phương pháp tính <strong>diện tích và thể tích </strong>của một đối tượng bằng cách xác định các yếu tố liên quan đến đối tượng như độ dài cạnh, số đo góc,....Sau khi tìm hiểu khái niệm <strong>Tích phân</strong> các em sẽ được tiếp cận một phương pháp mới để tính <strong>diện tích hình phẳng</strong>, <strong>thể tích của vật thể</strong>,<strong> thể tích khối tròn xoay</strong> chỉ thông qua các hàm số là<strong> Ứng dụng tích phân.</strong></p> </div></div><div class="box-1">
+<div class="box-title-1" id="lythuyet"><h2 class="b-title">Tóm tắt lý thuyết </h2></div>
+<div class="box-content content-fck">
+<div id="21">
+<h3>2.1. Ứng dụng tích phân tính diện tích hình phẳng</h3>
+</div>
+<ul>
+<li>Nếu hàm số \(y=f(x)\) liên tục trên \([a;b]\) thì diện tích S của hình phẳng giới hạn bởi đồ thị hàm số \(y=f(x)\), trục hoành và hai đường thẳng \(x=a,x=b\) là \(S = \int\limits_a^b {\left| {f(x)} \right|dx} .\)</li>
+</ul>
+<p style="margin-left:280px"><img alt="" src="https://hoc247.net/fckeditorimg/upload/images/1(11).png" style="height:201px; width:340px"/></p>
+<ul>
+<li>Diện tích hình phẳng giới hạn bởi các đồ thị hàm số \(y = f(x)\), \(y = g(x)\) và hai đường thẳng \(x=a,x=b\) là: \(S = \int\limits_a^b {\left| {f(x) - g(x)} \right|dx}\)</li>
+</ul>
+<p style="margin-left:160px"><img alt="" src="https://hoc247.net/fckeditorimg/upload/images/1(12).png" style="height:391px; width:401px"/></p>
+<div id="22">
+<h3>2.2. Ứng dụng tích phân tính thể tích vật thể</h3>
+</div>
+<p>Thể tích vật thể B giới hạn bởi  hai mặt phẳng vuông góc với trục Ox tại các điểm \(a,b\) là \(V = \int\limits_a^b {S(x)dx}.\) Trong đó S(x) là diện tích thiết diện của vật thể bị cắt bởi mặt phẳng vuông góc với trục Ox tại điểm có hoành độ là \(x \in \left[ {a;\,b} \right]\) và S(x) là một hàm liên tục.</p>
+<p style="margin-left:160px"><img alt="" src="https://hoc247.net/fckeditorimg/upload/images/1(13).png" style="height:207px; width:479px"/></p>
+<div id="23">
+<h3>2.3. Ứng dụng tích phân tính thể tích khối tròn xoay</h3>
+</div>
+<ul>
+<li>Hàm số  \(y=f(x)\) liên tục và không âm trên \([a,b].\) Hình phẳng giới hạn bởi đồ thị hàm số \(y=f(x)\), trục hoành và hai đường thẳng \(x=a,x=b\) quay quanh trục hoành tạo nên một khối tròn xoay. Thể tích V được tính bởi công thức \(V = \pi \int\limits_a^b {{f^2}(x)dx} .\) </li>
+</ul>
+<p style="margin-left:240px"><img alt="" src="https://hoc247.net/fckeditorimg/upload/images/1(14).png" style="height:232px; width:293px"/></p>
+<ul>
+<li>Cho hai hàm số  \(y=f(x)\), \(y=g(x)\) thỏa \(0\leq g(x)\leq f(x)\), liên tục và không âm trên \([a,b].\) Hình phẳng giới hạn bởi đồ thị hàm số \(y=f(x)\), \(y=g(x)\) và hai đường thẳng \(x=a,x=b\) quay quanh trục hoành tạo nên một khối tròn xoay. Thể tích V được tính bởi công thức \(V = \pi \int\limits_a^b {\left[ {{f^2}(x) - {g^2}(x)} \right]dx}.\)</li>
+<li>Cho hai hàm số hình phẳng giới hạn bởi đồ thị hàm số  \(y=f(x)\) và \(y=g(x)\)​ quay quanh trục hoành hoành tạo nên một khối tròn xoay. Để tính được thể tích khối tròn xoay ta thực hiện các bước:
+	<ul>
+<li>Giải phương trình \(f(x) = g(x) \Leftrightarrow \left[ \begin{array}{l} x = a\\ x = b \end{array} \right.\) (Thường dạng bài này đề bài cho phương trình hoành độ giao điểm có hai nghiệm phân biệt).</li>
+<li>Giải sử \(0\leq g(x)\leq f(x)\) với mọi x thuộc \([a,b].\) Khi đó: \(V = \pi \int\limits_a^b {\left[ {{f^2}(x) - {g^2}(x)} \right]dx}.\)</li>
+</ul>
+</li>
+<li>Hình phẳng giới hạn bởi đồ thị hàm số \(x = g(y)\), trục tung và hai đường thẳng \(y = c,\,y = d\) quay quanh trục tung tạo nên một khối tròn xoay. Thể tích V được tính bởi công thức \(V = \pi \int\limits_c^d {{g^2}(y)dy}.\)</li>
+</ul> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div data="INPAGE_MB YOMEDIA/intVisit=1"> </div><script type="text/javascript">
+	/* load placement: hoc247.net-mobile-inpage, for account: tailieu, site: hoc247.net, size: 2x2 - mobile */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["8701f44d62d54250b122748815c71b40","https://hoc247.net/toan-12/bai-3-ung-dung-cua-tich-phan-trong-hinh-hoc-l814.html","[width]","[height]"]);
+</script>
+<script id="s-8701f44d62d54250b122748815c71b40" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div data="INVIEW_MB YOMEDIA"> </div> <script type="text/javascript">
+	/* load placement: hoc247.net-inread, for account: tailieu, site: hoc247.net, size: 2x2 - video */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["15c47dbd541741bd976281bcda70b78c","https://hoc247.net/toan-12/bai-3-ung-dung-cua-tich-phan-trong-hinh-hoc-l814.html","[width]","[height]"]);
+</script>
+<script id="s-15c47dbd541741bd976281bcda70b78c" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div class="box-content content-fck">
+<div id="3">
+<h4><u><strong>Ví dụ 1:</strong></u></h4>
+</div>
+<p>Tính diện tích tích hình phẳng giới hạn bởi các đường cong \(y = {x^3},\) trục hoành và hai đường thẳng \(x = - 1,x = 2.\)</p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<p>Phương trình hoành độ giao điểm của đường cong \(y = {x^3}\) và trục hoành: </p>
+<p>Diện tích hình phẳng cần tính:</p>
+<p>\(S = \int\limits_{ - 1}^0 {\left| {{x^3}} \right|dx + \int\limits_0^2 {\left| {{x^3}} \right|dx} = \int\limits_{ - 1}^0 {\left( { - {x^3}} \right)} dx + \int\limits_0^2 {{x^3}dx} }\) \(= \left. { - \frac{{{x^4}}}{4}} \right|_{ - 1}^0 + \left. {\frac{{{x^4}}}{4}} \right|_0^2 = \frac{{17}}{4}\)</p>
+<h4><u><strong>Ví dụ 2:</strong></u> </h4>
+<p>Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số \(y = \left( {e + 1} \right)x\) và \(y=(1+e^x)x.\)</p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<p>Phương trình hoành độ giao điểm của hai đường cong là:\(\left( {e + 1} \right)x = \left( {1 + {e^x}} \right)x \Leftrightarrow \left[ {\begin{array}{*{20}{c}} {x = 0}\\ {{e^x} = e} \end{array}} \right. \Leftrightarrow \left[ {\begin{array}{*{20}{c}} {x = 0}\\ {x = 1} \end{array}} \right.\) </p>
+<p>Nhận xét, với \(x \in \left[ {0;1} \right]\) thì hiệu số \(\left( {1 + {e^x}} \right)x - \left( {e + 1} \right)x = x\left( {{e^x} - e} \right) &gt; 0.\) </p>
+<p>Khi đó, diện tích hình phẳng cần tìm là \(S = \int\limits_0^1 {\left| {\left( {1 + {e^x}} \right)x - \left( {e + 1} \right)x} \right|} dx = \int\limits_0^1 {\left| {x\left( {{e^x} - e} \right)} \right|dx = \int\limits_0^1 {x\left( {{e^x} - e} \right)} dx}\) </p>
+<p>Đặt \(\left\{ {\begin{array}{*{20}{c}} {u = x}\\ {dv = \left( {e - {e^x}} \right)dx} \end{array} \Rightarrow \left\{ {\begin{array}{*{20}{c}} {du = dx}\\ {v = ex - {e^x}} \end{array}} \right.} \right.\)</p>
+<p>\({ \Rightarrow S = x\left( {ex - {e^x}} \right)\left| {_0^1} \right. - \int\limits_0^1 {\left( {ex - {e^x}} \right)dx} }\) \(= \left( { - \frac{{e{x^2}}}{2} + {e^x}} \right)\left| {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right. = \frac{{e - 2}}{2}.\)</p>
+<h4><u><strong>Ví dụ 3:</strong></u> </h4>
+<p>Tính thể tích của phần vật thể giới hạn bởi hai mặt phẳng \(x=0\) và \(x=3\) , có thiết diện bị cắt bởi mặt phẳng vuông góc với trục \(Ox\) tại điểm có hoành độ \(x\left( {0 \le x \le 3} \right)\) là một hình chữ nhật có hai kích thước bằng \(x\) và \(2\sqrt {9 - {x^2}}.\)</p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<p>Diện tích của hình chữ nhật có hai cạnh là \(x;2\sqrt {9 - {x^2}}\) là \(2x\sqrt {9 - {x^2}}\) </p>
+<p>Khi đó, thể tích của vật thể được xác định bằng công thức \(V = \int\limits_0^3 {2x\sqrt {9 - {x^2}} dx}\) </p>
+<p>Đặt \(t = \sqrt {9 - {x^2}} \Leftrightarrow {t^2} = 9 - {x^2} \Leftrightarrow xdx = - tdt\) và \(\left\{ {\begin{array}{*{20}{c}} {x = 0 \Rightarrow t = 3}\\ {x = 3 \Rightarrow t = 0} \end{array}} \right.\) </p>
+<p>Suy ra \(V = - 2\int\limits_3^0 {{t^2}dt} = \frac{{2{t^3}}}{3}\left| {\begin{array}{*{20}{c}} 3\\ 0 \end{array}} \right. = 18.\) </p>
+<h4><u><strong>Ví dụ 4:</strong></u></h4>
+<p>Tính thể tích khối tròn xoay tạo thành khi cho hình phẳng giới hạn bởi đồ thị hàm số \(y = 2x - {x^2}\) và \(y = x\) quay quanh trục Ox.</p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<p>Phương trình hoành độ giao điểm của đồ thị hàm số \(y = 2x - {x^2}\) và đường thẳng \(y=x\) là \(2x - {x^2} = x \Leftrightarrow {x^2} - x = 0 \Leftrightarrow \left[ {\begin{array}{*{20}{c}} {x = 0}\\ {x = 1} \end{array}} \right.\) </p>
+<p>Khi đó, thể tích khối tròn xoay cần tìm là \(V = \pi \int\limits_0^1 {\left| {{{\left( {2x - {x^2}} \right)}^2} - {x^2}} \right|dx} = \pi \int\limits_0^1 {\left| {{x^4} - 4{x^3} + 3{x^2}} \right|dx}\)</p>
+<p>\(\Rightarrow V = \left| {\pi \int\limits_0^1 {\left( {{x^4} - 4{x^3} + 3{x^2}} \right)dx} } \right| = \pi \left| {\left( {\frac{{{x^5}}}{5} - {x^4} + {x^3}} \right)\left| {\begin{array}{*{20}{c}} 1\\ 0 \end{array}} \right.} \right| = \frac{\pi }{5}.\)</p> </div>
+</div></div></div></section>
+{% endverbatim %}
+{% endblock %}

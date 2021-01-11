@@ -1,0 +1,220 @@
+{% extends "pages/lop10/chuong5/base-lop10-chuong5.html" %}
+{% block title %}Toán 10 Bài 4: Phương sai và độ lệch chuẩn{% endblock %}
+{% block content %}
+{% verbatim %}
+<section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 10 Bài 4: Phương sai và độ lệch chuẩn</h1></div></section>
+<section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
+<br/>
+<p>Nội dung bài học sẽ giúp các em biết cách tính <span style="font-weight: 700;">Phương sai và độ lệch chuẩn </span>của các bảng phân bố tần số, tần suất (hoặc bảng phân bố tần số, tần suất ghép lớp), qua đó<span style="font-weight: 700;"> </span>đánh giá được mức độ phân tán của các số liệu thống kê (so với số trung bình cộng).</p> </div></div><div class="box-1">
+<div class="box-title-1" id="lythuyet"><h2 class="b-title">Tóm tắt lý thuyết </h2></div>
+<div class="box-content content-fck">
+<div id="11">
+<h3>1.1. Phương sai</h3>
+</div>
+<p><em>Là trung bình cộng của các bình phương độ lệch của mỗi số liệu thống kê.</em></p>
+<p><u><strong>Công thức tính phương sai:</strong></u></p>
+<p><strong>* Trường hợp bảng phân bố tần số, tần suất</strong></p>
+<p>\(\begin{array}{l}<br>
+{s^2} = \frac{1}{n}\left[ {{n_1}{{\left( {{x_1} - \overline x } \right)}^2} + {n_2}{{\left( {{x_2} - \overline x } \right)}^2} + ... + {n_k}{{\left( {{x_k} - \overline x } \right)}^2}} \right]\\<br/>
+ = {f_1}{\left( {{x_1} - \overline x } \right)^2} + {f_2}{\left( {{x_2} - \overline x } \right)^2} + ... + {f_k}{\left( {{x_k} - \overline x } \right)^2}<br/>
+\end{array}\)</br></p>
+<p>trong đó n<sub>i</sub>, f<sub>i</sub> lần lượt là tần số, tần suất cua giá trị x<sub>i</sub>; n là số các số liệu thống kê (n=n<sub>1</sub>+n<sub>2</sub>+...+n<sub>k</sub>); \({\overline x }\) là số trung bình cộng của các số liệu đã cho.</p>
+<p><strong>* Trường hợp bảng phân bố tần số, tần suất ghép lớp</strong></p>
+<p>\(\begin{array}{l}<br/>
+{s^2} = \frac{1}{n}\left[ {{n_1}{{\left( {{c_1} - \overline x } \right)}^2} + {n_2}{{\left( {{c_2} - \overline x } \right)}^2} + ... + {n_k}{{\left( {{c_k} - \overline x } \right)}^2}} \right]\\<br/>
+ = {f_1}{\left( {{c_1} - \overline x } \right)^2} + {f_2}{\left( {{c_2} - \overline x } \right)^2} + ... + {f_k}{\left( {{c_k} - \overline x } \right)^2}<br/>
+\end{array}\)</p>
+<p>trong đó c<sub>i</sub>, n<sub>i</sub>, f<sub>i </sub>lần lượt là giá trị đại diện, tần số, tần suất của lớp thứ i; n là số các số liệu thống kê (n=n<span style="position: relative; font-size: 9.75px; line-height: 0; vertical-align: baseline; bottom: -0.25em;">1</span>+n<span style="position: relative; font-size: 9.75px; line-height: 0; vertical-align: baseline; bottom: -0.25em;">2</span>+...+n<span style="position: relative; font-size: 9.75px; line-height: 0; vertical-align: baseline; bottom: -0.25em;">k</span>); \({\overline x }\) là số trung bình cộng của các số liệu đã cho.</p>
+<p><u><strong>Phương pháp tính phương sai:  </strong></u></p>
+<p> + Tính trung bình cộng </p>
+<p> + Tính độ lệch của mỗi số liệu thống kê</p>
+<p> + Áp dụng công thức</p>
+<p><u><strong>Ngoài ra có thể dùng công thức:</strong></u></p>
+<p>\({s^2} = \overline {{x^2}}  - {\left( {\overline x } \right)^2}\)</p>
+<p>trong đó \(\overline {{x^2}} \) là trung bình cộng của các bình phương số liệu thống kê và</p>
+<p>\(\overline {{x^2}}  = \frac{1}{n}\sum\limits_{i = 1}^k {{n_i}{x^2}_i}  = \sum\limits_1^k {{f_i}{x^2}_i} \) (đối với bảng phân bố tần số, tần suất)</p>
+<p>\(\overline {{x^2}}  = \frac{1}{n}\sum\limits_{i = 1}^k {{n_i}{c_i}^2}  = \sum\limits_1^k {{f_i}{c_i}^2} \) (đối với bảng phân bố tần số, tần suất ghép lớp)</p>
+<div id="12">
+<h3>1.2. Độ lệch chuẩn</h3>
+</div>
+<p>Căn bậc hai của phương sai được gọi là độ lệch chuẩn. Ký hiệu là s và \(s = \sqrt {{s^2}} \)</p>
+<p><u><strong>Ý nghĩa:</strong></u> Phương sai s<sup>2</sup> và độ lệch chuẩn s đều được dùng để đánh giá mức độ phân tán của các số liệu thống kê (so với số trung bình cộng). Nhưng khi cần chú ý đến đơn vị đo thì ta dùng s vì s có đơn vị đo với dấu hiệu được nghiên cứu.</p> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div data="INPAGE_MB YOMEDIA/intVisit=1"> </div><script type="text/javascript">
+	/* load placement: hoc247.net-mobile-inpage, for account: tailieu, site: hoc247.net, size: 2x2 - mobile */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["8701f44d62d54250b122748815c71b40","https://hoc247.net/toan-10/bai-4-phuong-sai-va-do-lech-chuan-l751.html","[width]","[height]"]);
+</script>
+<script id="s-8701f44d62d54250b122748815c71b40" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div data="INVIEW_MB YOMEDIA"> </div> <script type="text/javascript">
+	/* load placement: hoc247.net-inread, for account: tailieu, site: hoc247.net, size: 2x2 - video */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["15c47dbd541741bd976281bcda70b78c","https://hoc247.net/toan-10/bai-4-phuong-sai-va-do-lech-chuan-l751.html","[width]","[height]"]);
+</script>
+<script id="s-15c47dbd541741bd976281bcda70b78c" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div class="box-content content-fck">
+<p><span style="font-weight: 700;">Ví dụ 1:</span>  Điểm trung bình các môn học của học sinh được cho trong bảng sau:</p>
+<div class="table-responsive"><table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td>
+<p style="text-align: center;">Điểm</p>
+</td>
+<td>
+<p style="text-align: center;">7,5</p>
+</td>
+<td>
+<p style="text-align: center;">7,8</p>
+</td>
+<td>
+<p style="text-align: center;">8,0</p>
+</td>
+<td>
+<p style="text-align: center;">8,4</p>
+</td>
+<td>
+<p style="text-align: center;">9,0</p>
+</td>
+<td>
+<p style="text-align: center;">9,5</p>
+</td>
+<td>
+<p style="text-align: center;"> </p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">Tần số</p>
+</td>
+<td>
+<p style="text-align: center;">1</p>
+</td>
+<td>
+<p style="text-align: center;">2</p>
+</td>
+<td>
+<p style="text-align: center;">3</p>
+</td>
+<td>
+<p style="text-align: center;">2</p>
+</td>
+<td>
+<p style="text-align: center;">2</p>
+</td>
+<td>
+<p style="text-align: center;">1</p>
+</td>
+<td>
+<p style="text-align: center;">n = 11</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">Tần suất</p>
+<p style="text-align: center;">(%)</p>
+</td>
+<td>
+<p style="text-align: center;">9,09</p>
+</td>
+<td>
+<p style="text-align: center;">18,18</p>
+</td>
+<td>
+<p style="text-align: center;">27,27</p>
+</td>
+<td>
+<p style="text-align: center;">18,18</p>
+</td>
+<td>
+<p style="text-align: center;">18,18</p>
+</td>
+<td>
+<p style="text-align: center;">9,09</p>
+</td>
+<td>
+<p style="text-align: center;">100</p>
+<p style="text-align: center;">(%)</p>
+<div> </div>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>Hãy tính phương sai và độ lệch chuẩn của bảng phân bố tần số, tần suất trên</p>
+<p><u><strong>Hướng dẫn:</strong></u></p>
+<p>Điểm trung bình của học sinh là</p>
+<p>\(\begin{array}{*{20}{l}}<br/>
+{\bar x = {f_1}{x_1} + {f_2}{x_2} + {f_3}{x_3} + {f_4}{x_4} + {f_5}{x_5} + {f_6}{x_6}}\\<br/>
+{ = \frac{{9,09}}{{100}}.7,5 + \frac{{18,18}}{{100}}.7,8 + \frac{{27,27}}{{100}}.8,0 + \frac{{18,18}}{{100}}.8,4 + \frac{{18,18}}{{100}}.9,0 + \frac{{9,09}}{{100}}.9,5}\\<br/>
+{ \approx 8,3}<br/>
+\end{array}\)</p>
+<p>Phương sai s<sup>2</sup></p>
+<p> \(\begin{array}{l}<br/>
+\begin{array}{*{20}{l}}<br/>
+{{s^2} = {f_1}{{\left( {{x_1} - \bar x} \right)}^2} + {f_2}{{\left( {{x_2} - \bar x} \right)}^2} + ... + {f_k}{{\left( {{x_k} - \bar x} \right)}^2}}<br/>
+\end{array}\\<br/>
+ = \frac{{9,09}}{{100}}{\left( {7,5 - 8,3} \right)^2} + \frac{{18,18}}{{100}}{\left( {7,8 - 8,3} \right)^2} + \frac{{27,27}}{{100}}{\left( {8,0 - 8,3} \right)^2}\\<br/>
+ + \frac{{18,18}}{{100}}{\left( {8,4 - 8,3} \right)^2} + \frac{{18,18}}{{100}}{\left( {9,0 - 8,3} \right)^2} + \frac{{9,09}}{{100}}{\left( {9,5 - 8,3} \right)^2}\\<br/>
+ \approx 0,35<br/>
+\end{array}\)</p>
+<p>Độ lệch chuẩn \(s = \sqrt {{s^2}}  \approx 0,59\)</p>
+<p><strong>Ví dụ 2:</strong> Cho bảng phân bố tần số và tần suất ghép lớp sau</p>
+<p>Nhiệt độ trung bình của tháng 2 tại thành phố Vinh từ 1961 đến hết 1990 (30 năm)</p>
+<div class="table-responsive"><table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+<tbody>
+<tr>
+<td style="text-align: center;">Lớp nhiệt độ (<span style="position: relative; font-size: 9.75px; line-height: 0; vertical-align: baseline; top: -0.5em;">0</span>C)</td>
+<td style="text-align: center;">Tần số</td>
+<td style="text-align: center;">Tần suẩt</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">[12;14)</p>
+<p style="text-align: center;">[14;16)</p>
+<p style="text-align: center;">[16;18)</p>
+<p style="text-align: center;">[18;20)</p>
+<p style="text-align: center;">[20;22)</p>
+</td>
+<td>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">3</p>
+<p style="text-align: center;">12</p>
+<p style="text-align: center;">9</p>
+<p style="text-align: center;">5</p>
+</td>
+<td>
+<p style="text-align: center;">3,33</p>
+<p style="text-align: center;">10,00</p>
+<p style="text-align: center;">40,00</p>
+<p style="text-align: center;">30,00</p>
+<p style="text-align: center;">16,67</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">Cộng </td>
+<td style="text-align: center;">30</td>
+<td>
+<p style="text-align: center;">100 (%)</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>Hãy tính phương sai và độ lệch chuẩn của bảng trên.</p>
+<p><u><strong>Hướng dẫn:</strong></u></p>
+<p>Số trung bình cộng:</p>
+<p>\(\begin{array}{l}<br/>
+\bar x = {f_1}{c_1} + {f_2}{c_2} + ... + {f_k}{c_k}\\<br/>
+ = \frac{{3,33}}{{100}}.13 + \frac{{10}}{{100}}.15 + \frac{{40}}{{100}}.17 + \frac{{30}}{{100}}.19 + \frac{{16,67}}{{100}}.21\\<br/>
+ \approx 17,93<br/>
+\end{array}\)</p>
+<p>Phương sai s<sup>2</sup></p>
+<p>\(\begin{array}{l}<br/>
+{s^2} = {f_1}{\left( {{c_1} - \overline x } \right)^2} + {f_2}{\left( {{c_2} - \overline x } \right)^2} + {f_3}{\left( {{c_3} - \overline x } \right)^2} + {f_4}{\left( {{c_4} - \overline x } \right)^2} + {f_5}{\left( {{c_5} - \overline x } \right)^2}\\<br/>
+ = \frac{{3,33}}{{100}}{\left( {13 - 17,93} \right)^2} + \frac{{10}}{{100}}{\left( {15 - 17,93} \right)^2} + \frac{{40}}{{100}}.{\left( {17 - 17,93} \right)^2} + \frac{{30}}{{100}}{\left( {19 - 17,93} \right)^2} + \frac{{16,67}}{{100}}{\left( {21 - 17,93} \right)^2}\\<br/>
+ \approx 8,64<br/>
+\end{array}\)</p>
+<p>Độ lệch chuẩn \(s = \sqrt {{s^2}}  \approx 2,94\)</p> </div>
+</div></div></div></section>
+{% endverbatim %}
+{% endblock %}

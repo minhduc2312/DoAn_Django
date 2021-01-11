@@ -1,0 +1,212 @@
+{% extends "pages/lop12/chuong1/base-lop12-chuong1.html" %}
+{% block title %}Toán 12 Bài 2: Cực trị của hàm số{% endblock %}
+{% block content %}
+{% verbatim %}
+<section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 12 Bài 2: Cực trị của hàm số</h1></div></section>
+<section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
+<br/>
+<p>Nội dung bài học sẽ giúp các em nắm được hai khái niệm quan trọng của<strong> Giải tích 12 Chương 1 Bài 2</strong> là <strong>Cực đại</strong> và <strong>Cực tiểu</strong>, cùng với đó là điều kiện cần và điều kiện đủ để hàm số có cực trị. Bên cạnh đó là các ví dụ minh họa sẽ giúp các em hình thành các kĩ năng giải bài tập liên quan đến cực trị của hàm số.</p> </div></div><div class="box-1">
+<div class="box-title-1" id="lythuyet"><h2 class="b-title">Tóm tắt lý thuyết </h2></div>
+<div class="box-content content-fck">
+<div id="1">
+<div id="2.1">
+<div id="2.1">
+<div id="2.1">
+<div id="dinhnghia">
+<div id="21">
+<h3>2.1. Định nghĩa</h3>
+</div>
+</div>
+<p><span style="color:inherit; font-family:inherit; font-size:24px">Cho hàm số \(y=f(x)\) liên tục trên khoảng (a;b) và điểm \(x_0\in(a;b)\):</span></p>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Hàm số \(f(x)\) đạt cực đại tại \(x_0\) nếu \(f(x_0)&gt;f(x) \ \forall x\in (x_0-h,x_0+h) \setminus \left \{ x_0 \right \},h&gt;0\)</li>
+<li>Hàm số \(f(x)\) đạt cực tiểu tại x0 nếu \(f(x_0)0\).</li>
+</ul>
+<div id="22">
+<h3>2.2. Điều kiện cần và điều kiện đủ để hàm số có cực trị</h3>
+</div>
+<h4><span style="color:#000000">a) Điều kiện cần để hàm số có cực trị</span></h4>
+<p>\(f(x)\) đạt cực trị tại \(x_0\), có đạo hàm tại \(x_0\) thì \(f'(x_0)=0\).</p>
+<h4><span style="color:#000000">b) Điều kiện đủ để hàm số có điểm cực đại và cực tiểu</span></h4>
+<ul>
+<li><strong>Điều kiện thứ nhất:</strong> Cho hàm số \(y=f(x)\) liên tục trên khoảng \(K = ({x_0} - h;{x_0} + h)\,(h &gt; 0)\) và có đạo hàm trên K hoặc trên \(K\backslash \left\{ {{x_0}} \right\}\):
+
+	<ul>
+<li>Nếu <img alt="" id="equationview" src="http://latex.codecogs.com/gif.latex?%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%20f%27%28x%29%3C0%20%26%5Cforall%20x%5Cin%20%28x_%7B0%7D-h%3B%20x_%7B0%7D%29%20%5C%5C%20f%27%28x%29%3E0%20%26%20%5Cforall%20x%5Cin%20%28x_%7B0%7D%3B%20x_%7B0%7D+h%29%20%5Cend%7Bmatrix%7D%5Cright." title="This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program."/>  thì x0 là điểm cực tiểu của hàm số \(f(x)\).</li>
+<li> Nếu <img alt="" id="equationview" src="http://latex.codecogs.com/gif.latex?%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%20f%27%28x%29%3E0%20%26%20%5Cforall%20x%5Cin%20%28x_%7B0%7D-h%3Bx_%7B0%7D%29%5C%5C%20f%27%28x%29%3C0%20%26%20%5Cforall%20x%5Cin%20%28x_%7B0%7D%3Bx_%7B0%7D+h%29%20%5Cend%7Bmatrix%7D%5Cright." title="This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program."/> thì x0 là điểm cực đại của hàm số \(f(x)\).</li>
+</ul>
+</li>
+<li><strong>Cách phát biểu khác dễ hiểu hơn: </strong>Đi từ trái sang phải
+	<ul>
+<li>Nếu \(f(x)\) đổi dấu từ - sang + khi qua <sub>\(x_0\)</sub> thì \(x_0\) là điểm cực tiểu.</li>
+<li>Nếu \(f(x)\) đổi dấu từ + sang - khi qua \(x_0\) thì \(x_0\) là điểm cực đại.</li>
+</ul>
+</li>
+<li><strong>Điều kiện thứ hai:</strong><span style="font-size:14px"><span style="color:#000000"><strong> </strong><span style="color:#000000"><span style="font-size:14px">Cho hàm số \(y=f(x)\) có đạo hàm cấp hai trên khoảng </span></span><strong><span style="color:#000000"><span style="font-size:14px">\(K = ({x_0} - h;{x_0} + h)\,(h &gt; 0)\):</span></span></strong></span></span>
+<ul>
+<li><span style="color:#000000"><span style="font-size:14px">Nếu </span></span>\(f'(x_0)=0\)<span style="color:#000000"><span style="font-size:14px">, \(f''(x_0)&lt;0\) thì </span></span>\(x_0\)<span style="color:#000000"><span style="font-size:14px"> là điểm cực đại của hàm số \(f(x)\).</span></span></li>
+<li><span style="color:#000000"><span style="font-size:14px">Nếu </span></span>\(f'(x_0)=0\)<span style="color:#000000"><span style="font-size:14px">, </span></span>\(f''(x_0)&gt;0\)<span style="color:#000000"><span style="font-size:14px"> thì </span></span>\(x_0\)<span style="color:#000000"><span style="font-size:14px"><sub> </sub>là điểm cực tiểu của hàm số \(f(x)\).</span></span></li>
+</ul>
+</li>
+</ul>
+<div id="3">
+<div id="3">
+<h2>3. Qui tắc tìm cực trị</h2>
+</div>
+</div>
+<h3>a) Quy tắc 1</h3>
+<ul>
+<li>Tìm tập xác định.</li>
+<li>Tính \(f'(x)\). Tìm các điểm tại đó\(f'(x)=0\) hoặc \(f'(x)\) không xác định.</li>
+<li>Lập bảng biến thiên.</li>
+<li>Từ bảng biến thiên suy ra các điểm cực đại, cực tiểu.</li>
+</ul>
+<h3>b) Quy tắc 2</h3>
+<ul>
+<li>Tìm tập xác định.</li>
+<li>Tính \(f'(x)\). Tìm các nghiệm <img alt="" id="equationview" src="http://latex.codecogs.com/gif.latex?x_%7Bi%7D" title="This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program."/> của phương trình \(f'(x)=0\).</li>
+<li>Tính \(f''(x)\) và \(f''(x_i)\) suy ra tính chất cực trị của các điểm <img alt="" id="equationview" src="http://latex.codecogs.com/gif.latex?x_%7Bi%7D" title="This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program."/>.</li>
+</ul>
+<p><strong>♦ Chú ý:</strong> nếu \(f''(x_i)=0\) thì ta phải dùng quy tắc 1 để xét cực trị tại <img alt="" id="equationview" src="http://latex.codecogs.com/gif.latex?x_%7Bi%7D" title="This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program."/>.</p> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div data="INPAGE_MB YOMEDIA/intVisit=1"> </div><script type="text/javascript">
+	/* load placement: hoc247.net-mobile-inpage, for account: tailieu, site: hoc247.net, size: 2x2 - mobile */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["8701f44d62d54250b122748815c71b40","https://hoc247.net/toan-12/bai-2-cuc-tri-cua-ham-so-l802.html","[width]","[height]"]);
+</script>
+<script id="s-8701f44d62d54250b122748815c71b40" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div data="INVIEW_MB YOMEDIA"> </div> <script type="text/javascript">
+	/* load placement: hoc247.net-inread, for account: tailieu, site: hoc247.net, size: 2x2 - video */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["15c47dbd541741bd976281bcda70b78c","https://hoc247.net/toan-12/bai-2-cuc-tri-cua-ham-so-l802.html","[width]","[height]"]);
+</script>
+<script id="s-15c47dbd541741bd976281bcda70b78c" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div class="box-content content-fck">
+<div id="3.1">
+<div id="4.1">
+<div id="#41">
+<div id="41">
+<h3>4.1. Dạng 1: Tìm cực trị của hàm số</h3>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>
+<h3>Tìm các điểm cực đại, cực tiểu của các hàm số sau:</h3>
+</li>
+</ul>
+<p><span style="color:#000000"><span style="font-size:14px">a) \(y = \frac{1}{3}{x^3} - {x^2} - 3x + \frac{4}{3}\)</span></span></p>
+<p><span style="color:#000000"><span style="font-size:14px">b) \(y = \left| x \right|\left( {x + 2} \right)\)</span></span></p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<p><span style="color:#000000"><span style="font-size:14px">a) </span></span>\(y = \frac{1}{3}{x^3} - {x^2} - 3x + \frac{4}{3}\)</p>
+<p><strong><span style="color:#000000"><span style="font-size:14px">C</span></span>ách 1:</strong></p>
+<ul>
+<li>Hàm số có TXĐ: \(D=\mathbb{R}\)</li>
+<li>\(y' = {x^2} - 2x - 3\)</li>
+<li>\(y' = 0 \Leftrightarrow \left[ \begin{array}{l} x = - 1\\ x = 3 \end{array} \right.\)</li>
+<li>Bảng biến thiên: </li>
+</ul>
+<p style="margin-left:40px">​<img alt="" src="https://hoc247.net/fckeditorimg/upload/images/1.png"/></p>
+<ul>
+<li>Kết luận:
+	<ul>
+<li>Hàm số đạt cực đại tại \(x=-1\), giá trị cực đại tương ứng là \(y(-1)=3\);</li>
+<li>Hàm số đạt cực tiểu tại \(x=3\), giá trị cực tiểu tương ứng là \(y_{CD}=-\frac{23}{3}\).</li>
+</ul>
+</li>
+</ul>
+<p><span style="color:#000000"><span style="font-size:14px"><strong>Cách 2: </strong></span></span></p>
+<ul>
+<li>Hàm số có TXĐ: \(D=\mathbb{R}\)</li>
+<li>\(y' = {x^2} - 2x - 3\)</li>
+<li>\(y' = 0 \Leftrightarrow \left[ \begin{array}{l} x = - 1\\ x = 3 \end{array} \right.\)</li>
+<li>\(y ''= 2x - 2\)
+	<ul>
+<li> \(y''\left( { - 1} \right) = - 4 &lt; 0\) suy ra hàm số đạt cực đại tại \(x=-1\), giá trị cực đại tương ứng là \(y(-1)=3\).</li>
+<li>​\(y''\left( 3 \right) = 4 &gt; 0\) suy ra hàm số đạt cực tiểu tại \(x=3\), giá trị cực tiểu tương ứng là \(y_{CD}=-\frac{23}{3}\).</li>
+</ul>
+</li>
+</ul>
+<p><span style="color:#000000"><span style="font-size:14px"><strong>b) </strong></span></span><strong>\(y = \left| x \right|\left( {x + 2} \right)\)</strong></p>
+<ul>
+<li>Hàm số có TXĐ: \(D=\mathbb{R}\)</li>
+<li>\(y' = \frac{x}{{\left| x \right|}}\left( {x + 2} \right) + \left| x \right| = \frac{{2\left( {{x^2} + x} \right)}}{{\left| x \right|}} (x\ne0)\)</li>
+<li>Bảng biến thiên:</li>
+</ul>
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><img alt="" src="https://hoc247.net/fckeditorimg/upload/images/2.png" style="height:197px; width:290px"/></span></span></p>
+<ul>
+<li>Kết luận:
+	<ul>
+<li>Hàm số đạt cực đại tại \(x=-1,\) giá trị cực đại tương ứng là \(y(-1)=1;\) </li>
+<li>Hàm số đạt cực tiểu tại \(x=0,\) giá trị cực tiểu \(y(0)=0.\)</li>
+</ul>
+</li>
+<li>
+<h3>Tìm các điểm cực đại, cực tiểu của hàm số \(y=x-sin2x+2.\)</h3>
+</li>
+</ul>
+<h4><u><strong>Lời giải: </strong></u></h4>
+<ul>
+<li><span style="color:rgb(0, 0, 0); font-size:14px">Hàm số có TXĐ: </span>\(D=\mathbb{R}\)</li>
+</ul>
+<ul>
+<li><span style="color:#000000"><span style="font-size:14px">\(y' = 1 - 2\cos 2x\)</span></span></li>
+<li><span style="color:#000000"><span style="font-size:14px">\(y'=0 \Leftrightarrow \cos2x\Leftrightarrow x = \pm \frac{\pi }{6} + k\pi (k\in\mathbb{Z})\)</span></span></li>
+<li><span style="color:#000000"><span style="font-size:14px"><span style="color:#000000"><span style="font-size:14px">​\(y'' = 4\sin 2x\)</span></span></span></span>
+<ul>
+<li><span style="color:#000000"><span style="font-size:14px">\(y''\left( {\frac{\pi }{6} + k\pi } \right) = 4\sin \left( {\frac{\pi }{3} + 2k\pi } \right) = 2\sqrt 3 &gt; 0\) suy ra hàm số đạt cực tiểu tại \(x = \frac{\pi }{6} + k\pi\), giá trị cực tiểu tương ứng là \(y\left( {\frac{\pi }{6} + k\pi } \right) = {\textstyle{\pi \over 6}} + k\pi - \frac{{\sqrt 3 }}{2} + 2\).</span></span></li>
+<li><span style="color:#000000"><span style="font-size:14px">​\(y''\left( { - \frac{\pi }{6} + k\pi } \right) = 4\sin \left( { - \frac{\pi }{3} + 2k\pi } \right) = - 2\sqrt 3 &lt; 0\) suy ra hàm số đạt cực đại tại \(x = -\frac{\pi }{6} + k\pi\), giá trị cực đại tương ứng là \(y\left( { - \frac{\pi }{6} + k\pi } \right) = - \frac{\pi }{6} + k\pi - \frac{{\sqrt 3 }}{2} + 2\).​</span></span></li>
+</ul>
+</li>
+</ul>
+<div id="4.2">
+<div id="4.2">
+<div id="4.2">
+<div id="42">
+<h3>4.2. Dạng 2: Tìm tham số để hàm số có cực trị thỏa mãn điều kiện cho trước</h3>
+</div>
+</div>
+</div>
+</div>
+<h4><strong><u>Ví dụ 3:</u></strong> </h4>
+<p>Tìm m để hàm số \(y = \left( {m + 2} \right){x^3} + 3{x^2} + mx - 5\) có 2 cực trị</p>
+<h4><strong><u>Lời giải:</u></strong></h4>
+<ul>
+<li>Với m=-2 hàm số trở thành \(y = 3{x^2} - 2x - 5\) không thể có hai cực trị. (1)</li>
+<li>Với \(m\ne-2\) ta có: \(y' = 3\left( {m + 2} \right){x^2} + 6x + m\)
+	<ul>
+<li>Hàm số có hai cực trị khi và chỉ khi phương trình \(y'=0\) có hai nghiệm phân biệt.</li>
+<li>Điều này xảy ra khi: \(\Delta ' = - 3\left( {{m^2} + 2m - 3} \right) &gt; 0 \Leftrightarrow {m^2} + 2m - 3 &lt; 0 \Leftrightarrow - 3 &lt; m &lt; 1.\) (2)</li>
+</ul>
+</li>
+<li><span style="color:#000000"><span style="font-size:14px">Từ (1) (2) suy ra hàm số có hai cực trị khi: \(m \in \left( { - 3; - 2} \right) \cup \left( { - 2;1} \right)\)</span></span></li>
+</ul>
+<h4><strong><u>Ví dụ 4:</u> </strong></h4>
+<p>Tìm tất cả các giá trị thực của tham số m để hàm số \(\: y = -x^3 + (m+3)x^2 - (m^2 + 2m)x - 2\) đạt cực đại tại \(x=2.\)</p>
+<h4><u><strong>Lời giải:</strong></u> </h4>
+<ul>
+<li>Hàm số có tập xác định: \(D=\mathbb{R}\).</li>
+<li>\(y' = -3x^2 + 2(m+3)x-(m^2 + 2m);\)</li>
+<li>Để hàm số có cực trị tại \(x=2\) thì:
+	<ul>
+<li>​\(y'(2) = 0 \Leftrightarrow - 12 + 4(m + 3) - {m^2} - 2m = 0 \Leftrightarrow \left[ \begin{array}{l} m = 0\\ m = 2 \end{array} \right.\)</li>
+<li>Ta có: \(y'' = - 6x + 2(m + 3)\)
+		<ul>
+<li>Với \(m=0\) thì \(y''(2)=-6&lt;0.\)</li>
+<li>Với \(m=2\) thì \(y''(2)=-2&lt;0\).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Thứ lại với \(m=0\) và \(m=2\) hàm số đều đạt cực đại tại x=2.</li>
+</ul> </div>
+</div></div></div></section>
+{% endverbatim %}
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends "pages/lop12/chuong2/base-lop12-chuong2.html" %}
+{% block title %}Toán 12 Bài 3: Lôgarit{% endblock %}
+{% block content %}
+{% verbatim %}
+<section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 12 Bài 3: Lôgarit</h1></div></section>
+<section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
+<br/>
+<p>Nội dung bài hạc sẽ giúp các em nắm được <strong>định nghĩa</strong>, các <strong>qui tắc </strong>tính <strong>lôgarit</strong> và <strong>công thức </strong><strong>đổi cơ số.</strong> Thông qua các ví dụ minh họa các em sẽ biết vận dụng<strong> lôgarit </strong>để giải toán.</p> </div></div><div class="box-1">
+<div class="box-title-1" id="lythuyet"><h2 class="b-title">Tóm tắt lý thuyết </h2></div>
+<div class="box-content content-fck">
+<div id="11">
+<div id="21">
+<h3>2.1. Khái niệm lôgarit</h3>
+</div>
+</div>
+<p>Cho hai số thực dương \(a\) và \(b\) với \(a\ne1\). Số \(\alpha\) thỏa mãn \(a^{\alpha}=b\) được gọi là lôgarit có số \(a\) của \(b\), kí hiệu \(\log_ab=\alpha\).</p>
+<p>Vậy: \(\alpha = {\log _a}b \Leftrightarrow \left\{ \begin{array}{l} 0 &lt; a \ne 1,b &gt; 0\\ {a^\alpha } = b \end{array} \right.\)<br>
+<br/>
+Ví dụ:</br></p>
+<ul>
+<li>\(\log_2\sqrt{2}=\frac{1}{2}\) vì \(2^\frac{1}{2}=\sqrt{2}\)</li>
+<li>\(\log_2\frac{1}{8}=-3\) vì \(2^{-3}=\frac{1}{8}\)</li>
+<li>\(\log_23=1\) vì \(3^1=3\)</li>
+<li>\(\log_a1=0\) vì \(a^0=1\)</li>
+<li>\(\log_23=x\) vì \(2^x=3\)</li>
+</ul>
+<div id="22">
+<h3>2.2. Các tính chất của lôgarit</h3>
+</div>
+<h4>a) Qui tắc tính lôgarit</h4>
+<p>Cho số thực \(a\) thỏa \(0&lt; a\neq 1\), ta có các tính chất sau:</p>
+<ul>
+<li>Với \(b&gt;0\): \(a^{\log_ab}=b\)</li>
+<li>Lôgarit của một tích:
+	<ul>
+<li>Với \(x_1,x_2&gt;0\): \(\log_a(x_1.x_2)=\log_ax_1+\log_ax_2\)</li>
+<li>Mở rộng với \(x_1,x_2,..., x_n&gt;0\): \(\log_a(x_1.x_2....x_n)=\log_ax_1+\log_ax_2+...+\log_ax_n\)</li>
+</ul>
+</li>
+<li>Lôgarit của một thương
+	<ul>
+<li>Với \(x_1,x_2&gt;0 :\ \log_a\frac{x_1}{x_2}=\log_ax_1-\log_ax_2\)</li>
+<li>Với \(x&gt; 0: \log_a\frac{1}{x}=-\log_ax\)</li>
+</ul>
+</li>
+<li>Lôgarit của một lũy thừa:
+	<ul>
+<li>Với \(b&gt;0:\) \(\log_ab^x=x\log_ab\)</li>
+<li>\(\forall x\): \(\log_aa^x=x\)</li>
+</ul>
+</li>
+</ul>
+<h4>b) Công thức đổi cơ số:</h4>
+<p>Cho số thực \(a\) thỏa \(0&lt; a\neq 1\), ta có các tính chất sau:</p>
+<ul>
+<li>Với \(00:\) \(\log_ab=\frac{\log_c \ b}{\log_c \ a}\)</li>
+</ul>
+<p style="margin-left:40px">Lấy \(0 &lt; b \ne 1\), chọn \(c=b\) ta có: \({\log _a}b = \frac{1}{{{{\log }_b}a}}\)</p>
+<ul>
+<li>Với \(\alpha \neq 0,b&gt;0\): \(\log_{a^\alpha }b^\beta =\frac{\beta }{\alpha }\log_ab\)</li>
+<li>Với \(\alpha \neq 0, b&gt;0:\) \(\log_{a^\alpha }b=\frac{1}{\alpha }\log_ab\)</li>
+</ul>
+<h4>c) So sánh hai lôgarit cùng cơ số</h4>
+<ul>
+<li>Nếu \(a&gt;1\) thì \(\log_ax&gt;\log_ay \Leftrightarrow x&gt;y&gt;0\)</li>
+<li>Nếu \(0\log_ay \Leftrightarrow 0</li>
+<li>Nếu \(00\)</li>
+</ul>
+<div id="23">
+<h3>2.3. Lôgarit thập phân và lôgarit tự nhiên</h3>
+</div>
+<h4>a) Lôgarit thập phân</h4>
+<p>Lôgarit cơ số 10 của số \(x&gt;0\) được gọi là lôgarit thập phân của \(x\), kí hiệu là \(\log x\) hoặc \(\lg x\).</p>
+<h4>b) Lôgarit tự nhiên</h4>
+<p>Lôgarit cơ số \(e\) của số \(a&gt;0\) được gọi là lôgarit tự nhiên (hay lôgarit Nê-pe) của số a, kí hiệu \(\ln a.\)</p> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div data="INPAGE_MB YOMEDIA/intVisit=1"> </div><script type="text/javascript">
+	/* load placement: hoc247.net-mobile-inpage, for account: tailieu, site: hoc247.net, size: 2x2 - mobile */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["8701f44d62d54250b122748815c71b40","https://hoc247.net/toan-12/bai-3-logarit-l808.html","[width]","[height]"]);
+</script>
+<script id="s-8701f44d62d54250b122748815c71b40" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div data="INVIEW_MB YOMEDIA"> </div> <script type="text/javascript">
+	/* load placement: hoc247.net-inread, for account: tailieu, site: hoc247.net, size: 2x2 - video */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["15c47dbd541741bd976281bcda70b78c","https://hoc247.net/toan-12/bai-3-logarit-l808.html","[width]","[height]"]);
+</script>
+<script id="s-15c47dbd541741bd976281bcda70b78c" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div class="box-content content-fck">
+<h4><strong><u>Ví dụ 1:</u></strong></h4>
+<p>Tính giá trị các biểu thức sau:</p>
+<p>a) \(A = {\log _9}15 + {\log _9}18 - {\log _9}10\)</p>
+<p>b) \(B = {\log _{36}}2 - \frac{1}{2}{\log _{\frac{1}{6}}}3\)</p>
+<p>c) \(C = {\log _{\frac{1}{4}}}\left( {{{\log }_3}4.{{\log }_2}3} \right)\)</p>
+<h4><strong><u>Lời giải:</u></strong></h4>
+<p>a) \(A = {\log _9}15 + {\log _9}18 - {\log _9}10 = {\log _9}\frac{{15.18}}{{10}} = {\log _9}{3^3} = \frac{1}{2}{\log _3}{3^3} = \frac{3}{2}\)</p>
+<p>b) \(B = {\log _{36}}2 - \frac{1}{2}{\log _{\frac{1}{6}}}3 = \frac{1}{2}{\log _6}2 + \frac{1}{2}{\log _6}3 = \frac{1}{2}{\log _6}2.3 = \frac{1}{2}\)</p>
+<p>c) \(C = {\log _{\frac{1}{4}}}\left( {{{\log }_3}4.{{\log }_2}3} \right) = - {\log _4}\left( {{{\log }_2}3.{{\log }_3}4} \right)\)</p>
+<p>\(= - {\log _4}\left( {{{\log }_2}4} \right) = - \frac{1}{2}{\log _2}2 = - \frac{1}{2}\)</p>
+<h4><strong><u>Ví dụ 2:</u></strong> </h4>
+<p>Tính các giá trị biểu thức sau (Giả sử các biểu thức đều xác định):</p>
+<p>a) \(A = {\log _a}{a^3}\sqrt a \sqrt[5]{a}\)</p>
+<p>b) \(B={\log _{\frac{1}{a}}}\frac{{a\sqrt[5]{{{a^3}}}\sqrt[3]{{{a^2}}}}}{{\sqrt a \sqrt[4]{a}}}\)</p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<p>a) \(A = {\log _a}{a^3}\sqrt a \sqrt[5]{a} = {\log _a}\left( {{a^{3 + \frac{1}{2} + \frac{1}{5}}}} \right) = 3 + \frac{1}{2} + \frac{1}{5} = \frac{{37}}{{10}}\)</p>
+<p>b) \(B=lo{g_{\frac{1}{a}}}\frac{{a\sqrt[5]{{{a^3}}}\sqrt[3]{{{a^2}}}}}{{\sqrt a \sqrt[4]{a}}} = - {\log _a}\left( {\frac{{{a^{1 + \frac{3}{5} + \frac{2}{3}}}}}{{{a^{\frac{1}{2} + \frac{1}{4}}}}}} \right) = - \left( {\frac{{34}}{{15}} - \frac{3}{4}} \right) = - \frac{{91}}{{60}}\)</p>
+<h4><u><strong>Ví dụ 3:</strong></u></h4>
+<p>a) Tính \(A= {\log _3}135\) biết \({\log _2}5 = a;{\log _2}3 = b\)</p>
+<p>b) Tính \(B={\log _{49}}32\) biết \({\log _2}14 = a\)</p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<p>a) \(A = {\log _3}135 = {\log _3}{5.3^3} = {\log _3}5 + 3 = \frac{{{{\log }_2}5}}{{{{\log }_2}3}} + 3 = \frac{a}{b} + 3 = \frac{{a + 3b}}{b}\)</p>
+<p>b) Ta có: \({\log _2}14 = a \Leftrightarrow 1 + {\log _2}7 = a \Rightarrow {\log _2}7 = a - 1\)</p>
+<p>Vậy: \({\log _{49}}32 = \frac{{{{\log }_2}{2^5}}}{{{{\log }_2}{7^2}}} = \frac{5}{{2{{\log }_2}7}} = \frac{5}{{2\left( {a - 1} \right)}}\)</p>
+<h4><u><strong>Ví dụ 4:</strong></u></h4>
+<p>Không dùng máy tính, hãy so sánh:</p>
+<p>a) \({\log _{0,4}}\sqrt 2 \; \vee \;{\log _{0,2}}0,34\)</p>
+<p>b) \({\log _{\frac{5}{3}}}\frac{3}{4}\; \vee \;{\log _{\frac{3}{4}}}\frac{2}{5}\)</p>
+<p>c) \({2^{{{\log }_5}3}}\; \vee \;{3^{{{\log }_5}\frac{1}{2}}}\)</p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<p>a) Ta có: \(\left\{ \begin{array}{l} \sqrt 2 &gt; 1 \Rightarrow {\log _{0,4}}\sqrt 2 &lt; {\log _{0,4}}1 = 0\\ 0,3 &lt; 1 \Rightarrow {\log _{0,2}}0,3 &gt; {\log _{0,2}}1 = 0 \end{array} \right. \Rightarrow {\log _{0,2}}0,3 &gt; {\log _{0,4}}\sqrt 2\)</p>
+<p>b) Ta có: \(\left\{ \begin{array}{l} \frac{5}{3} &gt; 1;0 &lt; \frac{3}{4} &lt; 1 \Rightarrow {\log _{\frac{5}{3}}}\frac{3}{4} &lt; {\log _{\frac{5}{3}}}1 = 0\\ 0 &lt; \frac{3}{4} &lt; 1;0 &lt; \frac{2}{5} &lt; 1 \Rightarrow {\log _{\frac{3}{4}}}\frac{2}{5} &gt; {\log _{\frac{3}{4}}}1 = 0 \end{array} \right. \Rightarrow {\log _{\frac{3}{4}}}\frac{2}{5} &gt; {\log _{\frac{5}{3}}}\frac{3}{4}\)</p>
+<p>c) Ta có: \(\left\{ \begin{array}{l} {\log _5}3 &gt; {\log _5}1 \Rightarrow {2^{{{\log }_5}3}} &gt; {2^{{{\log }_5}1}} = {2^0} = 1\\ {\log _5}\frac{1}{2} &lt; {\log _5}1 \Rightarrow {3^{{{\log }_5}\frac{1}{2}}} &lt; {3^{{{\log }_5}1}} = {3^0} = 1 \end{array} \right. \Rightarrow {\log _5}3 &gt; {\log _5}\frac{1}{2}\)</p>
+<p> </p> </div>
+</div></div></div></section>
+{% endverbatim %}
+{% endblock %}

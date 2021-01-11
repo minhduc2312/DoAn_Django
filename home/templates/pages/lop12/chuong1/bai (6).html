@@ -1,0 +1,180 @@
+{% extends "pages/lop12/chuong1/base-lop12-chuong1.html" %}
+{% block title %}Toán 12 Ôn tập chương 1 Ứng dụng đạo hàm để khảo sát và vẽ đồ thị hàm số{% endblock %}
+{% block content %}
+{% verbatim %}
+<section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 12 Ôn tập chương 1 Ứng dụng đạo hàm để khảo sát và vẽ đồ thị hàm số</h1></div></section>
+<section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
+<br/>
+<p>Chương <strong>ứng dụng đạo hàm để khảo sát và vẽ đồ thị hàm số </strong>được xem là nội dung trọng tâm quan trọng bậc nhất trong chương trình phổ thông, thể hiện rõ nhất cho điều đó là trong các kì thi THPT QG môn Toán đây luôn là phần chiếm tỉ lệ điểm số cao nhất. Nội dung bài ôn tập chương sẽ giúp các em hệ thống lại kiến thức đã được học, ôn tập một số dạng toán điển hình và phương pháp giải, rèn luyện kĩ năng giải bài tập, từng bước chinh phục các bài toán khó hơn.</p> </div></div><div class="box-1">
+<div class="box-title-1" id="lythuyet"><h2 class="b-title">Tóm tắt lý thuyết </h2></div>
+<div class="box-content content-fck">
+<div id="21">
+<h3>2.1. Kiến thức cần nhớ</h3>
+</div>
+<ul>
+<li>Sự đơn điệu của hàm số.</li>
+<li>Cực trị của hàm số.</li>
+<li>Giá trị lớn nhất - Giá trị nhỏ nhất của hàm số.</li>
+<li>Tiệm cận của đồ thị hàm số. </li>
+<li>Khảo sát sự biến thiên và vẽ đồ thị hàm số.</li>
+</ul>
+<div id="22">
+<h3>2.2. Một số dạng toán về sự đơn điệu của hàm số thường gặp</h3>
+</div>
+<ul>
+<li><strong>Dạng 1:</strong> Xét tính đơn điệu của hàm số</li>
+<li><strong>Dạng 2:</strong> Định giá trị của tham số m để hàm số đồng biến (nghịch biến) trên TXĐ.</li>
+</ul>
+<div id="23">
+<h3>2.3. Một số dạng toán về cực trị của hàm số thường gặp</h3>
+</div>
+<ul>
+<li><strong>Dạng 1: </strong>Tìm các điểm cực trị của hàm số: Dùng quy tắc 1 hoặc quy tắc 2.</li>
+<li><strong>Dạng 2:</strong> Định giá trị tham số m để hàm số đạt cực trị tại \(x_0.\)
+	<ul>
+<li>Phương pháp:
+		<ul>
+<li>Tìm tập xác định.</li>
+<li>Tính \(y' \Rightarrow y'\left( {{x_0}} \right).\)</li>
+<li>Lập luận: Hàm số đạt cực đại tại \({x_0} \Rightarrow y'\left( {{x_0}} \right) = 0\), giải phương trình tìm được m.</li>
+<li>Với từng giá trị m vừa tìm được ta dùng quy tắc 1 hoặc quy tắc 2 kiểm tra lại xem có thỏa điều kiện đề bài không.</li>
+<li>Kết luận giá trị m thỏa điều kiện.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Dạng 3:</strong>Định giá trị của tham số m để các hàm số \(y = a{x^3} + b{x^2} + cx + d\,\,(a \ne 0)\) và \(y = \frac{{a{x^2} + bx + c}}{{mx + n}}\,\,(a,m \ne 0)\)cực đại, cực tiểu:
+	<ul>
+<li>Phương pháp:
+		<ul>
+<li>Tìm tập xác định D.</li>
+<li>Tính \(y'\).</li>
+<li>Tính \(\Delta _{y'}\).</li>
+<li>Lập luận: Hàm số luôn luôn có CĐ, CT khi và chỉ khi phương trình \(y'=0\) có hai nghiệm phân biệt và đổi dấu hai lần khác nhau khi qua hai nghiệm đó. Phương trình \(y'=0\) có hai nghiệm phân biệt khi và chỉ khi \(\Delta _{y'}&gt;0\) giải tìm m.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Dạng 4: Định giá trị của tham số m để các hàm số \(y = a{x^3} + b{x^2} + cx + d\,\,(a \ne 0)\) và \(y = \frac{{a{x^2} + bx + c}}{{mx + n}}\,\,(a,m \ne 0)\) không có cực đại, cực tiểu:
+	<ul>
+<li>Phương pháp:
+		<ul>
+<li>Tìm tập xác định D.</li>
+<li>Tính \(y'\).</li>
+<li>Tính \(\Delta _{y'}\).</li>
+<li>Lập luận: Hàm số không có CĐ, CT khi và chỉ khi phương trình \(y'=0\) vô nghiệm hoặc có nghiệm kép. Phương trình \(y'=0\) có hai nghiệm phân biệt khi và chỉ khi \(\Delta _{y'}\leq 0\) giải tìm m.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Dạng 5: </strong>Chứng minh với mọi giá trị của tham số m hàm số \(y = a{x^3} + b{x^2} + cx + d\,\,(a \ne 0)\) luôn luôn có cực đại, cực tiểu.
+	<ul>
+<li>Phương pháp:
+		<ul>
+<li>Tìm tập xác đinh D.</li>
+<li>Tính \(y'\). </li>
+<li>Tính \(\Delta _{y'}\) (nếu y’ là tam thức bậc 2 theo x).</li>
+<li>Chứng minh: \(\Delta _{y'}&gt;0\) và y’ đổi dấu hai lần khác nhau khi qua hai nghiệm đó suy ra hàm số luôn luôn có cực đại, cực tiểu.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div id="24">
+<h3>2.4. Giá trị lớn nhất - Giá trị nhỏ nhất của hàm số</h3>
+</div>
+<ul>
+<li>Tìm GTLN - GTNN của hàm sô trên một khoảng, nửa khoảng.</li>
+<li>Tìm GTLN - GTNN của hàm số trên một đoạn.</li>
+</ul>
+<div id="25">
+<h3>2.5. Khảo sát sự biến thiên và vẽ đồ thị hàm số</h3>
+</div>
+<ul>
+<li>Khảo sát sự biến thiên và vẽ đồ thị hàm số bậc ba.</li>
+<li>Khảo sát sự biến thiên và vẽ đồ thị hàm số bậc bốn (trùng phương)</li>
+<li>Khảo sát sự biến thiên và vẽ đồ thị hàm số phân thức bậc nhất/bậc nhất (hàm nhất biến).</li>
+</ul>
+<div id="26">
+<h3>2.6. Bài toán về sự tương giao của đồ thị hàm số</h3>
+</div>
+<ul>
+<li>Tìm số giao điểm của hai đường \((C_1):y=f(x)\) và \((C_2):y=g(x).\)</li>
+<li>Biện luận theo m nghiệm của phương trình \(f(x)=m.\)</li>
+</ul> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div data="INPAGE_MB YOMEDIA/intVisit=1"> </div><script type="text/javascript">
+	/* load placement: hoc247.net-mobile-inpage, for account: tailieu, site: hoc247.net, size: 2x2 - mobile */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["8701f44d62d54250b122748815c71b40","https://hoc247.net/toan-12/on-tap-chuong-1-ung-dung-dao-ham-de-khao-sat-va-ve-do-thi-ham-so-l6276.html","[width]","[height]"]);
+</script>
+<script id="s-8701f44d62d54250b122748815c71b40" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div data="INVIEW_MB YOMEDIA"> </div> <script type="text/javascript">
+	/* load placement: hoc247.net-inread, for account: tailieu, site: hoc247.net, size: 2x2 - video */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["15c47dbd541741bd976281bcda70b78c","https://hoc247.net/toan-12/on-tap-chuong-1-ung-dung-dao-ham-de-khao-sat-va-ve-do-thi-ham-so-l6276.html","[width]","[height]"]);
+</script>
+<script id="s-15c47dbd541741bd976281bcda70b78c" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div class="box-content content-fck">
+<div id="31">
+<h3>3.1. Bài tập cưc trị hàm số</h3>
+</div>
+<p>Cho hàm số: \(y=\frac{1}{3}x^3-mx^2+(m^2-m+1)x+1\). Tìm m để hàm số:<br>
+a) Có cực đại và cực tiểu. <br/>
+b) Đạt cực đại tại điểm x=1.</br></p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<p>TXĐ: \(D=\mathbb{R}.\) </p>
+<p>Đạo hàm: \(y'=x^2-2mx+m^2-m+1\).</p>
+<p>a) Tìm m để hàm số có cực đại và cực tiểu.<br/>
+Hàm số có cực đại và cực tiểu khi và chỉ khi: y'=0 có 2 nghiệm phân biệt.<br/>
+Điều này xảy ra khi: \(\left\{\begin{matrix} a_{y'}\neq 0\\ \Delta '_{y'}&gt;0 \end{matrix}\right.\Leftrightarrow \left\{\begin{matrix} 1\neq 0\\ (-m)^2-(m^2-m+1)&gt;0 \end{matrix}\right.\Leftrightarrow m-1&gt;0\Leftrightarrow m&gt;1\)<br/>
+b) Tìm m để hàm số đạt cực tiểu tại điểm x = 1<br/>
+\(y'=x^2-2mx+m^2-m+1\) và \(y''=2x-2m\)<br/>
+Ta có: \(\left\{\begin{matrix} y'(1)=0\\ y''(1)&lt;0 \end{matrix}\right. \ \ \Leftrightarrow \left\{\begin{matrix} m^2-3m+2=0\\ 2-2m&lt;0 \end{matrix}\right.\)\(\Leftrightarrow \left\{\begin{matrix} m=1\vee m=2\\ m&gt;1 \end{matrix}\right.\Leftrightarrow m=2\)<br/>
+Thử lại với m=2 hàm số đạt cực đại tại x=1.</p>
+<div id="32">
+<h3>3.2. Bài tập xác định m hàm nghịch biến</h3>
+</div>
+<p>Định m để hàm số \(y=x^3+3x^2+(m+1)x+4m\) nghịch biến trên khoảng (-1;1).</p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<p>TXĐ: \(D=\mathbb{R}.\)<br/>
+Đạo hàm: \(y'=3x^2+6x+m+1\)<br/>
+Hàm số nghịch biến trên khoảng (-1;1) khi và chỉ khi \(y'\leq 0,\forall x\in (-1;1)\)<br/>
+\(\Leftrightarrow 3x^2+6x+m+1\leq 0, \forall x\in (-1;1) \ \ (1)\)<br/>
+Xét BPT (1) \(\Leftrightarrow m\leq -3x^2-6x-1=g(x)\)<br/>
+Xét hàm số  \(g(x), x\in (-1;1)\)<br/>
+Có: \(g'(x)=-6x-6\leq 0, \forall x\in (-1;1)\)<br/>
+BBT:<br/>
+<img alt="" src="http://image.hoc247.net/contentans/2017/20170309/91781489032782-aa.png" style="height:159px; width:300px"/><br/>
+<br/>
+Từ BBT suy ra \(m\leq g(x), \forall x\in (-1;1)\Leftrightarrow m\leq -10\)<br/>
+Vậy, hàm số nghịch biến trên khoảng \((-1;1)\) khi và chỉ khi \(m\leq 10.\)</p>
+<div id="33">
+<h3>3.3. Bài tập tìm GTLN &amp; GTNN</h3>
+</div>
+<p>Tìm giá trị lớn nhất và giá trị nhỏ nhất của hàm số \(f(x)=x^2-ln4x\) trên đoạn [1;e].</p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<div>Hàm số xác định và liên tục trên đoạn [1;e].<br/>
+\(f'(x)=2x-\frac{4}{x}=\frac{2x^2-4}{x}\); với \(x\in [1;e],f'(x)=0\Leftrightarrow x=\sqrt{2}\)<br/>
+\(f(1)=1;f(e)=e^2-4;f(\sqrt{2})=2-2ln2\)<br/>
+Do đó:<br/>
+ \(\underset{x\in [1;e]}{min}f(x)=f(\sqrt{2})=2-2ln2\).<br/>
+\(\underset{x\in [1;e]}{max}f(x)=f(e)=e^2-4\).</div>
+<div id="34">
+<h3>3.4. Bài tập tìm m đề cắt trục hoành 4 điểm</h3>
+</div>
+<div>Cho hàm số \(y=-x^4+(m+2)x^2-m-1\) có đồ thị (C). Tìm m để đồ thị (C) cắt trục hoành tại 4 điểm phân biệt có hoành độ đều nhỏ hơn 2.</div>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<div>Phương trình hoành độ giao điểm của (C) và trục Ox:<br/>
+\(-x^4+(m+2)x^2-m-1=0\Leftrightarrow \bigg \lbrack \begin{matrix} x^2=1\Leftrightarrow x=\pm 1\\ x^2=m+1 \end{matrix}\) (1)<br/>
+<br/>
+(C) cắt trục Ox tại 4 điểm phân biệt <br/>
+\(\Leftrightarrow \left\{\begin{matrix} m+1&gt;0\\ m+1\neq 1 \end{matrix}\right.\Leftrightarrow \left\{\begin{matrix} m&gt;-1\\ m\neq 0 \end{matrix}\right.\)<br/>
+Khi đó: \((1)\Leftrightarrow x=-1\cup x=1\cup x=-\sqrt{m+1}\cup x=\sqrt{m+1}\)<br/>
+Yêu cầu bài toán \(\Leftrightarrow \sqrt{m+1}&lt;2\Leftrightarrow m+1&lt;4\Leftrightarrow m&lt;3\)<br/>
+So với điều kiện (*) ta có giá trị cần tìm là: \(\left\{\begin{matrix} -1</div> </div>
+</div></div></div></section>
+{% endverbatim %}
+{% endblock %}

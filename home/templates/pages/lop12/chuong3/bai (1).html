@@ -1,0 +1,166 @@
+{% extends "pages/lop12/chuong3/base-lop12-chuong3.html" %}
+{% block title %}Toán 12 Bài 1: Nguyên hàm{% endblock %}
+{% block content %}
+{% verbatim %}
+<section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 12 Bài 1: Nguyên hàm</h1></div></section>
+<section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
+<br/>
+<p>Thông qua bài học các em sẽ nắm được khái niệm, các tính chất của <strong>nguyên hàm</strong>. Bên cạnh đó bài học còn giới thiệu đến các em <strong>công thức tìm nguyên hàm</strong> của một số hàm số cơ bản, các phương pháp tìm nguyên hàm của một hàm số là <strong>phương pháp đổi biến số</strong> và<strong> phương pháp nguyên hàm từng phần.</strong></p> </div></div><div class="box-1">
+<div class="box-title-1" id="lythuyet"><h2 class="b-title">Tóm tắt lý thuyết </h2></div>
+<div class="box-content content-fck">
+<div id="21">
+<h3>2.1. Nguyên hàm và tính chất</h3>
+</div>
+<h4>a) Khái niệm nguyên hàm</h4>
+<p>Kí hiệu K là khoảng hoặc đoạn hoặc nửa khoảng của \(\mathbb{R}.\)</p>
+<p><span style="font-size:14px"><strong>Định nghĩa:</strong></span></p>
+<p>Cho hàm số \(f(x)\) xác định trên K.</p>
+<p>Hàm số \(F(x)\) được gọi là nguyên hàm của hàm số \(f(x)\) trên K nếu \(F'(x) = f(x)\) với mọi \(x \in K.\)</p>
+<p><strong><span style="font-size:14px">Định lý 1:</span></strong></p>
+<p>Nếu \(F(x)\) là một nguyên hàm của hàm số \(f(x)\) trên K thì với mỗi hằng số C, hàm số \(G(x) = F(x)+C\) cũng là một nguyên hàm của hàm số \(f(x)\) trên K.</p>
+<p><strong><span style="font-size:14px">Định lý 2:</span></strong></p>
+<p>Nếu \(F(x)\) là một nguyên hàm của hàm số \(f(x)\) trên K thì mọi nguyên hàm của \(f(x)\) trên K đều có dạng \(F(x)+C\) với \(C\) là một hằng số tùy ý.</p>
+<p>Kí hiệu họ nguyên hàm của hàm số \(f(x)\) là \(\int f(x)dx.\)</p>
+<p>Khi đó : \(\int f(x)dx=F(x)+C,C\in \mathbb{R}.\)</p>
+<h4>b) Tính chất</h4>
+<ul>
+<li><strong>Tính chất 1: </strong>\(\int f'(x)dx=f(x)+C,C\in \mathbb{R}.\)</li>
+<li><strong>Tính chất 2:</strong> \(\int fk(x)dx=k\int f(x)dx\) (với k là hằng số khác 0).</li>
+<li><strong>Tính chất 3</strong>: \(\int {\left( {f(x) \pm g(x)} \right)dx} = \int {f(x)dx} \pm \int {g(x)dx}.\)</li>
+</ul>
+<h4>c) Sự tồn tại của nguyên hàm</h4>
+<p><strong>Định lí 3:</strong></p>
+<p>Mọi hàm số f(x) liên tục trên K đều có nguyên hàm trên K.</p>
+<h4>d) Nguyên hàm của một số hàm số thường gặp</h4>
+<ul>
+<li>Nguyên hàm của các hàm số sơ cấp thương gặp:
+	<ul>
+<li>\(\int {kdx = kx + C,\,k \in \mathbb{R}}\)</li>
+<li>\(\int {{x^\alpha }dx = \frac{1}{{1 + \alpha }}.{x^{\alpha + 1}} + C\,(\alpha \ne - 1)}\)</li>
+<li>\(\int {\frac{{dx}}{x} = \ln \left| x \right| + C}\)</li>
+<li>\(\int {\frac{{dx}}{{\sqrt x }} = 2\sqrt x + C}\)</li>
+<li>\(\int {{e^x}dx = {e^x} + C}\)</li>
+<li>\(\int {{a^x}dx = \frac{{{a^x}}}{{\ln a}} + C\,\,(0 &lt; a \ne 1)}\)</li>
+<li>\(\int {\cos xdx = \sin x + C}\)</li>
+<li>\(\int {\sin xdx = - \cos x + C}\)</li>
+<li>\(\int {\frac{{dx}}{{{{\cos }^2}x}} = \tan x + C}\)</li>
+<li>\(\int {\frac{{dx}}{{{{\sin }^2}x}} = - \cot x + C}\)</li>
+</ul>
+</li>
+<li>Ngoài ra còn có một số công thức thường gặp khác:
+	<ul>
+<li>\(\int {{{({\rm{ax}} + b)}^k}dx = \frac{1}{a}\frac{{{{{\rm{(ax}} + b)}^{k + 1}}}}{{k + 1}}\, + C\,,(a \ne 0,\,k \ne - 1)}\)</li>
+<li>\(\int {\frac{1}{{{\rm{ax}} + b}}dx = \frac{1}{a}\ln \left| {{\rm{ax}} + b} \right|} + C,\,a \ne 0\)</li>
+<li>\(\int {{e^{{\rm{ax}} + b}}dx = \frac{1}{a}{e^{{\rm{ax}} + b}} + C}\)</li>
+<li>\(\int {c{\rm{os}}({\rm{ax}} + b)dx = \frac{1}{a}\sin ({\rm{ax}} + b)} + C\)</li>
+<li>\(\int {\sin ({\rm{ax}} + b)dx = - \frac{1}{a}c{\rm{os}}({\rm{ax}} + b)} + C\)</li>
+</ul>
+</li>
+</ul>
+<div id="22">
+<h3>2.2. Các phương pháp tính nguyên hàm</h3>
+</div>
+<h4><span style="color:inherit; font-family:inherit; font-size:16px">a) Phương pháp đổi biến số</span></h4>
+<p><strong>Định lí 1:</strong></p>
+<p style="text-align:justify">Cơ sở của phương pháp đổi biến số là định lý sau: Cho hàm số \(u = u(x)\) có đạo hàm và liên tục trên K và hàm số \(y = f({\rm{u)}}\) liên tục sao cho \(f[u(x)]\) xác định trên K. Khi đó nếu \(F\) là một nguyên hàm của \(f\), tức là \(\int {f(u)du = F(u) + C}\) thì \(\int {f[u(x){\rm{]dx = F[u(x)] + C}}}.\)</p>
+<p style="text-align:justify"><strong>Hệ quả:</strong></p>
+<p style="text-align:justify">Với \(u = ax + b\,(a \ne 0),\) ta có:</p>
+<p style="text-align:justify">\(\int {f(ax + b)dx} = \frac{1}{a}F(ax + b) + C\)</p>
+<h4>b) Phương pháp tính nguyên hàm từng phần</h4>
+<p><strong>Định lí 2: </strong></p>
+<p>Nếu hai hàm số \(u=u(x)\) và \(v=v(x)\) có đạo hàm và liên tục trên K thì:</p>
+<p>\(\int {u(x)v'(x)dx} = u(x)v(x) - \int {u'(x)v(x)dx}\)</p>
+<p><strong>Một số dạng thường gặp:</strong></p>
+<ul>
+<li>Dạng 1: \(\int {P(x).{e^{{\rm{ax}} + b}}dx\,,\,\,\int {P(x)\sin ({\rm{ax}} + b)dx\,,\,\int {P(x)c{\rm{os}}({\rm{ax}} + b)dx} } }\)</li>
+</ul>
+<p style="margin-left:40px">Cách giải: Đặt \(u = P(x)\,,\,dv = {e^{{\rm{ax}} + b}}dx\,\) hoặc \(dv = \sin (ax + b)dx,\,\,dv = \cos (ax + b)dx.\)</p>
+<ul>
+<li>Dạng 2: \(\int {P(x)\ln ({\rm{ax}} + b)dx}\)</li>
+</ul>
+<p style="margin-left:40px">Cách giải: Đặt \(u = \ln ({\rm{ax}} + b)\,,\,dv = P(x)dx.\)</p> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div data="INPAGE_MB YOMEDIA/intVisit=1"> </div><script type="text/javascript">
+	/* load placement: hoc247.net-mobile-inpage, for account: tailieu, site: hoc247.net, size: 2x2 - mobile */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["8701f44d62d54250b122748815c71b40","https://hoc247.net/toan-12/bai-1-nguyen-ham-l812.html","[width]","[height]"]);
+</script>
+<script id="s-8701f44d62d54250b122748815c71b40" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div data="INVIEW_MB YOMEDIA"> </div> <script type="text/javascript">
+	/* load placement: hoc247.net-inread, for account: tailieu, site: hoc247.net, size: 2x2 - video */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["15c47dbd541741bd976281bcda70b78c","https://hoc247.net/toan-12/bai-1-nguyen-ham-l812.html","[width]","[height]"]);
+</script>
+<script id="s-15c47dbd541741bd976281bcda70b78c" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div class="box-content content-fck">
+<div id="3">
+<h4><u><strong>Ví dụ 1:</strong></u></h4>
+</div>
+<p>Áp dụng công thức nguyên hàm cơ bản, tính nguyên hàm sau:</p>
+<p>a) \(I = \int {{x^8}}dx\)</p>
+<p>b) \(I=\int \left ( x^2+2x \right )^2dx\)</p>
+<p>c) \(I=\int \frac{1}{x^5}dx\)</p>
+<p>d) \(I=\int\frac{1}{2x}dx\)</p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<p>a) \(I = \int {{x^8}dx = \frac{1}{9}{x^9} + C}\)</p>
+<p>b) \(I = \int {{{\left( {{x^2} + 2x} \right)}^2}dx = \int {\left( {{x^4} + 4{x^3} + 4{x^2}} \right)dx = \frac{1}{5}{x^5} + {x^4} + \frac{4}{3}{x^3} + C} }\)</p>
+<p>c) \(I = \int {\frac{{dx}}{{{x^5}}} = \int {{x^{ - 5}}dx = \frac{1}{{ - 5 + 1}}{x^{ - 5 + 1}} + C = } } - \frac{1}{4}{x^{ - 4}} + C\)</p>
+<p>d) \(I = \int {\frac{{dx}}{{2x}}} = \frac{1}{2}\int {\frac{{dx}}{x} = \frac{1}{2}\ln \left| x \right| + C}\)</p>
+<h4><u><strong>Ví dụ 2:</strong></u></h4>
+<p>Dùng phương pháp đổi biến số tính các nguyên hàm sau:</p>
+<p>a) \(I = \int {\sqrt {{x^{2004}} + 1} .{x^{2003}}dx}\)</p>
+<p>b) \(I = \int {{e^{{e^x} + x}}dx}\)</p>
+<p>c) \(I = \int {{e^{2{x^2} + \ln {\rm{x}}}}dx}\)</p>
+<p>d) \(I = \int {\frac{x}{{\sqrt[{10}]{{x + 1}}}}} dx\)</p>
+<p>e) \(I=\int {\frac{{\sin x.{{\cos }^3}x}}{{1 + {{\cos }^2}x}}dx}\)</p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<p>a) Đặt: \(t = {x^{2004}} + 1 \Rightarrow dt = 2004{x^{2003}}dx \Rightarrow {x^{2003}}dx = \frac{1}{{2004}}dt.\)</p>
+<p>Từ đó ta được: </p>
+<p>\(I = \frac{1}{{2004}}\int {\sqrt t dt} = \frac{1}{{2004}}\int {{t^{\frac{1}{2}}}dt} = \frac{1}{{2004}}.\frac{2}{3}{t^{\frac{3}{2}}} + C\)</p>
+<p>\(= \frac{1}{{3006}}\sqrt {{t^3}} + C = \frac{1}{{3006}}\sqrt {{{\left( {{x^{2004}} + 1} \right)}^3}} + C\)</p>
+<p>b) Ta có: \({e^{{e^x} + x}} = {e^{{e^x}}}.{e^x}\)</p>
+<p>Đặt: \({e^x} = t \Rightarrow {e^x}dx = dt\)</p>
+<p>Từ đó ta được:</p>
+<p>\(I = \int {{e^t}dt} = \int {{e^t}dt} = {e^t} + C = {e^{{e^x}}} + C\)</p>
+<p>c) Ta có: \(M = \int {{e^{2{x^2}}}.{e^{\ln x}}dx = } \int {{e^{2{x^2}}}.xdx}\)</p>
+<p>Đặt: \(2{x^2} = t \Rightarrow 4xdx = dt \Rightarrow xdx = \frac{{dt}}{4}\)</p>
+<p>Ta được: \(M = \int {{e^t}\frac{{dt}}{4} = \frac{1}{4}{e^t} + C = \frac{1}{4}{e^{2{x^2}}}} + C.\)</p>
+<p>d) \(I = \int {\frac{x}{{\sqrt[{10}]{{x + 1}}}}} dx\)</p>
+<p>Đặt: \(\sqrt[{10}]{{x + 1}} = t \Rightarrow x + 1 = {t^{10}} \Rightarrow dx = 10{t^9}dt\)</p>
+<p>Ta được:</p>
+<p>\(\begin{array}{l} N = \int {\frac{{{t^{10}} - 1}}{t}.10{t^9}dt} = 10\int {\left( {{t^{10}} - 1} \right){t^8}dt} \\ = 10\int {\left( {{t^{18}} - {t^8}} \right)dt} = \frac{{10}}{{19}}{t^{19}} - \frac{{10}}{9}{t^9} + C \end{array}\)</p>
+<p> \(\, = \frac{{10}}{{19}}\sqrt[{10}]{{{{\left( {x + + 1} \right)}^{19}}}} - \frac{{10}}{9}\sqrt[{10}]{{{{\left( {x + 1} \right)}^9}}} + C\)</p>
+<p>e) Ta có:\(I = \int {\frac{{\sin x.{{\cos }^3}x}}{{1 + {{\cos }^2}x}}dx = \frac{1}{2}\int {\frac{{2\sin x\cos x.{{\cos }^2}x}}{{1 + {{\cos }^2}x}}} } dx = \frac{1}{2}\int {\frac{{{{\cos }^2}x}}{{1 + {{\cos }^2}x}}.\sin 2xdx}\)</p>
+<p>Đặt: \(1 + {\cos ^2}x = t \Rightarrow \sin 2xdx = - dt\)</p>
+<p>\(\Rightarrow S = - \frac{1}{2}\int {\frac{{t - 1}}{t}dt} = - \frac{1}{2}\int {dt + \frac{1}{2}\int {\frac{{dt}}{t}} = - \frac{1}{2}t + \frac{1}{2}\ln \left| t \right| + C}\)</p>
+<h4><u><strong>Ví dụ 3:</strong></u> </h4>
+<p>Dùng phương pháp nguyên hàm từng phần tính các nguyên hàm sau:</p>
+<p>a) \(I = \int {x{\rm{sin2}}xdx}\)</p>
+<p>b) \(I = \int {{x^2}{e^{2x}}dx}\)</p>
+<p>c) \(I = \int {\left( {2{x^2} + x + 1} \right){e^x}dx}\)</p>
+<p>d) \(I = \int {x{{\cos }^2}2xdx}\)</p>
+<h4><u><strong>Lời giải:</strong></u></h4>
+<p>a) Đặt \(\left\{ \begin{array}{l} u = x\\ dv = \sin 2xdx \end{array} \right. \Rightarrow \left\{ \begin{array}{l} du = dx\\ v = - \frac{1}{2}\cos 2x \end{array} \right.\)</p>
+<p>\(\Rightarrow I = - \frac{1}{2}x\cos 2x + \frac{1}{2}\int {\cos 2xdx} = - \frac{1}{2}x\cos 2x + \frac{1}{4}\sin 2x + C\)</p>
+<p>b) Đặt: \(\left\{ \begin{array}{l} u = {x^2}\\ dv = {e^{2x}}dx \end{array} \right. \Rightarrow \left\{ \begin{array}{l} du = 2xdx\\ v = \frac{1}{2}{e^{2x}} \end{array} \right.\)\(\Rightarrow I = \frac{1}{2}{x^2}{e^{2x}} - \int {x{e^{2x}}dx} = \frac{1}{2}{x^2}{e^{2x}} - {I_1}\)</p>
+<p>Tính \({I_1} = \int {x{e^{2x}}dx}\)</p>
+<p>Đặt: \(\left\{ \begin{array}{l} u = x\\ dv = {e^{2x}}dx \end{array} \right. \Rightarrow \left\{ \begin{array}{l} du = dx\\ v = \frac{1}{2}{e^{2x}} \end{array} \right.\)</p>
+<p>\(\Rightarrow {I_1} = \frac{1}{2}x{e^{2x}} - \frac{1}{2}\int {{e^{2x}}dx} = \frac{1}{2}x{e^{2x}} - \frac{1}{4}{e^{2x}} + C\)</p>
+<p>Vậy: \(I = \frac{1}{2}{x^2}{e^{2x}} - \frac{1}{2}x{e^{2x}} + \frac{1}{4}{e^{2x}} + C = \frac{{\left( {2{x^2} - 2x + 1} \right){e^{2x}}}}{4} + C\)</p>
+<p>c) Đặt: \(\left\{ \begin{array}{l} u = 2{x^2} + x + 1\\ dv = {e^x}dx \end{array} \right. \Rightarrow \left\{ \begin{array}{l} du = \left( {4x + 1} \right)dx\\ v = {e^x} \end{array} \right.\)</p>
+<p>\(\Rightarrow I = \left( {2{x^2} + x + 1} \right){e^x} - \int {\left( {4x + 1} \right){e^x}dx}\)</p>
+<p>Tính: \({I_1} = \int {\left( {4x + 1} \right){e^x}dx}\)</p>
+<p>Đặt: \(\left\{ \begin{array}{l} u = 4x + 1\\ dv = {e^x}dx \end{array} \right. \Rightarrow \left\{ \begin{array}{l} du = 4dx\\ v = {e^x} \end{array} \right.\)</p>
+<p> \(\Rightarrow {I_1} = \left( {4x + 1} \right){e^x} - 4\int {{e^x}dx} = \left( {4x + 1} \right){e^x} - 4{e^x} + C = \left( {4x - 3} \right){e^x} + C\)</p>
+<p>\(\Rightarrow I = \left( {2{x^2} + x + 1} \right){e^x} - \left( {4x - 3} \right){e^x} + C = \left( {2{x^2} - 3x + 4} \right){e^x} + C\)</p>
+<p>d) </p>
+<p>\(\begin{array}{l} I = \int {x{{\cos }^2}2xdx} = \int {x.\frac{{1 + \cos 4x}}{2}} dx\\ = \frac{1}{2}\int {xdx} + \int {\frac{1}{2}x\cos 4xdx} = \frac{1}{4}{x^2} + {I_1} \end{array}\)</p>
+<p>Tính \({I_1} = \int {\frac{1}{2}x\cos 4xdx}\)</p>
+<p>Đặt: \(\left\{ \begin{array}{l} u = \frac{1}{2}x\\ dv = \cos 4xdx \end{array} \right. \Rightarrow \left\{ \begin{array}{l} du = \frac{1}{2}dx\\ v = \frac{1}{4}\sin 4x \end{array} \right.\)</p>
+<p>\(\Rightarrow {I_1} = \frac{1}{8}x\sin 4x - \frac{1}{8}\int {\sin 4xdx} = \frac{1}{8}x\sin 4x + \frac{1}{{32}}\cos 4x + C\)</p>
+<p>Vậy: \(I = \frac{1}{4}{x^2} + \frac{1}{8}x\sin 4x + \frac{1}{{32}}\cos 4x + C\)</p> </div>
+</div></div></div></section>
+{% endverbatim %}
+{% endblock %}

@@ -1,0 +1,114 @@
+{% extends "pages/lop11/chuong2/base-lop11-chuong2.html" %}
+{% block title %}Toán 11 Bài 3: Nhị thức Niu-tơn{% endblock %}
+{% block content %}
+{% verbatim %}
+<section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 11 Bài 3: Nhị thức Niu-tơn</h1></div></section>
+<section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
+<br/>
+<p>Nội dung bài học sẽ giới thiệu đến các em khái niệm <strong>Nhị thức Niu-tơn</strong> cùng các dạng bài tập liên quan. Bên cạnh đó là những ví dụ minh họa có hướng dẫn giải sẽ giúp các em dễ dàng làm chủ nội dung bài học.</p> </div></div><div class="box-1">
+<div class="box-title-1" id="lythuyet"><h2 class="b-title">Tóm tắt lý thuyết </h2></div>
+<div class="box-content content-fck">
+<div id="11">
+<h3>1.1. Nhị thức Newton</h3>
+</div>
+<p><strong>Định lí:</strong> \({(a + b)^n} = \sum\limits_{k = 0}^n {C_n^k{a^{n - k}}{b^k}} \)</p>
+<p>                  \( = C_n^0{a^n} + C_n^1{a^{n - 1}}b + C_n^2{a^{n - 2}}{b^2} + ... + C_n^{n - 1}a{b^{n - 1}} + C_n^n{b^n}\)</p>
+<div id="12">
+<h3>1.2. Nhận xét</h3>
+</div>
+<p>Trong khai triển Newton \({(a + b)^n}\) có các tính chất sau</p>
+<ul>
+<li>Gồm có \(n + 1\) số hạng</li>
+<li>Số mũ của a giảm từ n đến 0 và số mũ của b tăng từ 0 đến n</li>
+<li>Tổng các số mũ của a và b trong mỗi số hạng bằng n</li>
+<li>Các hệ số có tính đối xứng: \(C_n^k = C_n^{n - k}\)</li>
+<li>Số hạng tổng quát : \({T_{k + 1}} = C_n^k{a^{n - k}}{b^k}\)</li>
+</ul>
+<p><strong>VD</strong>: Số hạng thứ nhất \({T_1} = {T_{0 + 1}} = C_n^0{a^n}\), số hạng thứ k: \({T_{(k - 1) + 1}} = C_n^{k - 1}{a^{n - k + 1}}{b^{k - 1}}\)</p>
+<div id="13">
+<h3>1.3. Hệ quả</h3>
+</div>
+<p>Ta có : \({(1 + x)^n} = C_n^0 + xC_n^1 + {x^2}C_n^2 + ... + {x^n}C_n^n\)</p>
+<p>Từ khai triển này ta có các kết quả sau:</p>
+<ul>
+<li>\(C_n^0 + C_n^1 + ... + C_n^n = {2^n}\)</li>
+<li>\(C_n^0 - C_n^1 + C_n^2 - ... + {( - 1)^n}C_n^n = 0\)</li>
+</ul>
+<div id="14">
+<h3>1.4. Bài toán</h3>
+</div>
+<p><strong>Xác định hệ số của số hạng chứa </strong>\({x^m}\)<strong> trong khai triển:</strong></p>
+<p>\({\left( {a{x^p} + b{x^q}} \right)^n}\) với \(x &gt; 0\)      (\(p,q\) là các hằng số khác nhau).</p>
+<h4><u>Phương pháp giải:</u></h4>
+<p>Ta có:</p>
+<p>\({\left( {a{x^p} + b{x^q}} \right)^n} = \sum\limits_{k = 0}^n {C_n^k{{\left( {a{x^p}} \right)}^{n - k}}{{\left( {b{x^q}} \right)}^k}}  = \sum\limits_{k = 0}^n {C_n^k{a^{n - k}}{b^k}{x^{np - pk + qk}}} \)</p>
+<p>Số hạng chứa \({x^m}\) ứng với giá trị \(k\) thỏa: \(np - pk + qk = m\).</p>
+<p>Từ đó tìm \(k = \frac{{m - np}}{{p - q}}\)</p>
+<p>Vậy hệ số của số hạng chứa \({x^m}\) là: \(C_n^k{a^{n - k}}.{b^k}\) với giá trị \(k\) đã tìm được ở trên.</p>
+<p> Nếu \(k\) không nguyên hoặc \(k &gt; n\) thì trong khai triển không chứa \({x^m}\), hệ số phải tìm bằng 0.</p>
+<p><u><strong>Chú ý:</strong></u> Xác định hệ số của số hạng chứa \({x^m}\) trong khai triển</p>
+<p>\(P\left( x \right) = {\left( {a + b{x^p} + c{x^q}} \right)^n}\) được viết dưới dạng \({a_0} + {a_1}x + ... + {a_{2n}}{x^{2n}}\).</p>
+<p>Ta làm như sau:</p>
+<ul>
+<li>Viết \(P\left( x \right) = {\left( {a + b{x^p} + c{x^q}} \right)^n} = \sum\limits_{k = 0}^n {C_n^k{a^{n - k}}{{\left( {b{x^p} + c{x^q}} \right)}^k}} \);</li>
+<li>Viết số hạng tổng quát khi khai triển các số hạng dạng \({\left( {b{x^p} + c{x^q}} \right)^k}\) thành một đa thức theo luỹ thừa của x.</li>
+<li>Từ số hạng tổng quát của hai khai triển trên ta tính được hệ số của \({x^m}\).</li>
+</ul>
+<p><u><strong>Chú ý:</strong></u> Để xác định hệ số lớn nhất trong khai triển nhị thức Niutơn</p>
+<p>Ta làm như sau:</p>
+<ul>
+<li>Tính hệ số \({a_k}\) theo \(k\) và \(n\);</li>
+<li>Giải bất phương trình \({a_{k - 1}} \le {a_k}\) với ẩn số \(k\);</li>
+<li>Hệ số lớn nhất phải tìm ứng với số tự nhiên k lớn nhất thoả mãn bất phương trình trên.</li>
+</ul> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div data="INPAGE_MB YOMEDIA/intVisit=1"> </div><script type="text/javascript">
+	/* load placement: hoc247.net-mobile-inpage, for account: tailieu, site: hoc247.net, size: 2x2 - mobile */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["8701f44d62d54250b122748815c71b40","https://hoc247.net/toan-11/bai-3-nhi-thuc-niu-ton-l770.html","[width]","[height]"]);
+</script>
+<script id="s-8701f44d62d54250b122748815c71b40" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div data="INVIEW_MB YOMEDIA"> </div> <script type="text/javascript">
+	/* load placement: hoc247.net-inread, for account: tailieu, site: hoc247.net, size: 2x2 - video */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["15c47dbd541741bd976281bcda70b78c","https://hoc247.net/toan-11/bai-3-nhi-thuc-niu-ton-l770.html","[width]","[height]"]);
+</script>
+<script id="s-15c47dbd541741bd976281bcda70b78c" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div class="box-content content-fck">
+<h4><u>Ví dụ 1: </u></h4>
+<p>Tìm hệ số x<sup>16</sup> trong khai triền ( x<sup>2</sup>-2x )<sup>10</sup>.</p>
+<h4><u>Hướng dẫn giải:</u> </h4>
+<p>Ta có: \({\left( {{x^2} - 2x} \right)^{10}} = \,{\sum\limits_{k = 0}^{10} {C_{10}^k{x^2})} ^{10 - k}}{\left. { - 2x} \right)^k}\)</p>
+<p>\(= \,\sum\limits_{k = 0}^{10} {C_{10}^k{x^{20 - 2k}}{x^k}} {\left. { - 2} \right)^k} = \,\sum\limits_{k = 0}^{10} {C_{10}^k{x^{20 - k}}} {\left. { - 2} \right)^k}\)</p>
+<p>Ta chọn: 20 - k= 16 \(\Leftrightarrow \,k = 4\)</p>
+<p>=&gt; Hệ số x<sup>16</sup> trong khai triển là \(C_{10}^4 = 3360\)</p>
+<h4><u>Ví dụ 2:</u></h4>
+<p>Biết hệ số của x<sup>2</sup> trong khai triển của (1-3x)<sup>n</sup> là 90. Tìm n.</p>
+<h4><u>Hướng dẫn giải:</u> </h4>
+<p>Với số thực \(x \ne 0\) và với mọi số tự nhiên \(n \ge 1\), ta có:</p>
+<p>\({(1 - 3x)^n} = \,{[1 - (3x)]^n} = \,\sum\limits_{k = 0}^n {C_n^k} {(1)^{n - k}}{( - 3)^k}{x^k}\)</p>
+<p>Suy ra hệ số của x<sup>2</sup> trong khai triển này là \({3^2}C_n^2\). Theo giả thiết, ta có:</p>
+<p>\({3^2}C_n^2\) = 90 =&gt; \(C_n^2\, = 10\)</p>
+<p>Từ đó ta có: \(\frac{{n!}}{{2!(n - 2)!}} = 10\, \Leftrightarrow \,n(n - 1)\, = \,20\)</p>
+<p>\(\Leftrightarrow \,{n^2}\, - \,n = \,20\, \Leftrightarrow \,n = \, - 4\) ( loại) hoặc n= 5</p>
+<p>Đáp số: n= 5</p>
+<h4><u>Ví dụ 3: </u></h4>
+<p>Tìm số hạng không chứa x trong các khai triển \(f(x) = {\left( {x - \frac{2}{x}} \right)^{12}}{\rm{    (}}x \ne 0).\)</p>
+<h4><u>Hướng dẫn giải:</u></h4>
+<p>Ta có: \(f(x) = {(x - 2.{x^{ - 1}})^{12}} = \sum\limits_{k = 0}^{12} {C_{12}^k{x^{12 - k}}.{{( - 2{x^{ - 1}})}^k}} \)</p>
+<p>                       \(\sum\limits_{k = 0}^{12} {C_{12}^k{{( - 2)}^k}{x^{12 - 2k}}} \)</p>
+<p>Số hạng không chứa \(x\) ứng với giá trị \(k\) thỏa mãn: \(12 - 2k = 0\)</p>
+<p>\( \Leftrightarrow k = 6 \Rightarrow \) số hạng không chứa \(x\) là: \(C_{12}^6{.2^6} = 59136\).</p>
+<h4><u>Ví dụ 4:</u></h4>
+<p>Xác định hệ số của \({x^4}\) trong khai triển sau: \(f(x) = {(3{x^2} + 2x + 1)^{10}}\).</p>
+<h4><u>Hướng dẫn giải:</u></h4>
+<p>\(f\left( x \right) = {\left( {1 + 2x + 3{x^2}} \right)^{10}} = \sum\limits_{k = 0}^{10} {C_{10}^k} {\left( {2x + 3{x^2}} \right)^k}\)</p>
+<p>\( = \sum\limits_{k = 0}^{10} {C_{10}^k} \sum\limits_{i = 0}^k {C_k^i} {(2x)^{k - i}}.{(3{x^2})^i} = \sum\limits_{k = 0}^{10} {C_{10}^k} \sum\limits_{i = 0}^k {C_k^i} {2^{k - i}}{.3^i}{x^{k + i}}\)</p>
+<p>với\(0 \le i \le k \le 10\).</p>
+<p>Do đó \(k + i = 4\) với các trường hợp \(i = 0,k = 4\) hoặc \(i = 1,k = 3\) hoặc \(i = k = 2\).</p>
+<p>Vậy hệ số chứa \({x^4}\): \({2^4}C_{10}^4.C_4^0 + {2^2}{3^1}C_{10}^3.C_3^1 + {3^2}C_{10}^2.C_2^2 = 8085\).</p> </div>
+</div></div></div></section>
+{% endverbatim %}
+{% endblock %}

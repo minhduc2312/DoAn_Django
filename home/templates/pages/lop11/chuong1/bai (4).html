@@ -1,0 +1,174 @@
+{% extends "pages/lop11/chuong1/base-lop11-chuong1.html" %}
+{% block title %}Toán 11 Ôn tập chương 1 Hàm số lượng giác và Phương trình lượng giác{% endblock %}
+{% block content %}
+{% verbatim %}
+<section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 11 Ôn tập chương 1 Hàm số lượng giác và Phương trình lượng giác</h1></div></section>
+<section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
+<br/>
+<p>Nội dung bài ôn tập Chương <strong>Hàm số lượng giác và Phương trình lượng giác </strong>sẽ giúp các em có cái nhìn tổng quan về toàn bộ nội dung đã học trong chương 1 thông qua <strong>sơ đồ hệ thống hóa kiến thức</strong> và các bài tập ở mức độ khó cao hơn. Bên cạnh đó thông qua nội dung bài học, các em sẽ được tìm hiểu thêm một số dạng <strong>phương trình lượng giác đặc trưng</strong> không được giới thiệu trong sách giáo khoa <strong>Đại số và Giải tích 11.</strong></p> </div></div><div class="box-1">
+<div class="box-title-1" id="lythuyet"><h2 class="b-title">Tóm tắt lý thuyết </h2></div>
+<div class="box-content content-fck">
+<div id="11">
+<h3>1.1. Hệ thống hóa kiến thức chương Hàm số lượng giác và Phương trình lượng giác</h3>
+</div>
+<p style="text-align:center"><img alt="" src="https://hoc247.net/fckeditorimg/upload/images/111(1).png" style="height:703px; width:1039px"/></p>
+<div id="12">
+<h3>1.2. Một số dạng phương trình lượng giác đặc trưng khác và phương pháp giải</h3>
+</div>
+<h4>a) Phương trình đẳng cấp bậc hai đối với sinx và cosx</h4>
+<p><strong>Dạng phương trình:</strong></p>
+<p>\(a\sin {}^2x + b\sin x\cos x + c\cos {}^2x = d{\rm{  (1) }}\)</p>
+<p style="margin-left:2.85pt">(a, b, c, d: có ít nhất 2 hệ số khác không)</p>
+<p><strong>Phương pháp giải:</strong></p>
+<ul>
+<li><strong>Cách 1:</strong></li>
+</ul>
+<p>Xét \(\cos x = 0 \Leftrightarrow x = \frac{\pi }{2} + k\pi ,k \in \mathbb{Z}\) có là nghiệm của (1) hay không</p>
+<p>Xét \(\cos x \ne 0\), chia hai vế của (1) cho \({\cos ^2}x\) ta được:</p>
+<p>\(a{\tan ^2}x + b\tan x + c = d(1 + {\tan ^2}x)\)</p>
+<p>\( \Leftrightarrow \left( {a - d} \right){\tan ^2}x + b\tan x + c - d = 0\)  \(\left( {1'} \right)\)</p>
+<p>Đặt \(t = \tan x\)</p>
+<p>Phương trình \(\left( {1'} \right)\) trở thành: \((a - d){t^2} + bt + c - d = 0{\rm{   (2)}}\)</p>
+<p>Giải phương trình (2) theo t từ đó suy ra x  theo \(t = \tan x\)</p>
+<ul>
+<li><strong>Cách 2: Sử dụng các công thức</strong></li>
+</ul>
+<p> \({\sin ^2}x = \frac{{1 - \cos 2x}}{2}\); \({\cos ^2}x = \frac{{1 + \cos 2x}}{2}\); \(\sin x\cos x = \frac{{\sin 2x}}{2}\)</p>
+<p>Phương trình (1) trở thành:</p>
+<p>\(a\left( {\frac{{1 - \cos 2x}}{2}} \right) + b\frac{{\sin 2x}}{2} + c\left( {\frac{{1 + \cos 2x}}{2}} \right) = d\)</p>
+<p>\( \Leftrightarrow b\sin 2x + (c - a)\cos 2x = 2d - a - c\)</p>
+<p>Đây là phương trình bậc nhất đối với sin2x và cos2x.</p>
+<h4>b) Phương trình đẳng cấp bậc ba đối với sinx và cosx</h4>
+<p><strong>Dạng phương trình:</strong></p>
+<p>\(a\sin {}^3x + b{\sin ^2}x\cos x + c\sin x{\cos ^2}x + d\sin x + e\cos x + fc{\rm{o}}{{\rm{s}}^3}x = 0{\rm{    (1)  }}\)</p>
+<p>(a, b, c, d, e, f: có ít nhất 2 hệ số khác không).</p>
+<p><strong>Phương pháp giải:</strong></p>
+<p>Xét \(\cos x = 0 \Leftrightarrow x = \frac{\pi }{2} + k\pi ,k \in \mathbb{Z}\)có là nghiệm của (1) hay không</p>
+<p>Xét\(\cos x \ne 0\), chia hai vế của (1) cho \({\cos ^3}x\)  ta được:</p>
+<p>\(a{\tan ^3}x + b{\tan ^2}x + c\tan x + d\tan x(1 + {\tan ^2}x) + e(1 + {\tan ^2}x) + f = 0\)</p>
+<p>\( \Leftrightarrow (a + d){\tan ^3}x + (b + e){\tan ^2}x + (c + d)\tan x + e + f = 0\) \(\left( {{\rm{1'}}} \right)\)</p>
+<p>Đặt \(t = \tan x\)</p>
+<p>Phương trình \(\left( {{\rm{1'}}} \right)\) trở thành:</p>
+<p>\((a + d){{\mathop{\rm t}\nolimits} ^3} + (b + e){{\mathop{\rm t}\nolimits} ^2} + (c + d){\mathop{\rm t}\nolimits}  + e + f = 0\)   (2)</p>
+<p>Giải phương trình (2) theo t từ đó suy ra x theo \(t = \tan x\)</p>
+<h4>c) Phương trình đối xứng đối với sinx và cosx</h4>
+<ul>
+<li><strong>Dạng 1:</strong> \(a\left( {\sin x + \cos x} \right) + b\sin x\cos x + c = 0\)</li>
+</ul>
+<p><strong>Phương pháp giải</strong></p>
+<p>Đặt \(t = \sin x + \cos x = \sqrt 2 \sin \left( {x + \frac{\pi }{4}} \right)\)</p>
+<p>Điều kiện: \(\left| t \right| \le \sqrt 2 \)    (*)</p>
+<p>Suy ra  \(\sin x\cos x = \frac{{{t^2} - 1}}{2}\)</p>
+<p>Khi đó phương trình trở thành: \(b{t^2} + 2at + 2c - b = 0\)</p>
+<p>Giải phương trình theo t kết hợp với điều kiên (*) suy ra t</p>
+<p>Giải phương trình lượng giác cơ bản \(\sqrt 2 \sin \left( {x + \frac{\pi }{4}} \right) = t\), suy ra x</p>
+<p><strong>Chú ý</strong>: Ta cũng có thể đặt \(t = \sin x + \cos x = \sqrt 2 c{\rm{os}}\left( {x - \frac{\pi }{4}} \right)\) và làm tương tự như trên.</p>
+<ul>
+<li><strong>Dạng 2: </strong>\(a\left( {\sin x - \cos x} \right) + b\sin x\cos x + c = 0\)</li>
+</ul>
+<p><strong>Phương pháp giải</strong></p>
+<p>Đặt \(t = \sin x - \cos x = \sqrt 2 \sin \left( {x - \frac{\pi }{4}} \right)\)</p>
+<p>Điều kiện: \(\left| t \right| \le \sqrt 2 \)    (*)</p>
+<p>Suy ra \(\sin x\cos x = \frac{{1 - {t^2}}}{2}\)</p>
+<p>Khi đó phương trình trở thành: \(b{t^2} - 2at - 2c - b = 0\)</p>
+<p>Giải phương trình theo t kết hợp với điều kiện  (*) suy ra t</p>
+<p>Giải phương trình lượng giác cơ bản \(\sqrt 2 \sin \left( {x - \frac{\pi }{4}} \right) = t\), suy ra x</p>
+<h4>d) Phương trình đối xứng đối với tanx và cotx</h4>
+<ol>
+<li><strong>Dạng 1: </strong>\(a({\tan ^2}x + {\cot ^2}x) + b(\tan x + \cot x) + c = 0\)</li>
+</ol>
+<p><strong>Phương pháp giải</strong></p>
+<p>Điều kiện \(\left\{ {\begin{array}{*{20}{c}}{\sin x \ne 0}\\{\cos x \ne 0}\end{array}} \right. \Leftrightarrow \sin 2x \ne 0 \Leftrightarrow x \ne \frac{{k\pi }}{2},k \in \mathbb{Z}\)</p>
+<p>Đặt \(t = \tan x + \cot x\), điều kiện \(\left| t \right| \ge 2\)</p>
+<p>Suy ra \({\tan ^2}x + {\cot ^2}x = {t^2} - 2\)</p>
+<p>Phương trình trở thành:</p>
+<p>\(a({t^2} - 2) + bt + c = 0 \Leftrightarrow a{t^2} + bt + c - 2a = 0\)</p>
+<p>Giải phương trình theo t và kết hợp với điều kiện (*), suy ra t</p>
+<p>Giải phương trình \(\tan x + \cot x = t\)</p>
+<p><strong>Cách 1:</strong></p>
+<p>Ta có \(\tan x + \frac{1}{{\tan x}} = t \Leftrightarrow {\tan ^2}x - t.\tan x + 1 = 0\)</p>
+<p>Đây là phương trình bậc hai theo tanx</p>
+<p><strong>Cách 2:</strong></p>
+<p>Ta có: \(\frac{{\sin x}}{{\cos x}} + \frac{{\cos x}}{{\sin x}} = t \Leftrightarrow \frac{{{{\sin }^2}x + {{\cos }^2}x}}{{\sin x\cos x}} = t \Leftrightarrow \sin 2x = \frac{2}{t}\)</p>
+<p>Đây là phương trình cơ bản của sin2x</p>
+<ol>
+<li><strong>Dạng 2: </strong>\(a({\tan ^2}x + {\cot ^2}x) + b(\tan x - \cot x) + c = 0\)</li>
+</ol>
+<p>Điều kiện \(\left\{ {\begin{array}{*{20}{c}}{\sin x \ne 0}\\{\cos x \ne 0}\end{array}} \right. \Leftrightarrow \sin 2x \ne 0 \Leftrightarrow x \ne \frac{{k\pi }}{2}{\rm{, }}k \in \mathbb{Z}\)</p>
+<p>Đặt  \(t = \tan x - \cot x\). Khi đó \({\tan ^2}x + {\cot ^2}x = {t^2} + 2\)</p>
+<p>Phương trình trở thành:</p>
+<p>\(a({t^2} + 2) + bt + c = 0 \Leftrightarrow a{t^2} + bt + c + 2a = 0\)</p>
+<p>Giải phương trình theo t và kết hợp với điều kiện (nếu có), suy ra t</p>
+<p>Giải phương trình \(\tan x - \cot x = t\)</p>
+<p><strong>Cách 1:</strong></p>
+<p>Ta có \(\tan x - \frac{1}{{\tan x}} = t \Leftrightarrow {\tan ^2}x - t\tan x - 1 = 0\)</p>
+<p>Đây là phương trình bậc hai theo tanx</p>
+<p><strong>Cách 2:</strong></p>
+<p>Ta có: \(\frac{{\sin x}}{{\cos x}} - \frac{{\cos x}}{{\sin x}} = t \Leftrightarrow \frac{{{{\sin }^2}x - {{\cos }^2}x}}{{\sin x\cos x}} = t\)</p>
+<p>\( \Leftrightarrow \frac{{ - 2\cos 2x}}{{\sin 2x}} = t \Leftrightarrow \cot 2x =  - \frac{t}{2}\)</p>
+<p>Đây là phương trình cơ bản của cot2x.</p> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div data="INPAGE_MB YOMEDIA/intVisit=1"> </div><script type="text/javascript">
+	/* load placement: hoc247.net-mobile-inpage, for account: tailieu, site: hoc247.net, size: 2x2 - mobile */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["8701f44d62d54250b122748815c71b40","https://hoc247.net/toan-11/on-tap-chuong-1-ham-so-luong-giac-va-phuong-trinh-luong-giac-l6450.html","[width]","[height]"]);
+</script>
+<script id="s-8701f44d62d54250b122748815c71b40" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div data="INVIEW_MB YOMEDIA"> </div> <script type="text/javascript">
+	/* load placement: hoc247.net-inread, for account: tailieu, site: hoc247.net, size: 2x2 - video */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["15c47dbd541741bd976281bcda70b78c","https://hoc247.net/toan-11/on-tap-chuong-1-ham-so-luong-giac-va-phuong-trinh-luong-giac-l6450.html","[width]","[height]"]);
+</script>
+<script id="s-15c47dbd541741bd976281bcda70b78c" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div class="box-content content-fck">
+<p style="text-align:center"><strong>BÀI TẬP ÔN TẬP CHƯƠNG 1: HÀM SỐ LƯỢNG GIÁC VÀ PHƯƠNG TRÌNH LƯỢNG GIÁC</strong></p>
+<p style="text-align:center"> </p>
+<h4><u>Bài tập:</u></h4>
+<p>Giải các phương trình lượng giác sau:</p>
+<p>a) \(\tan x + \frac{{\cos x}}{{1 + \sin x}} = 1\)</p>
+<p>b) \(\cot x = \tan x + \frac{{2\cos 4x}}{{\sin 2x}}\)</p>
+<p>c) \({\sin ^4}x + {\cos ^4}x = 2\sin x\cos x - \frac{1}{2}{\cos ^2}2x\)</p>
+<p>d) \(\cos 7x\cos 5x - \sqrt 3 \sin 2x = 1 - \sin 7x\sin 5x\)</p>
+<p>e) \({\sin ^4}x + {\cos ^4}\left( {x + \frac{\pi }{4}} \right) = \frac{1}{4}\)</p>
+<h4><u>Hướng dẫn giải:</u></h4>
+<p>a) \(\tan x + \frac{{\cos x}}{{1 + \sin x}} = 1\)</p>
+<p>Điều kiện: \(\left\{ \begin{array}{l}\cos x \ne 0\\\sin x \ne  - 1\end{array} \right. \Leftrightarrow x \ne \frac{\pi }{2} + k\pi ,k \in \mathbb{Z}\)</p>
+<p>Khi đó (1)\( \Leftrightarrow \frac{{\sin x}}{{\cos x}} + \frac{{\cos x}}{{1 + \sin x}} = 1\)</p>
+<p>\(\begin{array}{l} \Leftrightarrow \sin x\left( {1 + \sin x} \right) + {\cos ^2}x = \cos x\left( {1 + \sin x} \right)\\ \Leftrightarrow \sin x + 1 = \cos x\left( {1 + \sin x} \right)\end{array}\)</p>
+<p>\( \Leftrightarrow \left( {\sin x + 1} \right)\left( {\cos x - 1} \right) = 0 \Leftrightarrow \left[ \begin{array}{l}\sin x =  - 1\\\cos x = 1\end{array} \right. \Leftrightarrow \left[ \begin{array}{l}x =  - \frac{\pi }{2} + k\pi \\x = k2\pi \end{array} \right.,k \in \mathbb{Z}\)</p>
+<p>So sánh với điều kiện (*) ta được nghiệm của (1) là \(x = k2\pi \) \(\left( {k \in \mathbb{Z}} \right)\).</p>
+<p> </p>
+<p>b) \(\cot x = \tan x + \frac{{2\cos 4x}}{{\sin 2x}}\)</p>
+<p>Điều kiện: \(\sin 2x \ne 0 \Leftrightarrow \cos 2x \ne  \pm 1\) (*)</p>
+<p>Khi đó (2)\( \Leftrightarrow \frac{{\cos x}}{{\sin x}} - \frac{{\sin x}}{{\cos x}} = \frac{{\cos 4x}}{{\sin x\cos x}}\)\( \Leftrightarrow {\cos ^2}x - {\sin ^2}x = \cos 4x\)</p>
+<p>\( \Leftrightarrow \cos 2x = \cos 4x \Leftrightarrow 2{\cos ^2}2x - \cos 2x - 1 = 0\)</p>
+<p>Đặt: \(t = \cos 2x,t \in \left( { - 1;1} \right)\)</p>
+<p>Bất phương trình trở thành: \(2{t^2} - t - 1 = 0 \Leftrightarrow  \Leftrightarrow \left[ {\begin{array}{*{20}{c}}{t = 1\,(loai){\rm{   }}}\\{t =  - \frac{1}{2}}\end{array}} \right.\)</p>
+<p>Với \(\cos 2x =  - \frac{1}{2} \Leftrightarrow \left[ {\begin{array}{*{20}{c}}{2x = \frac{{2\pi }}{3} + k2\pi }\\{2x =  - \frac{{2\pi }}{3} + k2\pi }\end{array}} \right. \Leftrightarrow \left[ {\begin{array}{*{20}{c}}{x = \frac{\pi }{3} + k\pi }\\{x =  - \frac{\pi }{3} + k\pi }\end{array}} \right.,k \in \mathbb{Z}\)</p>
+<p>Vậy nghiệm của (2) là \(x = \frac{\pi }{3} + k\pi \), \(x =  - \frac{\pi }{3} + k\pi \) \(\left( {k \in \mathbb{Z}} \right)\).</p>
+<p> </p>
+<p>c) \({\sin ^4}x + {\cos ^4}x = 2\sin x\cos x - \frac{1}{2}{\cos ^2}2x\)</p>
+<p>\( \Leftrightarrow 1 - 2{\sin ^2}x{\cos ^2}x = \sin 2x - \frac{1}{2}\left( {1 - {{\sin }^2}2x} \right)\)</p>
+<p>\( \Leftrightarrow 1 - \frac{{{{\sin }^2}2x}}{2} = \sin 2x - \frac{1}{2}\left( {1 - {{\sin }^2}2x} \right)\)</p>
+<p>\( \Leftrightarrow {\sin ^2}2x + 2\sin 2x - 3 = 0\)</p>
+<p>Đặt \(t = \sin 2x,t \in \left[ { - 1;1} \right],\) Bất phương trình trở thành:</p>
+<p>\({t^2} - 2t - 3 = 0 \Leftrightarrow \left[ \begin{array}{l}t = 1\\t =  - 3\,(loai)\end{array} \right.\)</p>
+<p>Với \(\sin 2x = 1 \Leftrightarrow 2x = \frac{\pi }{2} + k2\pi  \Leftrightarrow x = \frac{\pi }{4} + k\pi ,k \in \mathbb{Z}\)</p>
+<p>Vậy nghiệm của (3) là \(x = \frac{\pi }{4} + k\pi \)\(\left( {k \in \mathbb{Z}} \right)\).</p>
+<p> </p>
+<p>d) \(\cos 7x\cos 5x - \sqrt 3 \sin 2x = 1 - \sin 7x\sin 5x\)</p>
+<p>\( \Leftrightarrow \left( {\cos 7x\cos 5x + \sin 7x\sin 5x} \right) - \sqrt 3 \sin 2x = 1\)</p>
+<p>\(\begin{array}{l} \Leftrightarrow \cos 2x - \sqrt 3 \sin 2x = 1 \Leftrightarrow \cos \left( {2x + \frac{\pi }{3}} \right) = \frac{1}{2}\\ \Leftrightarrow \left[ {\begin{array}{*{20}{c}}{2x + \frac{\pi }{3} = \frac{\pi }{3} + k2\pi }\\{2x + \frac{\pi }{3} =  - \frac{\pi }{3} + k2\pi }\end{array}} \right. \Leftrightarrow \left[ {\begin{array}{*{20}{c}}{x = k\pi {\rm{         }}}\\{x =  - \frac{\pi }{3} + k\pi }\end{array},} \right.{\rm{ }}k \in \mathbb{Z}\end{array}\)</p>
+<p>Vậy nghiệm của (4) là \(x = k\pi \), \(x =  - \frac{\pi }{3} + k\pi \) \(\left( {k \in \mathbb{Z}} \right)\).</p>
+<p> </p>
+<p>e) \({\sin ^4}x + {\cos ^4}\left( {x + \frac{\pi }{4}} \right) = \frac{1}{4}\)</p>
+<p>\( \Leftrightarrow \frac{{{{(1 - \cos 2x)}^2}}}{4} + \frac{{{{\left[ {1 + \cos (2x + \frac{\pi }{2})} \right]}^2}}}{4} = \frac{1}{4}\)\( \Leftrightarrow {(1 - \cos 2x)^2} + {(1 - \sin 2x)^2} = 1\)</p>
+<p>\( \Leftrightarrow \cos 2x + \sin 2x = 1 \Leftrightarrow \cos \left( {2x - \frac{\pi }{4}} \right) = \frac{{\sqrt 2 }}{2} \Leftrightarrow \left[ \begin{array}{l}2x - \frac{\pi }{4} = \frac{\pi }{4} + k2\pi \\2x - \frac{\pi }{4} =  - \frac{\pi }{4} + k2\pi \end{array} \right.\)</p>
+<p>\( \Leftrightarrow \left[ \begin{array}{l}x = \frac{\pi }{4} + k\pi \\x = k\pi \end{array} \right.{\rm{, }}k \in \mathbb{Z}\)</p>
+<p>Vậy nghiệm của (5) là \(x = k\pi \), \(x = \frac{\pi }{4} + k\pi \)\(\left( {k \in \mathbb{Z}} \right)\).</p>
+<p> </p> </div>
+</div></div></div></section>
+{% endverbatim %}
+{% endblock %}

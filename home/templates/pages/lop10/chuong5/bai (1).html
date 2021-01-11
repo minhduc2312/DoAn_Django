@@ -1,0 +1,367 @@
+{% extends "pages/lop10/chuong5/base-lop10-chuong5.html" %}
+{% block title %}Toán 10 Bài 1: Bảng phân bố tần số và tần suất{% endblock %}
+{% block content %}
+{% verbatim %}
+<section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 10 Bài 1: Bảng phân bố tần số và tần suất</h1></div></section>
+<section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
+<br/>
+<p>Mở đầu chương 5 <span style="font-weight: 700;">Đại số 10</span>, các em sẽ được tìm hiểu về <b>Bảng phân bố tần số và tần suất,</b> ngoài các thuật ngữ quen thuộc các em đã được làm quen ở Toán lớp 7, các em còn làm quen với bảng phân bố tần số và tần suất lớp ghép.</p> </div></div><div class="box-1">
+<div class="box-title-1" id="lythuyet"><h2 class="b-title">Tóm tắt lý thuyết </h2></div>
+<div class="box-content content-fck">
+<div id="11">
+<h3>1.1. Số liệu thống kê</h3>
+</div>
+<p>Khi thực hiện điều tả thống kê (theo mục đích đã định trước), cần xác định tập hợp các đơn vị điều tả, dấu hiệu điều tra và thu nhập số liệu.</p>
+<p><strong>Ví dụ: </strong></p>
+<p>Khi khảo sát "Tiền lãi (nghìn đồng) của mỗi ngày trong 30 ngày của một quầy bán báo", người ta thu được bảng sau:</p>
+<p><img alt="" src="https://hoc247.net/fckeditorimg/upload/images/12(166).PNG" style="width: 438px; height: 44px;"/></p>
+<p>                                                                                            <strong>Bảng 1</strong></p>
+<p>Tập hợp các đơn vị điều tra là tập hợp 30 ngày, mỗi ngày là một đơn vị điều tra. Dấu hiệu điều tra là <em>tiền lãi (nghìn đồng) của mỗi ngày của một quầy bán báo</em>. Các số liệu ghi trong bảng 1 gọi là <em>các số liệu thống kê</em>, còn gọi là các giá trị của dấu hiệu.</p>
+<div id="12">
+<h3>1.2. Tần số </h3>
+</div>
+<p>Tần số là số lần xuất hiện của mỗi giá trị trong bảng số liệu thống kê.</p>
+<p>Tần số xuất hiện là: N</p>
+<p>Tần số của số liệu x<sub>i</sub> kí hiệu là n<sub>i</sub></p>
+<div id="13">
+<h3>1.3. Tần suất </h3>
+</div>
+<p>Tỉ số \({f_i} = \frac{{{n_i}}}{N}\) được gọi là tần suất của giá trị x<sub>i</sub></p>
+<div class="table-responsive"><table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+<tbody>
+<tr>
+<td>
+<p style="text-align: center;"><strong>Tiền lãi mỗi ngày</strong></p>
+<p style="text-align: center;"><strong>(nghìn đồng)</strong></p>
+</td>
+<td style="text-align: center;"><strong>Tần số </strong></td>
+<td style="text-align: center;"><strong>Tần suất (%)</strong></td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">30</p>
+<p style="text-align: center;">31</p>
+<p style="text-align: center;">37</p>
+<p style="text-align: center;">42</p>
+<p style="text-align: center;">44</p>
+<p style="text-align: center;">46</p>
+<p style="text-align: center;">47</p>
+<p style="text-align: center;">51</p>
+<p style="text-align: center;">52</p>
+<p style="text-align: center;">53</p>
+<p style="text-align: center;">55</p>
+<p style="text-align: center;">57</p>
+<p style="text-align: center;">58</p>
+<p style="text-align: center;">63</p>
+<p style="text-align: center;">64</p>
+<p style="text-align: center;">65</p>
+<p style="text-align: center;">67</p>
+<p style="text-align: center;">73</p>
+<p style="text-align: center;">74</p>
+<p style="text-align: center;">77</p>
+<p style="text-align: center;">81</p>
+<p style="text-align: center;">82</p>
+<p style="text-align: center;">85</p>
+<p style="text-align: center;">92</p>
+<p style="text-align: center;">93</p>
+</td>
+<td>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">2</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">2</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">2</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">2</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">2</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">1 </p>
+</td>
+<td>
+<p style="text-align: center;"><span style="background-color: transparent;">3,3</span></p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">6,7</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">6,7</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">6,7</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">6,7</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">6,7</p>
+<p style="text-align: center;">3,3</p>
+<p style="text-align: center;">3,3</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Cộng </strong></td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">100(%)</td>
+</tr>
+</tbody>
+</table></div>
+<p style="text-align: center;"><strong>                                                                    Bảng 2</strong></p>
+<p>Bảng 2 được gọi là <strong>bảng phân bố tần số và tần suất</strong></p>
+<p>Nếu trong bảng 2, bỏ cột tần số ta được <strong>bảng phân bố tần suất</strong>; bỏ cột tần suất ta được <strong>bảng phân bố tần số</strong></p>
+<div id="14">
+<h3>1.4. Bảng phân bố tần số và tần suất ghép lớp </h3>
+</div>
+<div class="table-responsive"><table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+<tbody>
+<tr>
+<td>
+<p style="text-align: center;"><strong>Lớp tiền lãi mỗi ngày</strong></p>
+<p style="text-align: center;"><strong>(nghìn đồng)</strong></p>
+</td>
+<td style="text-align: center;"><strong>Tần số</strong></td>
+<td style="text-align: center;"><strong>Tần suất</strong></td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">[29,5;40,5)</p>
+<p style="text-align: center;">[40,5;51,5)</p>
+<p style="text-align: center;">[51,5;62,5)</p>
+<p style="text-align: center;">[62,5;73,5)</p>
+<p style="text-align: center;">[73,5;84,5)</p>
+<p style="text-align: center;">[84,5;95,5)</p>
+</td>
+<td>
+<p style="text-align: center;">3</p>
+<p style="text-align: center;">5</p>
+<p style="text-align: center;">7</p>
+<p style="text-align: center;">6</p>
+<p style="text-align: center;">5</p>
+<p style="text-align: center;">4</p>
+</td>
+<td>
+<p style="text-align: center;">10,0</p>
+<p style="text-align: center;">16,7</p>
+<p style="text-align: center;">23,3</p>
+<p style="text-align: center;">20,0</p>
+<p style="text-align: center;">16,7</p>
+<p style="text-align: center;">13,3</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Cộng</strong></td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">100(%)</td>
+</tr>
+</tbody>
+</table></div>
+<p style="text-align: center;">                                       <strong>Bảng 3</strong></p>
+<p>Bảng 3 được gọi là <strong>bảng phân bố tần số và tần suất ghép lớp</strong>.</p>
+<p>Nếu trong bảng 3 bỏ cột tần số ta được <strong>bảng phân bố tần suất ghép lớ</strong>p, bỏ cột tần suất ta được <strong>bảng phân bố tần số ghép lớp</strong>.</p> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div data="INPAGE_MB YOMEDIA/intVisit=1"> </div><script type="text/javascript">
+	/* load placement: hoc247.net-mobile-inpage, for account: tailieu, site: hoc247.net, size: 2x2 - mobile */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["8701f44d62d54250b122748815c71b40","https://hoc247.net/toan-10/bai-1-bang-phan-bo-tan-so-va-tan-suat-l748.html","[width]","[height]"]);
+</script>
+<script id="s-8701f44d62d54250b122748815c71b40" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div data="INVIEW_MB YOMEDIA"> </div> <script type="text/javascript">
+	/* load placement: hoc247.net-inread, for account: tailieu, site: hoc247.net, size: 2x2 - video */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["15c47dbd541741bd976281bcda70b78c","https://hoc247.net/toan-10/bai-1-bang-phan-bo-tan-so-va-tan-suat-l748.html","[width]","[height]"]);
+</script>
+<script id="s-15c47dbd541741bd976281bcda70b78c" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div class="box-content content-fck">
+<p><strong>Ví dụ 1:</strong> Cho các số liệu thống kê ghi trong bảng sau:</p>
+<p>Thời gian hoàn thành một sản phẩm ở một nhóm công nhân</p>
+<p><img alt="" src="https://hoc247.net/fckeditorimg/upload/images/13(119).PNG" style="width: 250px; height: 89px;"/></p>
+<p>a) Lập bảng phân bố tần số và tần suất</p>
+<p>b) Lập bảng phân bố tần số và tần suất lớp ghép với các lớp sau</p>
+<p>[40;45); [45;50); [50;55)</p>
+<p><u><strong>Hướng dẫn:</strong></u></p>
+<p>a) Bảng phân bố tần số và tần suất</p>
+<div class="table-responsive"><table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+<tbody>
+<tr>
+<td style="text-align: center;">Thời gian hoàn thành một sản phẩm</td>
+<td style="text-align: center;">Tần số</td>
+<td style="text-align: center;">Tần suất (%)</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">42</p>
+<p style="text-align: center;">43</p>
+<p style="text-align: center;">44</p>
+<p style="text-align: center;">45</p>
+<p style="text-align: center;">46</p>
+<p style="text-align: center;">47</p>
+<p style="text-align: center;">48</p>
+<p style="text-align: center;">50</p>
+<p style="text-align: center;">54</p>
+</td>
+<td>
+<p style="text-align: center;">4</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">6</p>
+<p style="text-align: center;">6</p>
+<p style="text-align: center;">3</p>
+<p style="text-align: center;">1</p>
+<p style="text-align: center;">7</p>
+<p style="text-align: center;">5</p>
+<p style="text-align: center;">2</p>
+</td>
+<td>
+<p style="text-align: center;">11,4</p>
+<p style="text-align: center;">2,9</p>
+<p style="text-align: center;">17,1</p>
+<p style="text-align: center;">17,1</p>
+<p style="text-align: center;">8,6</p>
+<p style="text-align: center;">2,9</p>
+<p style="text-align: center;">20,0</p>
+<p style="text-align: center;">14,3</p>
+<p style="text-align: center;">5,7</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">Cộng</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">100(%)</td>
+</tr>
+</tbody>
+</table></div>
+<p>b) Bảng phân bố tần số và tần suất lớp ghép</p>
+<div class="table-responsive"><table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+<tbody>
+<tr>
+<td style="text-align: center;">Lớp của thời gian hoàn thành</td>
+<td style="text-align: center;">Tần số</td>
+<td style="text-align: center;">Tần suất (%)</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">[40;45)</p>
+<p style="text-align: center;">[45;50)</p>
+<p style="text-align: center;">[50;55)</p>
+</td>
+<td>
+<p style="text-align: center;">11</p>
+<p style="text-align: center;">17</p>
+<p style="text-align: center;">7</p>
+</td>
+<td>
+<p style="text-align: center;">31,4</p>
+<p style="text-align: center;">48,6</p>
+<p style="text-align: center;">20,0</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">Cộng</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">100 (%)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Ví dụ 2:</strong> Để mua áo quần thể dục cho học sinh khối 10. Nhà trường chọn ngẫu nhiên mootk lớp 10 gồm 45 học sinh và thực hiện đo chiều cao của học sinh lớp đó. Kết quả được thống kê như sau (đơn vị: cm)</p>
+<p><img alt="" src="https://hoc247.net/fckeditorimg/upload/images/14(90).PNG" style="width: 500px; height: 80px;"/></p>
+<p>Hãy tính tần số và tần suất theo lớp dưới đây?</p>
+<div class="table-responsive"><table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+<tbody>
+<tr>
+<td style="text-align: center;">Lớp</td>
+<td style="text-align: center;">Tần số</td>
+<td style="text-align: center;">Tần suất (%)</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">[150;152]</p>
+<p style="text-align: center;">[153;155]</p>
+<p style="text-align: center;">[156;158]</p>
+<p style="text-align: center;">[159;161]</p>
+<p style="text-align: center;">[162;164]</p>
+</td>
+<td>
+<p style="text-align: center;">.....</p>
+<p style="text-align: center;">.....</p>
+<p style="text-align: center;">.....</p>
+<p style="text-align: center;">.....</p>
+<p style="text-align: center;">.....</p>
+</td>
+<td>
+<p style="text-align: center;">.....</p>
+<p style="text-align: center;">.....</p>
+<p style="text-align: center;">.....</p>
+<p style="text-align: center;">.....</p>
+<p style="text-align: center;">.....</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">Cộng </td>
+<td style="text-align: center;">N=.....</td>
+<td style="text-align: center;">.....</td>
+</tr>
+</tbody>
+</table></div>
+<p><u><strong>Hướng dẫn:</strong></u></p>
+<div class="table-responsive"><table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+<tbody>
+<tr>
+<td style="text-align: center;">Lớp</td>
+<td style="text-align: center;">Tần số</td>
+<td style="text-align: center;">Tần suất (%)</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">[150;152]</p>
+<p style="text-align: center;">[153;155]</p>
+<p style="text-align: center;">[156;158]</p>
+<p style="text-align: center;">[159;161]</p>
+<p style="text-align: center;">[162;164]</p>
+</td>
+<td>
+<p style="text-align: center;">5</p>
+<p style="text-align: center;">8</p>
+<p style="text-align: center;">11</p>
+<p style="text-align: center;">14</p>
+<p style="text-align: center;">7</p>
+</td>
+<td>
+<p style="text-align: center;">11,1</p>
+<p style="text-align: center;">17,8</p>
+<p style="text-align: center;">24,4</p>
+<p style="text-align: center;">31,1</p>
+<p style="text-align: center;">15,6</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">Cộng </td>
+<td style="text-align: center;">N=45</td>
+<td style="text-align: center;">100 (%)</td>
+</tr>
+</tbody>
+</table></div> </div>
+</div></div></div></section>
+{% endverbatim %}
+{% endblock %}

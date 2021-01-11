@@ -1,0 +1,119 @@
+{% extends "pages/lop10/chuong2/base-lop10-chuong2.html" %}
+{% block title %}Toán 10 Bài 1: Hàm số{% endblock %}
+{% block content %}
+{% verbatim %}
+<section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 10 Bài 1: Hàm số</h1></div></section>
+<section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
+<br/>
+<p><span style="background-color:rgb(252, 252, 255); color:rgb(20, 20, 20)"><strong>Hàm số</strong> là một khái niệm mà chúng ta đã làm quen ở cấp THCS. Bài giảng này sẽ giúp các em hiểu rõ hơn về các khái niệm liên quan đến hàm số như <strong>tập xác định</strong>, <strong>tính chẵn lẻ</strong>, <strong>sự biến thiên</strong>,...</span></p> </div></div><div class="box-1">
+<div class="box-title-1" id="lythuyet"><h2 class="b-title">Tóm tắt lý thuyết </h2></div>
+<div class="box-content content-fck">
+<div id="11">
+<h3>1.1. Định nghĩa</h3>
+</div>
+<p>Cho một tập hợp khác rỗng <span class="math-tex">\(D \subset R\)</span></p>
+<p>Hàm số f xác định trên D là một quy tắc đặt tương ứng mỗi sỗ thuộc D với một và chỉ một số, kí hiệu là f(x), số f(x) được gọi là giá trị của hàm số f tại x.</p>
+<p>Tập D gọi là tập xác định (hay miền xác định), x gọi là biến số hay đối số của hàm số f.</p>
+<h4>a) Hàm số cho bằng biểu thức: </h4>
+<p>Nếu không có giải thích gì thêm thì tập xác định của hàm số y=f(x) là tập hợp tất cả các số thực x sao cho giá trị của biểu thức f(x) được xác định.</p>
+<h4>b) Sự biến thiên của hàm số:</h4>
+<p>Cho hàm số f xác định trên K.</p>
+<ul>
+<li>Hàm số f gọi là đồng biến (hay tăng) trên K nếu: </li>
+</ul>
+<p style="margin-left:40px"><span class="math-tex">\(\forall {x_1},{x_2} \in K,{x_1} &lt; {x_2} \Rightarrow f({x_1}) &lt; f({x_2});\)</span></p>
+<ul>
+<li>Hàm số f gọi là nghịch biến (hay giảm) trên K nếu:</li>
+</ul>
+<p style="margin-left:40px"><span class="math-tex">\(\forall {x_1},{x_2} \in K,{x_1} &lt; {x_2} \Rightarrow f({x_1}) &gt; f({x_2});\)</span></p>
+<p>Ta có:</p>
+<ul>
+<li>Nếu một hàm số đồng biến trên K thì trên đó, đồ thị của nó đi lên.</li>
+<li>Nếu một hàm số nghịch biến trên K thì trên đó, đồ thị của nó đi xuống.</li>
+</ul>
+<p><strong>Chú ý:</strong></p>
+<p>Nếu <span class="math-tex">\(f({x_1}) =f({x_2})\)</span> với mọi <span class="math-tex">\({x_1},{x_2} \in K\)</span> tức là f(x)=c với mọi <span class="math-tex">\({x} \in K\)</span>( c là hằng số) thì ta có hàm số không đổi (còn gọi là hàm số hằng) trên K.</p>
+<h4>c) Khảo sát sự biến thiên của hàm số:</h4>
+<p>Khảo sát sự biến thiên của hàm số là xét xem hàm số đồng biến, nghịch biến hay không đổi trên các khoảng (nửa khoảng hay đoạn) nào trong tập xác định của nó.</p>
+<p>Hàm số f đồng biến trên K khi và chỉ khi</p>
+<p><span class="math-tex">\(\forall {x_1},{x_2} \in K,{x_1} \ne {x_2},\frac{{f({x_2}) - f({x_1})}}{{{x_2} - {x_1}}} &gt; 0\)</span>.</p>
+<p>Hàm số f nghịch biến trên K khi và chỉ khi</p>
+<p><span class="math-tex">\(\forall {x_1},{x_2} \in K,{x_1} \ne {x_2},\frac{{f({x_2}) - f({x_1})}}{{{x_2} - {x_1}}} &lt; 0\)</span></p>
+<div id="12">
+<h3>1.2. Hàm số chẵn hàm số lẻ</h3>
+</div>
+<h4>a) Định nghĩa</h4>
+<p>Cho hàm số y=f(x) với tập xác định D:</p>
+<ul>
+<li>Hàm số f gọi là hàm số chẵn nếu với mọi x thuộc D, ta có -x cũng thuộc D và f(-x)=f(x).</li>
+<li>Hàm số f gọi là hàm số lẻ nếu với mọi x thuộc D, ta có -x cũng thuộc D và f(-x)=-f(x).</li>
+</ul>
+<h4>b) Tính chất</h4>
+<ul>
+<li>Đồ thị của hàm số chẵn nhận trục tung làm trục đối xứng.</li>
+<li>Đồ thị của hàm số lẻ nhận gốc tọa độ làm tâm đối xứng.</li>
+</ul>
+<div id="13">
+<h3>1.3. Tịnh tiến một đồ thị</h3>
+</div>
+<p><strong>Định lí:</strong></p>
+<p>Trong mặt phẳng tọa độ Oxy, cho đồ thị (G)của hàm số y=f(x); p và q là hai số dương tùy ý. Khi đó:</p>
+<ul>
+<li>Tịnh tiến (G) lên trên q đơn vị thì được đồ thị của hàm số y=f(x)+q.</li>
+<li>Tịnh tiến (G) xuống dưới q đơn vị thì được đồ thị của hàm số y=f(x)-q;</li>
+<li>Tịnh tiến (G) sang trái p đơn vị thì được đồ thị của hàm số y=f(x+p);</li>
+<li>Tịnh tiến (G) sang phải p đơn vị thì được đồ thị của hàm số y=f(x-p);</li>
+</ul> </div>
+</div>
+<div class="box-1">
+<div class="box-title-1" id="baitap"><h2 class="b-title">Bài tập minh họa </h2></div>
+<div data="INPAGE_MB YOMEDIA/intVisit=1"> </div><script type="text/javascript">
+	/* load placement: hoc247.net-mobile-inpage, for account: tailieu, site: hoc247.net, size: 2x2 - mobile */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["8701f44d62d54250b122748815c71b40","https://hoc247.net/toan-10/bai-1-ham-so-l737.html","[width]","[height]"]);
+</script>
+<script id="s-8701f44d62d54250b122748815c71b40" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div data="INVIEW_MB YOMEDIA"> </div> <script type="text/javascript">
+	/* load placement: hoc247.net-inread, for account: tailieu, site: hoc247.net, size: 2x2 - video */
+	var _avlVar = _avlVar || [];
+	_avlVar.push(["15c47dbd541741bd976281bcda70b78c","https://hoc247.net/toan-10/bai-1-ham-so-l737.html","[width]","[height]"]);
+</script>
+<script id="s-15c47dbd541741bd976281bcda70b78c" src="//ss.yomedia.vn/js/yomedia-sdk.js?v=3" type="text/javascript"></script>
+<div class="box-content content-fck">
+<h4><u>Bài 1:</u></h4>
+<p>Tìm tập xác định của hàm số:</p>
+<p>a) <span class="math-tex">\(y=\frac{{x + \sqrt {4 - {x^2}} }}{{{x^2} - 5x + 6}}\)</span></p>
+<p>b) <strong><span class="math-tex">\(y=\frac{{{x^3} + 6x}}{{({x^2} - 4)\sqrt {x - 5} }}\)</span></strong></p>
+<h4><u>Hướng dẫn:</u></h4>
+<p>a)<strong> </strong></p>
+<p><strong><span class="math-tex">\(y=\frac{{x + \sqrt {4 - {x^2}} }}{{{x^2} - 5x + 6}}\)</span></strong></p>
+<p>Hàm số được xác định khi:</p>
+<p><span class="math-tex">\( \left\{ {\begin{array}{*{20}{c}} {4 - {x^2} \ge 0}\\ {{x^2} - 5x + 6 \ne 0} \end{array}} \right. \Rightarrow \left\{ {\begin{array}{*{20}{c}} { - 2 \le x \le 2}\\ {\left\{ {\begin{array}{*{20}{c}} {x \ne 2}\\ {x \ne 3} \end{array}} \right.} \end{array}} \right.\)</span></p>
+<p>Vậy tập xác định của hàm số là D=[-2;2)</p>
+<p>b)</p>
+<p><strong><span class="math-tex">\(y=\frac{{{x^3} + 6x}}{{({x^2} - 4)\sqrt {x - 5} }}\)</span> </strong></p>
+<p>Hàm số được xác định khi:</p>
+<p><span class="math-tex">\(\left\{ {\begin{array}{*{20}{c}} {{x^2} - 4 \ne 0}\\ {x - 5 \ge 0} \end{array}} \right. \Rightarrow \left\{ {\begin{array}{*{20}{c}} {x \ne \pm 2}\\ {x \ge 5} \end{array}} \right.\)</span></p>
+<p>Vậy tập xác định của hàm số là <span class="math-tex">\(D = {\rm{[}}5; + \infty )\)</span></p>
+<h4> </h4>
+<h4><u>Bài 2:</u><strong> </strong></h4>
+<p>Xét tính chẵn lẻ của hàm số sau:</p>
+<p>a) <span class="math-tex">\(f(x)={x^3} + 2{x^2} + 1\)</span></p>
+<p>b)<strong> <span class="math-tex">\(f(x)={x^4} - 2{x^2} + 1996\)</span></strong></p>
+<p>c)<strong> <span class="math-tex">\(f(x)={x^3} - 6x\)</span> </strong></p>
+<h4><u>Hướng dẫn:</u></h4>
+<p>a) TXĐ: \(D = \mathbb{R}\)</p>
+<p>\(\forall x \in D \Rightarrow  - x \in D\) </p>
+<p>Ta có <strong><span class="math-tex">\(f( - x) = {( - x)^3} + 2{( - x)^2} + 1 = - {x^3} + 2{x^2} + 1 \ne f(x) \ne f( - x)\)</span> </strong></p>
+<p>Vậy hàm số không chẵn không lẻ.</p>
+<p>b) TXĐ: \(D = \mathbb{R}\)</p>
+<p>\(\forall x \in D \Rightarrow  - x \in D\)</p>
+<p>Ta có <strong><span class="math-tex">\(f( - x) = {( - x)^4} - 2{( - x)^2} + 1996 = {x^4} - 2{x^2} + 1996 = f(x)\)</span></strong></p>
+<p>Vậy hàm số đã cho là hàm chẵn.</p>
+<p>c) TXĐ: \(D = \mathbb{R}\)</p>
+<p>\(\forall x \in D \Rightarrow  - x \in D\)</p>
+<p>Ta có <span class="math-tex">\(f( - x) = {( - x)^3} - 6( - x) = - {x^3} + 6x = - f(x)\)</span></p>
+<p>vậy hàm số đã cho là hàm lẻ. </p> </div>
+</div></div></div></section>
+{% endverbatim %}
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "pages/lop11/chuong2/base-lop11-chuong2.html" %}
+{% block title %}Toán 11 Ôn tập chương 2 Tổ hợp - Xác suất{% endblock %}
+{% block content %}
+{% verbatim %}
+<section class="wrapbanner"><div class="container"><h1 class="cate-h1">Toán 11 Ôn tập chương 2 Tổ hợp - Xác suất</h1></div></section>
+<section class="main"><div class="container"><div class="detail-col-left"><div class="box-1"><div class="box-content">
+<br/>
+<p>Nội dung bài ôn tập chương <strong>Tổ hợp - Xác suất</strong> sẽ giúp các em hệ thống hóa lại toàn bộ kiến thức đã được học ở <strong>Chương 2 Đại số và Giải tích 11</strong>. Bên cạnh đó các em có thể đánh giá mức độ hiểu bài của mình thông qua bài kiểm tra Trắc nghiệm với những câu hỏi có mức độ khó từ cơ bản đến nâng cao.</p> </div></div><div class="box-1">
+<div class="box-title-1" id="lythuyet"><h2 class="b-title">Tóm tắt lý thuyết </h2></div>
+<div class="box-content content-fck">
+<h3>1.1. Quy tắc đếm</h3>
+<h4>1. Qui tắc cộng</h4>
+<p><strong>a) Định nghĩa:</strong> Xét một công việc \(H\).</p>
+<p>Giả sử \(H\) có \(k\) phương án \({H_1},{H_2},...,{H_k}\) thực hiện công việc \(H\). Nếu có \({m_1}\)cách thực hiện phương án  \({H_1}\), có \({m_2}\) cách thực hiện phương án \({H_2}\),.., có \({m_k}\)cách thực hiện phương án \({H_k}\) và mỗi cách thực hiện phương án \({H_i}\) không trùng với bất kì cách thực hiện phương án \({H_j}\) (\(i \ne j;i,j \in \left\{ {1,2,...,k} \right\}\)) thì có \({m_1} + {m_2} + ... + {m_k}\) cách thực hiện công việc \(H\).</p>
+<p><strong>b)</strong> <strong>Công thức quy tắc cộng</strong></p>
+<p>Nếu các tập \({A_1},{A_2},...,{A_n}\) đôi một rời nhau. Khi đó:</p>
+<p>\(\left| {{A_1} \cup {A_2} \cup ... \cup {A_n}} \right| = \left| {{A_1}} \right| + \left| {{A_2}} \right| + ... + \left| {{A_n}} \right|\)</p>
+<h4>2. Quy tắc nhân</h4>
+<p><strong>a) Định nghĩa:</strong> Giả sử một công việc \(H\) bao gồm \(k\) công đoạn \({H_1},{H_2},...,{H_k}\). Công đoạn \({H_1}\) có \({m_1}\) cách thực hiện, công đoạn\({H_2}\) có \({m_2}\) cách thực hiện,…, công đoạn \({H_k}\) có \({m_k}\) cách thực hiện. Khi đó công việc H có thể thực hiện theo \({m_1}.{m_2}...{m_k}\) cách.</p>
+<p><strong>b) Công thức quy tắc nhân</strong></p>
+<p>Nếu các tập \({A_1},{A_2},...,{A_n}\) đôi một rời nhau. Khi đó:</p>
+<p>\(\left| {{A_1} \cap {A_2} \cap ... \cap {A_n}} \right| = \left| {{A_1}} \right|.\left| {{A_2}} \right|.....\left| {{A_n}} \right|\).</p>
+<h3>1.2. Nhị thức Niu-tơn</h3>
+<h4>1. Nhị thức Newton</h4>
+<p> <strong>Định lí: </strong>\({(a + b)^n} = \sum\limits_{k = 0}^n {C_n^k{a^{n - k}}{b^k}} \)</p>
+<p>                  \( = C_n^0{a^n} + C_n^1{a^{n - 1}}b + C_n^2{a^{n - 2}}{b^2} + ... + C_n^{n - 1}a{b^{n - 1}} + C_n^n{b^n}\)</p>
+<h4>2. Nhận xét</h4>
+<p>  Trong khai triển Newton \({(a + b)^n}\) có các tính chất sau</p>
+<p>* Gồm có \(n + 1\) số hạng</p>
+<p>* Số mũ của a giảm từ n đến 0 và số mũ của b tăng từ 0 đến n</p>
+<p>* Tổng các số mũ của a và b trong mỗi số hạng bằng n</p>
+<p>* Các hệ số có tính đối xứng: \(C_n^k = C_n^{n - k}\)</p>
+<p>* Số hạng tổng quát : \({T_{k + 1}} = C_n^k{a^{n - k}}{b^k}\)</p>
+<p><strong>VD</strong>: Số hạng thứ nhất \({T_1} = {T_{0 + 1}} = C_n^0{a^n}\), số hạng thứ k: \({T_{(k - 1) + 1}} = C_n^{k - 1}{a^{n - k + 1}}{b^{k - 1}}\)</p>
+<div id="13">
+<h3>1.3. Hoán vị - Chỉnh hợp – Tổ hợp</h3>
+</div>
+<h4>1. Hoán vị</h4>
+<p><strong>a) Định nghĩa</strong>: Cho tập \(A\) gồm \(n\) phần tử (\(n \ge 1\)). Khi sắp xếp \(n\) phần tử này theo một thứ tự ta được một hoán vị các phần tử của tập A.</p>
+<p>Kí hiệu số hoán vị của n phần tử là \({P_n}\).</p>
+<p><strong>b) Số hoán vị của tập n phần tử: </strong></p>
+<p><strong>Định lí</strong>: Ta có \({P_n} = n!\)</p>
+<h4>2.Chỉnh hợp</h4>
+<p><strong>a) Định nghĩa:</strong> Cho tập A gồm n phần tử và số nguyên \(k\) với \(1 \le k \le n\). Khi lấy \(k\) phần tử của A và sắp xếp chúng theo một thứ tự ta được một chỉnh hợp chập \(k\) của \(n\) phần tử của A.</p>
+<p><strong>b) Số chỉnh hợp</strong></p>
+<p>Kí hiệu \(A_n^k\) là số chỉnh hợp chập \(k\) của \(n\) phần tử</p>
+<p><strong>Định lí:</strong> Ta có \(A_n^k = \frac{{n!}}{{(n - k)!}}\).</p>
+<h4>3.Tổ hợp</h4>
+<p>Cho tập hợp A gồm <strong>n</strong> phần tử. Mỗi cách sắp xếp <strong>k</strong> phần tử của A (1 £ k £ n) được gọi là một <strong>chỉnh hợp chập k của n phần tử</strong> của tập A.</p>
+<p>Số tổ  hợp chập k của n phần tử ký hiệu\(C_n^k:\) \(C_n^k = \frac{{n!}}{{k!\left( {n - k} \right)!}}\)</p>
+<p><strong>Nhận xét :</strong></p>
+<p>i/ Điều kiện để xảy ra hoán vị, chỉnh hợp và tổ hợp là n phần tử phải phân biệt .</p>
+<p>ii/ Chỉnh hợp và tổ hợp khác nhau ở chổ là sau khi chọn ra k trong n phần tử thì chỉnh hợp có sắp thứ tự còn tổ hợp thì không.</p>
+<div id="14">
+<h3>1.4. Biến cố - Xác suất của biến cố</h3>
+</div>
+<h4>1. Xác suất của biến cố</h4>
+<p><strong>a) Định nghĩa cổ điển của xác suất:</strong></p>
+<p>Cho T là một phép thử ngẫu nhiên với không gian mẫu \(\Omega \) là một tập hữu hạn. Giả sử A là một biến cố được mô ta bằng \({\Omega _A} \subset \Omega \). Xác suất của biến cố A,  kí hiệu bởi P(A), được cho bởi công thức</p>
+<p>\(P(A) = \frac{{\left| {{\Omega _A}} \right|}}{{\left| \Omega  \right|}} = \)\(\frac{{{\rm{So ket qua thuan loi cho A}}}}{{{\rm{So ket qua co the xay ra}}}}\).</p>
+<p><strong>Chú ý:</strong> \( \bullet \) Xác suất của biến cố A chỉ phụ thuộc vào số kết quả thuận lợi cho A, nên ta đồng nhất \({\Omega _A}\) với A nên ta có : \(P(A) = \frac{{n(A)}}{{n(\Omega )}}\)</p>
+<p>\( \bullet \) \(P(\Omega ) = 1,{\rm{ }}P(\emptyset ) = 0,{\rm{ }}0 \le P(A) \le 1\)</p>
+<p><strong>b) Định nghĩa thống kê của xác suất</strong></p>
+<p>Xét phép thử ngẫu nhiên T và một biến cố A liên quan tới phép thử đó. Nếu tiến hành lặp đi lặp lại N lần phép thử T và thống kê số lần xuất hiện của A</p>
+<p>Khi đó xác suất của biến cố A được định nghĩa như sau:</p>
+<p>\(P(A) = \)\(\frac{{{\rm{So lan xuat hien cua bien co A}}}}{N}\).</p>
+<h4>2. Quy tắc cộng xác suất</h4>
+<p>Nếu hai biến cố A và B xung khắc thì \(P(A \cup B) = P(A) + P(B)\)</p>
+<p>\( \bullet \) Mở rộng quy tắc cộng xác suất</p>
+<p>Cho \(k\) biến cố \({A_1},{A_2},...,{A_k}\) đôi một xung khắc. Khi đó:</p>
+<p>\(P({A_1} \cup {A_2} \cup ... \cup {A_k}) = P({A_1}) + P({A_2}) + ... + P({A_k})\).</p>
+<p>\( \bullet \) \(P(\overline A ) = 1 - P(A)\)</p>
+<p>\( \bullet \) Giải sử A và B là hai biến cố tùy ý  cùng liên quan đến một phép thử. Lúc đó: \(P(A \cup B) = P\left( A \right) + P\left( B \right) - P\left( {AB} \right)\).</p>
+<h4>3. Quy tắc nhân xác suất</h4>
+<p>\( \bullet \) Ta nói hai biến cố A và B độc lập nếu sự xảy ra (hay không xảy ra) của A không làm ảnh hưởng đến xác suất của B.</p>
+<p>\( \bullet \) Hai biến cố A và B độc lập khi và chỉ khi \(P\left( {AB} \right) = P\left( A \right).P\left( B \right)\).</p> </div>
+</div>
+<div class="box-1">
+<div class="ads-2 box-2" id="ads-right-flexible" style="background:#fff;padding:20px 0px 30px 0px;margin-bottom:0px;margin-top:0px;">
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-8066379099334713" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="4860858211" style="display:block; text-align:center;"></ins>
+<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div> </div></div></div></section>
+{% endverbatim %}
+{% endblock %}
