@@ -1262,7 +1262,7 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <form>
+                                                <form id="form1">
                                                     <div class="form-group">
                                                         <label for="recipient-name"
                                                             class="col-form-label">Đề bài:</label>
@@ -1307,6 +1307,55 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+        
+        $(document).ready(function()
+        { 
+            function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+}
+           //khai báo biến submit form lấy đối tượng nút submit
+           var submit = $("button[type='submit']");
+        
+           //khi nút submit được click
+           submit.click(function()
+           {
+             //khai báo các biến dữ liệu gửi lên server
+             var input = $("input[name='ketqua1']").val(); //lấy giá trị trong input user
+             window.location.href = 'http://127.0.0.1:8000/answer/' + `?q=${encodeURIComponent(input)}`;
+
+             //Kiểm tra xem trường đã được nhập hay chưa
+             if(user == ''){
+               alert('Chưa có công thức');
+               return false;
+             }
+      
+             //Lấy toàn bộ dữ liệu trong Form
+             var data = $('form#form1').serialize();
+           
+             //Sử dụng phương thức Ajax.
+             $.ajax({
+                   type : 'GET', //Sử dụng kiểu gửi dữ liệu POST
+                   url : 'http://127.0.0.1:8000/answer/', //gửi dữ liệu sang trang data.php
+                   data : data, //dữ liệu sẽ được gửi
+                   success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
+                             { 
+                                if(data == 'false') 
+                                {
+                                  alert('Không có dữ liệu');
+                                }else{
+                                  $('#input').html(data); //dữ liệu HTML trả về sẽ được chèn vào trong thẻ có id content
+                                }
+                             }
+                   });
+                   return false;
+             });
+         });
+     </script>
     <script>
         window.addEventListener('load', () => {
             const myscriptMathWebElement = document.querySelector('myscript-math-web');
