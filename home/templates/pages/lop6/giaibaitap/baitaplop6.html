@@ -141,6 +141,13 @@
                         <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
                     </a>
                 </div>
+                <h1>Toán nâng cao</h1>
+                <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
+                    <a id="toan-nang-cao" href="#tab10" class="nav-link" data-toggle="pill" role="tab"
+                        aria-controls="tab10" aria-selected="false">
+                        <i class="mdi mdi-account-settings"></i> TỔNG QUÁT
+                    </a>
+                </div>
             </div>
             <div class="col-lg-8" style="margin-top: 55px;">
                 <div class="tab-content" id="faq-tab-content">
@@ -1237,13 +1244,12 @@
                                     hmackey="db7063c2-3195-4340-826a-6dec48f1d218" mimetypes='["application/x-latex"]'
                                     touch-action="none">
                                 </myscript-math-web>
-                                <button class="check classic-btn">Check</button>
+                                <button class="check classic-btn">Kiểm tra</button>
                                 <button type="button" class="check classic-btn" style="left: 20px;" data-toggle="modal"
                                     data-target="#exampleModal" data-whatever="@mdo">Giải ngay</button>
                             </div>
+
                             <div>
-
-
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
@@ -1259,12 +1265,12 @@
                                                 <form>
                                                     <div class="form-group">
                                                         <label for="recipient-name"
-                                                            class="col-form-label">Input:</label>
+                                                            class="col-form-label">Đề bài:</label>
                                                         <input name="ketqua1" type="text" class="form-control"
                                                             id="recipient-name" id="kiemtra1" value="">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="message-text" class="col-form-label">Output:</label>
+                                                        <label for="message-text" class="col-form-label">Bài giải:</label>
                                                         <textarea class="form-control" id="message-text"></textarea>
                                                     </div>
                                                 </form>
@@ -1272,10 +1278,27 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
                                                     data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary">Send message</button>
+                                                <button id='giaitoan' type="button" class="btn btn-primary">Giải ngay</button>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab10" role="tabpanel" aria-labelledby="tab10">
+                        <div class="accordion" id="accordion-tab-10">
+                            <div class="card" style="padding: 15px;">
+                                <label for="toan-nangcao">Giải toán nâng cao</label>
+                                <input style="width: 50%" class="form-control"
+                                    type="text" id="toan-nangcao" value="x^4 - 4x^2 + 5x - 24 = 0" placeholder="Ví dụ: 4 * sin(x) + 5 * cos(x/2)" />
+                                    <button style="width: 20%;margin: 10px 0px;border: 1px solid;" class="btn" type="button" id='solveMathAdvance'
+                                     >Giải</button>
+
+                                <div id="ketqua-10">
+                                    
+                                    
+
                                 </div>
                             </div>
                         </div>
@@ -1295,11 +1318,9 @@
             myscriptMathWebElement.addEventListener('exported', (evt) => {
                 if (evt.detail.exports) {
                     const latexExport = evt.detail.exports['application/x-latex'] || '';
-
                     var tmp1;
                     //Replace 1 số ký tự ra khỏi chuỗi ban đầu
                     tmp1 = latexExport.replace(/[{}]/g, "");
-                    console.log('We got: ', tmp1);
                     //Set giá trị cho input modal có id=kiemtra1
                     document.querySelector('input[name="ketqua1"]').setAttribute('value', tmp1);
 
@@ -1314,15 +1335,28 @@
             checkElement.addEventListener('click', () => {
                 myscriptMathWebElement.convert();
                 const functionOutput = myscriptMathWebElement.export_();
-                console.log('Output :' + functionOutput);
             });
+            const giaitoan = document.querySelector('#giaitoan');
+            giaitoan.addEventListener('click',(evt)=>{
+                const debai = document.querySelector('input[name="ketqua1"]').value
+                if(debai != ""){
+                    document.getElementsByClassName('modal-footer')[0].querySelector('button').click()
+                    var input = document.getElementById('recipient-name').value
+                    document.getElementById('toan-nang-cao').click();
+                    document.getElementById('toan-nangcao').value = input;
+                    document.getElementById('solveMathAdvance').click();
+                }
+                // window.open('http://127.0.0.1:8000/answer/?q='+ encodeURIComponent(debai), '_blank');
+                
+            })
+
         });
 
 
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+       
         crossorigin="anonymous"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
@@ -1334,8 +1368,14 @@
         crossorigin="anonymous"></script>
     <!-- jQuery Custom Scroller CDN -->
     <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
+    <script type="text/javascript" src="../../../../static/resources/js/baitaplop6.js"></script>
+    <!-- MathJS -->
+    <script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
+    <script type="text/javascript" src="../../../../static/resources/js/math.js"></script>
+    <script type="text/javascript" src="../../../../static/resources/js/bundle.js"></script>
+    <script type="text/javascript" src="../../../../static/resources/js/wolfram-api.js"></script>   
     <script type="text/javascript">
         $(document).ready(function () {
             $("#sidebar").mCustomScrollbar({
@@ -1358,38 +1398,58 @@
 
         }
         $(document).ready(function () {
+            $('#lop6').click(function () {
+                $('#lop6').removeClass('active');
+                $('html, body').animate({scrollTop: '0px'}, 500);     
+                   })
+        })
+        $(document).ready(function () {
             $('#lop7').click(function () {
-                $('#lop7').removeClass('active')
-            })
+                $('#lop7').removeClass('active');
+                $('html, body').animate({scrollTop: '0px'}, 500);   
+                     })
+        })
+        $(document).ready(function () {
+            $('#lop8').click(function () {
+                $('#lop8').removeClass('active');
+                $('html, body').animate({scrollTop: '0px'}, 500); 
+                       })
         })
         $(document).ready(function () {
             $('#lop9').click(function () {
-                $('#lop9').removeClass('active')
-            })
+                $('#lop9').removeClass('active');
+                $('html, body').animate({scrollTop: '0px'}, 500);
+                        })
         })
         $(document).ready(function () {
             $('#giaitich').click(function () {
-                $('#giaitich').removeClass('active')
+                $('#giaitich').removeClass('active');
+                $('html, body').animate({scrollTop: '0px'}, 500);            
             })
         })
         $(document).ready(function () {
             $('#dothi').click(function () {
-                $('#dothi').removeClass('active')
+                $('#dothi').removeClass('active');
+                $('html, body').animate({scrollTop: '0px'}, 500);            
             })
         })
         $(document).ready(function () {
             $('#recognition-handwritten').click(function () {
-                $('#recognition-handwritten').removeClass('active')
+                $('#recognition-handwritten').removeClass('active');
+                $('html, body').animate({scrollTop: '0px'}, 500);            
             })
         })
+        $(document).ready(function () {
+            $('#toan-nang-cao').click(function () {
+                $('#toan-nang-cao').removeClass('active');
+                $('html, body').animate({scrollTop: '0'}, 500);            
+            })
+        })
+
+       
     </script>
 
 </body>
-<script type="text/javascript" src="../../../../static/resources/js/baitaplop6.js"></script>
-<!-- MathJS -->
 
-<script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
-<script type="text/javascript" src="../../../../static/resources/js/math.js"></script>
-<script type="text/javascript" src="../../../../static/resources/js/bundle.js"></script>
 
 </html>

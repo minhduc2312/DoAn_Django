@@ -9,7 +9,8 @@
 	<link rel="stylesheet" href="../../../static/resources/css_API/style.mobile_async.min.css">
 	<link rel="stylesheet" href="../../../static/resources/css_API/style.css">
 	<!--MathJax-->
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Jquery -->
@@ -23,76 +24,73 @@
 <body link = "#0000CC" alink = "#0000CC" vlink="#0000CC" style="background-image: url('/static/resources/img/main_bg.jpg'); background-size: cover;">
 	<div class="content">
 
-	
 	<div>
 		<a href="/"><img id="logo" src="../../../static/resources-index/img/Logo.jpg" alt="Logo"></a>
 	</div>
 	{% csrf_token %}
-	<div>	
+	<div class="container">
+
+	<div id="debai">
+		<p>\({{ debai }}\)</p>
+	</div>
+	<div id='header'>	
 	<form method="GET" action="" id="nhap">	
 		<input placeholder="Nhap bai toan" id="input" type="text" name="q" value="{{ debai }}">
 		<button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button>
 	</form>
+	<div id="chu_thich">
+		<a href="#">Ghi chú</a>
+		<table id = "bang">
+			<tr>
+				<th>Ví dụ</th>
+				<th>Nhập</th>
+			</tr>
+			<tr>
+				<td>\(ab\)</td>
+				<td>a*b</td>
+			</tr>
+			<tr>
+				<td>\(\frac{a}{b}\)</td>
+				<td>a/b</td>
+			</tr>
+			<tr>
+				<td>\(a^b\)</td>
+				<td>a^b</td>
+			</tr>
+			<tr>
+				<td>\(\sqrt{a}\)</td>
+				<td>sqrt(a)</td>
+			</tr>
+			<tr>
+				<td>|a|</td>
+				<td>|a|</td>
+			</tr>
+			<tr>
+				<td>\(\sin{a}\)</td>
+				<td>sin(a)</td>
+			</tr><tr>
+				<td>\(\sin^2{a}\)</td>
+				<td>sin^2(a)</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="font-size: 20px;">Giải hệ phương trình: Mỗi phương trình cách nhau bởi dấu ' ; '</td> 	
+			</tr>		
+			
+		</table>
 	</div>
-	<div id="debai">
-		<p>\({{ debai }}\)</p>
 	</div>
+	
 	
 		<div class="block_div" style="visibility: visible;" id="step_div">
 			<div id="steps">
 		{% verbatim %}
-		<div class='itn' style='color: #333'><div class='oops_title'>Cymath can't further simplify this.</div><div class='oops_msg'>Please try another operation.</div><br/></div>
+		<div class='method_choice_box'><div class='method_heading'>Available Methods</div><div class='method_choices'><div class='method_choice_unselected' onclick='loadUrlWithoutHistory("/answer?q=5x%5E2%2B7x-2%3D0%3Aformula");'><div class='method_choice'>Quadratic Formula</div></div><div class='method_choice_selected'>Complete the Square</div></div></div><div class='nc_base nc_step'>1</div> <div class='itn'>The expression \(5{x}^{2}+7x-2\) fits the form \(a{x}^{2}+bx+c\). Let's complete the square, where:<br/></div><div style='clear: both'></div><div class='math'>\[\begin{aligned}&amp;a=5\\&amp;b=7\\&amp;c=-2\end{aligned}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>2</div> <div class='itn'>Factor out \(a\), which is \(5\).<br/></div><div style='clear: both'></div><div class='math'>\[5({x}^{2}+\frac{7}{5}x-\frac{2}{5})\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>3</div> <div class='itn'><div class='solution_how_button_base no_select' id='button-qa17340e1-ws2-5cb1' onclick="showHideSolutionHow('qa17340e1-ws2-5cb1'); return false;"><img class='expander' src='/img/expander.png'/></div>Introduce the constant \(k\), which is \(\frac{49}{100}\) in our case.<br/></div><div style='clear: both'></div><div class='workspace_base' style='display: none' id='qa17340e1-ws2-5cb1'><div class='nc_base nc_step'>1</div> <div class='itn'>Let \(k={(\frac{b}{2a})}^{2}\). From the earlier step, \(a=5\) and \(b=7\).<br/></div><div style='clear: both'></div><div class='math'>\[k={(\frac{b}{2a})}^{2}={(\frac{7}{2\times 5})}^{2}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>2</div> <div class='itn'>Simplify.<br/></div><div style='clear: both'></div><div class='math'>\[k=\frac{49}{100}\]</div><div style='clear: both'></div><br/><div class='workspace_marketing_message'>To get access to all 'How?' and 'Why?' steps, join <a class='workspace_marketing' style='color: #AAA' href='/join'>Cymath Plus</a>!</div></div><div class='math'>\[5({x}^{2}+\frac{7}{5}x+\frac{49}{100}-\frac{49}{100}-\frac{2}{5})\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>4</div> <div class='itn'>Use <span class='rule_title'>Square of Sum</span>: \({(a+b)}^{2}={a}^{2}+2ab+{b}^{2}\).<br/></div><div style='clear: both'></div><div class='math'>\[5({(x+\frac{7}{10})}^{2}-\frac{49}{100}-\frac{2}{5})\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>5</div> <div class='itn'>Simplify.<br/></div><div style='clear: both'></div><div class='math'>\[5({(x+\frac{7}{10})}^{2}-\frac{89}{100})\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>6</div> <div class='itn'>Expand.<br/></div><div style='clear: both'></div><div class='math'>\[5{(x+\frac{7}{10})}^{2}-\frac{89}{20}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>7</div> <div class='itn'>Substitute the above back into the original equation.<br/></div><div style='clear: both'></div><div class='math'>\[5{(x+\frac{7}{10})}^{2}-\frac{89}{20}=0\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>8</div> <div class='itn'>Add \(\frac{89}{20}\) to both sides.<br/></div><div style='clear: both'></div><div class='math'>\[5{(x+\frac{7}{10})}^{2}=\frac{89}{20}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>9</div> <div class='itn'>Divide both sides by \(5\).<br/></div><div style='clear: both'></div><div class='math'>\[{(x+\frac{7}{10})}^{2}=\frac{\frac{89}{20}}{5}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>10</div> <div class='itn'>Simplify&nbsp; \(\frac{\frac{89}{20}}{5}\) &nbsp;to&nbsp; \(\frac{89}{20\times 5}\).<br/></div><div style='clear: both'></div><div class='math'>\[{(x+\frac{7}{10})}^{2}=\frac{89}{20\times 5}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>11</div> <div class='itn'>Simplify&nbsp; \(20\times 5\) &nbsp;to&nbsp; \(100\).<br/></div><div style='clear: both'></div><div class='math'>\[{(x+\frac{7}{10})}^{2}=\frac{89}{100}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>12</div> <div class='itn'>Take the square root of both sides.<br/></div><div style='clear: both'></div><div class='math'>\[x+\frac{7}{10}=\pm \sqrt{\frac{89}{100}}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>13</div> <div class='itn'>Simplify&nbsp; \(\sqrt{\frac{89}{100}}\) &nbsp;to&nbsp; \(\frac{\sqrt{89}}{\sqrt{100}}\).<br/></div><div style='clear: both'></div><div class='math'>\[x+\frac{7}{10}=\pm \frac{\sqrt{89}}{\sqrt{100}}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>14</div> <div class='itn'>Since \(10\times 10=100\), the square root of \(100\) is \(10\).<br/></div><div style='clear: both'></div><div class='math'>\[x+\frac{7}{10}=\pm \frac{\sqrt{89}}{10}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>15</div> <div class='itn'>Break down the problem into these 2 equations.<br/></div><div style='clear: both'></div><div class='math'>\[x+\frac{7}{10}=\frac{\sqrt{89}}{10}\]</div><div style='clear: both'></div><div class='math'>\[x+\frac{7}{10}=-\frac{\sqrt{89}}{10}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>16</div> <div class='itn'><div class='solution_how_button_base no_select' id='button-qa17340e1-ws15-5349' onclick="showHideSolutionHow('qa17340e1-ws15-5349'); return false;"><img class='expander' src='/img/expander.png'/></div>Solve the 1st equation: \(x+\frac{7}{10}=\frac{\sqrt{89}}{10}\).<br/></div><div style='clear: both'></div><div class='workspace_base' style='display: none' id='qa17340e1-ws15-5349'><div class='nc_base nc_step'>1</div> <div class='itn'>Subtract \(\frac{7}{10}\) from both sides.<br/></div><div style='clear: both'></div><div class='math'>\[x=\frac{\sqrt{89}}{10}-\frac{7}{10}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>2</div> <div class='itn'>Join the denominators.<br/></div><div style='clear: both'></div><div class='math'>\[x=\frac{\sqrt{89}-7}{10}\]</div><div style='clear: both'></div><br/><div class='workspace_marketing_message'>To get access to all 'How?' and 'Why?' steps, join <a class='workspace_marketing' style='color: #AAA' href='/join'>Cymath Plus</a>!</div></div><div class='math'>\[x=\frac{\sqrt{89}-7}{10}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>17</div> <div class='itn'><div class='solution_how_button_base no_select' id='button-qa17340e1-ws16-0d13' onclick="showHideSolutionHow('qa17340e1-ws16-0d13'); return false;"><img class='expander' src='/img/expander.png'/></div>Solve the 2nd equation: \(x+\frac{7}{10}=-\frac{\sqrt{89}}{10}\).<br/></div><div style='clear: both'></div><div class='workspace_base' style='display: none' id='qa17340e1-ws16-0d13'><div class='nc_base nc_step'>1</div> <div class='itn'>Subtract \(\frac{7}{10}\) from both sides.<br/></div><div style='clear: both'></div><div class='math'>\[x=-\frac{\sqrt{89}}{10}-\frac{7}{10}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>2</div> <div class='itn'>Join the denominators.<br/></div><div style='clear: both'></div><div class='math'>\[x=\frac{-\sqrt{89}-7}{10}\]</div><div style='clear: both'></div><br/><div class='workspace_marketing_message'>To get access to all 'How?' and 'Why?' steps, join <a class='workspace_marketing' style='color: #AAA' href='/join'>Cymath Plus</a>!</div></div><div class='math'>\[x=\frac{-\sqrt{89}-7}{10}\]</div><div style='clear: both'></div><br/><div class='nc_base nc_step'>18</div> <div class='itn'>Collect all solutions.<br/></div><div style='clear: both'></div><div class='math'>\[x=\frac{\sqrt{89}-7}{10},\frac{-\sqrt{89}-7}{10}\]</div><div style='clear: both'></div><br/><div class='done'>Done</div><img class='check' src='/img/check_v2.gif'><br/><p class='decimal'>Decimal Form: 0.243398, -1.643398</p><div style='display: none' id='answer'>x=(sqrt(89)-7)/10,(-sqrt(89)-7)/10</div>
 		{% endverbatim %}
 			</div>
 		</div>
-		<div id="chu_thich">
-			<a href="#">Ghi chú</a>
-			<table id = "bang">
-				<tr>
-					<th>Ví dụ</th>
-					<th>Nhập</th>
-				</tr>
-				<tr>
-					<td>\(ab\)</td>
-					<td>a*b</td>
-				</tr>
-				<tr>
-					<td>\(\frac{a}{b}\)</td>
-					<td>a/b</td>
-				</tr>
-				<tr>
-					<td>\(a^b\)</td>
-					<td>a^b</td>
-				</tr>
-				<tr>
-					<td>\(\sqrt{a}\)</td>
-					<td>sqrt(a)</td>
-				</tr>
-				<tr>
-					<td>|a|</td>
-					<td>|a|</td>
-				</tr>
-				<tr>
-					<td>\(\sin{a}\)</td>
-					<td>sin(a)</td>
-				</tr><tr>
-					<td>\(\sin^2{a}\)</td>
-					<td>sin^2(a)</td>
-				</tr>
-				<tr>
-					<td colspan="2" style="font-size: 20px;">Giải hệ phương trình: Mỗi phương trình cách nhau bởi dấu ' ; '</td> 	
-				</tr>		
-				
-			</table>
-		</div>
 	</div>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
-	<script src="../../../static/resources/scripts_API/katex_customized.min.js"></script>
-	<script src="../../../static/resources/scripts_API/script.min.js"></script>
-	<script src="../../../static/resources/scripts_API/typeahead.min.js"></script>
-	<script src="../../../static/resources/scripts_API/graph.min.js"></script>
+	</div>
+	
 	<script type = "text/javascript">
 		const get_img = document.getElementsByTagName('img');
 		for(let i =1; i < get_img.length;i++){
@@ -105,7 +103,40 @@
 			}else{
 				$('.block_div').css('display','block')
 			}
+			$('#input').val('');
+
+			$('#input').on('input', function(e) {
+				
+				// MathJax.typesetPromise().then(() => {
+				// // modify the DOM here
+				// $('#debai').html(`<p>\\(${e.target.value}\\)</p>`)
+				// console.log(e.target.value);
+				// MathJax.typesetPromise();
+				// }).catch((err) => console.log(err.message));
+
+				const node = document.getElementById('debai');
+				node.innerHTML = `<p>\\(${e.target.value}\\)</p>`;
+				MathJax.typesetPromise([node]).then(() => {
+				// the new content is has been typeset
+					if($('#debai').text() == 'Missing superscript or subscript argumentMissing superscript or subscript argument'){
+						$('#debai').html(`<p>${e.target.value}</p>`)
+					}else{
+						$('#debai').html(`<p>\\(${e.target.value}\\)</p>`)
+						MathJax.typesetPromise();
+					}
+					
+				});
+			})
 		})
+
 	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
+	<script src="../../../static/resources/scripts_API/katex_customized.min.js"></script>
+	<script src="../../../static/resources/scripts_API/script.min.js"></script>
+	<script src="../../../static/resources/scripts_API/typeahead.min.js"></script>
+	<script src="../../../static/resources/scripts_API/graph.min.js"></script>
+
 </body>
 </html>

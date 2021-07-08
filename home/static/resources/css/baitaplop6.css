@@ -43,9 +43,10 @@ body {
   
   .tab-content {
     box-shadow: 0 1px 5px rgba(85, 85, 85, 0.15);
+    border-radius: 10px;
   }
   .tab-content .card {
-    border-radius: 0;
+    border-radius: 5px !important;
   }
   .tab-content .card-header {
     padding: 15px 16px;
@@ -88,9 +89,43 @@ body {
     border-radius: 50%;
     left: 45px;
     top: 45px;
-    border: 2px solid black
+    border: 1px solid #0000006e;
   }
 
   .can{
     width: 13%;
   }
+  .sub-image{
+    display: none;
+  }
+  .show-active{
+    display: flex;
+    flex-flow: column;
+  } 
+  .loader {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #3498db;
+    width: 59px;
+    height: 59px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .show-more{
+    color: #2b58ff !important;
+    cursor: pointer;
+  }
+  .show-more:hover{
+    text-decoration: underline !important;
+  }
+    

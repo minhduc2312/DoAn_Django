@@ -1055,6 +1055,7 @@ def answer(request):
 
         response = requests.get("https://www.cymath.com/ajax/get_steps.php",
                                 headers=headers, params=params, cookies=cookies)
+        print(response.text)
         f = open("home/templates/pages/Giaitoan_API/index.html",
                  mode='r', encoding='utf-8')
         string = f.read().split('<!--ketqua-->')
@@ -1068,7 +1069,7 @@ def answer(request):
         # t =  template.loader.get_template('ketqua.html')
         # return render(request, 'pages/Giaitoan_API/index.html', {'ketqua' : response.text})
         return render(request, 'pages/Giaitoan_API/ketqua.html', {'debai': debai})
-    return render(request, 'pages/Giaitoan_API/index.html', {'debai': debai})
+    return render(request, 'pages/Giaitoan_API/index.html', {'debai': ''})
 
 
 def register(request):

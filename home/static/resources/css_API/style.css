@@ -83,7 +83,7 @@ td.grayline{border-top:solid 1px gray}
 td.menu{border-bottom:solid 1px gray}
 sup{vertical-align:1.0;font-size:75%}div.inline_choices{margin-bottom:15px;display:block}
 div.list_title{font-size:24px;display:block;margin-bottom:30px}
-div.block_div{width: 60%; position: absolute;left: 50%;top: 15%;transform: translate(-50%, 0%); border:1px solid #e1e1e1;padding:16px;margin-bottom:16px;box-shadow:0 6px 12px rgba(0,0,0,0.02),0 6px 12px rgba(0,0,0,0.05);background-color:#FFF}
+div.block_div{ border:1px solid #e1e1e1;padding:16px;margin-bottom:16px;box-shadow:0 6px 12px rgba(0,0,0,0.02),0 6px 12px rgba(0,0,0,0.05);background-color:#FFF}
 div.layout_div{margin:0}
 div.layout_div_mobile{margin:0 16px}
 div.sharing_title{font-size:16px;font-weight:bold;color:#666;display:block;margin-bottom:10px}
@@ -292,15 +292,22 @@ input.url{width:240px}#graph_div{width:280px;height:280px;min-width:280px;min-he
 div.sharing_title{font-size:14px}
 div.answer_call_to_action{font-size:14px}}
 
+
+#header{
+    display: flex;
+    top: 15%;
+    flex-direction: row;
+}
 #nhap{
-    position: absolute;
-    left:50%;
-    transform: translate(-50%, 25%);
-    height: 50px;
     width: 60%;
     height: 50px;
     font-family: Arial, Helvetica, sans-serif;
-    
+    display: flex;
+}
+.container{
+    position: relative;
+    top: 50px;
+
 }
 #nhap button{
     height: 40px;
@@ -310,24 +317,21 @@ div.answer_call_to_action{font-size:14px}}
 #nhap input{
     border: 1px solid #28a745;
     height: 40px;
-    width: 60%;
+    width: 100%;
+    margin-right: 10px;
     text-align: left;
     text-decoration: #28a745;
     border-radius: 5px;
 }
 #debai{
     color: #28a745;
-    position: absolute;
-    width: 60%;
-    left: 50%;
-    transform: translate(-50%, 60px);
     font-size: x-large;
+    margin-top: 10px;
+
 }
 #chu_thich{
-    position: absolute;
-    left: 55%;
-    transform: translate(100%, 50%);
-    width: auto;
+    margin-left: 20px;
+
 }
 #chu_thich a{
     font-size: x-large;
