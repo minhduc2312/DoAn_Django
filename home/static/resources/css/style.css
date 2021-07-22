@@ -1021,9 +1021,10 @@ li .itemvideoright{border-bottom:1px solid #e1e1e1;padding-bottom:10px}
 #logo{
     position: absolute;
     width: 100px;
-    left: 40px;
     border-radius: 50%;
     margin-top: 5px;
+    left: 40px; 
+
 }
 
 /* Button Previous-Next */ 

@@ -73,7 +73,7 @@
 <body>
     <div class="container">
         <a href="/"><img class="logo" src="../../static/resources-index/img/Logo.jpg" alt="Logo"></a>
-        <div class="row">
+        <div class="row" style="margin-left: 3%;">
             <div class="col-lg-4">
                 <h1>Lớp 6</h1>
                 <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
@@ -1366,10 +1366,27 @@
 
             myscriptMathWebElement.addEventListener('exported', (evt) => {
                 if (evt.detail.exports) {
-                    const latexExport = evt.detail.exports['application/x-latex'] || '';
+                    let latexExport = evt.detail.exports['application/x-latex'] || '';
                     var tmp1;
+                    console.log(latexExport);
+
+                    if(latexExport.indexOf('_') && latexExport.indexOf('int')){
+                       /* var high = text.split('_')[0];
+                        var highIndex = high.indexOf('{')
+                        high = high.slice(highIndex+1,-1)
+                        var below = text.split('_')[1];
+                        var belowIndex = below.indexOf('}')
+                        below = below.slice(1,belowIndex)
+                        console.log(high,below)*/
+                        var text = latexExport.split('}')
+                        text[2] = "("+text[2]
+                        text[text.length-1] = text[text.length-1] + ')'
+                        latexExport = text.join('}')              
+                    }
+                    console.log(latexExport);
+
                     //Replace 1 số ký tự ra khỏi chuỗi ban đầu
-                    tmp1 = latexExport.replace(/[{}]/g, "");
+                    tmp1 = latexExport.replace(/[()]/g, "");
                     //Set giá trị cho input modal có id=kiemtra1
                     document.querySelector('input[name="ketqua1"]').setAttribute('value', tmp1);
 

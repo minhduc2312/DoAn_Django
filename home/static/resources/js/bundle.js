@@ -10,7 +10,7 @@ $('#nguyenham').on('click',function(){
   try{    
     var input = $('#input_nguyenham').val();
     var text = '';
-    text += "Nguyên Hàm: `int_0^1 " + input + " dx`<br>Áp dụng công thức nguyên hàm";
+    text += "Nguyên Hàm: `int " + input + " dx`<br>Áp dụng công thức nguyên hàm";
     var kq1 = math.integral(input, 'x', {simplify: false}).toString();
     var kq2 = math.integral(input, 'x', {simplify: true}).toString();
     text += "<br>=> `" + kq1 +" + C`";

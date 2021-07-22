@@ -91,7 +91,9 @@ body {
     top: 45px;
     border: 1px solid #0000006e;
   }
-
+  a{
+    cursor: pointer !important;
+  }
   .can{
     width: 13%;
   }
